@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Stats - Single Season Records | CFB Updates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background-color: #0a0a0a; color: #e0e0e0; }
+        .main-header { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 15px 20px; text-align: center; border-bottom: 4px solid #c8a415; }
+        .main-header h1 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: #ffffff; text-transform: uppercase; letter-spacing: 3px; }
+        .main-header h1 span { color: #c8a415; }
+        .tagline { color: #888; font-size: 0.85rem; margin-top: 5px; }
+        .nav-bar { background-color: #151515; padding: 10px 20px; display: flex; justify-content: center; gap: 30px; border-bottom: 1px solid #333; flex-wrap: wrap; }
+        .nav-bar a { color: #c8a415; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+        .nav-bar a:hover { color: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+        .page-title { font-family: 'Oswald', sans-serif; font-size: 2rem; color: #c8a415; text-align: center; margin-bottom: 30px; text-transform: uppercase; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .stat-category { background: linear-gradient(180deg, #1a1a1a 0%, #141414 100%); border-radius: 8px; padding: 20px; border: 1px solid #2a2a2a; }
+        .category-title { font-family: 'Oswald', sans-serif; font-size: 1.4rem; color: #c8a415; margin-bottom: 20px; text-align: center; border-bottom: 2px solid #c8a415; padding-bottom: 10px; }
+        .stats-table { width: 100%; }
+        .stats-row { display: grid; grid-template-columns: 40px 1fr 100px 80px 2fr; gap: 10px; padding: 10px 0; border-bottom: 1px solid #222; font-size: 0.9rem; align-items: center; }
+        .stats-row:last-child { border-bottom: none; }
+        .stats-row.header { font-weight: 600; color: #c8a415; border-bottom: 2px solid #c8a415; }
+        .rank { color: #666; text-align: center; }
+        .player-name { color: #fff; font-weight: 500; }
+        .stat-value { color: #c8a415; font-weight: 700; text-align: center; }
+        .year { color: #888; text-align: center; }
+        .school { color: #999; }
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: 30px 1fr 80px; font-size: 0.85rem; }
+            .year, .school { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1>CFB <span>Updates</span></h1>
+        <p class="tagline">Your Source for College Football Dynasty Coverage</p>
+    </header>
+    <nav class="nav-bar">
+        <a href="./index.html">Home</a>
+        <a href="./historical.html">Historical Stats</a>
+        <a href="./archive/index.html">All Articles</a>
+    </nav>
+    <div class="container">
+        <h2 class="page-title">All-Time Single Season Records</h2>
+        
+        <div class="stats-grid">
+            <!-- Passing Yards -->
+            <div class="stat-category">
+                <h3 class="category-title">Passing Yards</h3>
+                <div class="stats-table">
+                    <div class="stats-row header">
+                        <div class="rank">Rk</div>
+                        <div class="player-name">Player</div>
+                        <div class="stat-value">Yds</div>
+                        <div class="year">Year</div>
+                        <div class="school">School</div>
+                    </div>
+                    <div class="stats-row"><div class="rank">1</div><div class="player-name">Bailey Zappe</div><div class="stat-value">5,967</div><div class="year">2021</div><div class="school">Western Kentucky</div></div>
+                    <div class="stats-row"><div class="rank">2</div><div class="player-name">B.J. Symons</div><div class="stat-value">5,833</div><div class="year">2003</div><div class="school">Texas Tech</div></div>
+                    <div class="stats-row"><div class="rank">3</div><div class="player-name">Graham Harrell</div><div class="stat-value">5,705</div><div class="year">2007</div><div class="school">Texas Tech</div></div>
+                    <div class="stats-row"><div class="rank">4</div><div class="player-name">Joe Burrow</div><div class="stat-value">5,671</div><div class="year">2019</div><div class="school">LSU</div></div>
+                    <div class="stats-row"><div class="rank">5</div><div class="player-name">Case Keenum</div><div class="stat-value">5,671</div><div class="year">2009</div><div class="school">Houston</div></div>
+                    <div class="stats-row"><div class="rank">6</div><div class="player-name">Case Keenum</div><div class="stat-value">5,631</div><div class="year">2011</div><div class="school">Houston</div></div>
+                    <div class="stats-row"><div class="rank">7</div><div class="player-name">Anthony Gordon</div><div class="stat-value">5,579</div><div class="year">2019</div><div class="school">Washington State</div></div>
+                    <div class="stats-row"><div class="rank">8</div><div class="player-name">Colt Brennan</div><div class="stat-value">5,549</div><div class="year">2006</div><div class="school">Hawaii</div></div>
+                    <div class="stats-row"><div class="rank">9</div><div class="player-name">Ty Detmer</div><div class="stat-value">5,188</div><div class="year">1990</div><div class="school">Brigham Young</div></div>
+                    <div class="stats-row"><div class="rank">10</div><div class="player-name">David Klingler</div><div class="stat-value">5,140</div><div class="year">1990</div><div class="school">Houston</div></div>
+                </div>
+            </div>
+
+            <!-- Passing TDs -->
+            <div class="stat-category">
+                <h3 class="category-title">Passing Touchdowns</h3>
+                <div class="stats-table">
+                    <div class="stats-row header">
+                        <div class="rank">Rk</div>
+                        <div class="player-name">Player</div>
+                        <div class="stat-value">TDs</div>
+                        <div class="year">Year</div>
+                        <div class="school">School</div>
+                    </div>
+                    <div class="stats-row"><div class="rank">1</div><div class="player-name">Bailey Zappe</div><div class="stat-value">62</div><div class="year">2021</div><div class="school">Western Kentucky</div></div>
+                    <div class="stats-row"><div class="rank">2</div><div class="player-name">Joe Burrow</div><div class="stat-value">60</div><div class="year">2019</div><div class="school">LSU</div></div>
+                    <div class="stats-row"><div class="rank">3</div><div class="player-name">Colt Brennan</div><div class="stat-value">58</div><div class="year">2006</div><div class="school">Hawaii</div></div>
+                    <div class="stats-row"><div class="rank">4</div><div class="player-name">David Klingler</div><div class="stat-value">54</div><div class="year">1990</div><div class="school">Houston</div></div>
+                    <div class="stats-row"><div class="rank">5</div><div class="player-name">B.J. Symons</div><div class="stat-value">52</div><div class="year">2003</div><div class="school">Texas Tech</div></div>
+                    <div class="stats-row"><div class="rank">6</div><div class="player-name">Dwayne Haskins</div><div class="stat-value">50</div><div class="year">2018</div><div class="school">Ohio State</div></div>
+                    <div class="stats-row"><div class="rank">7</div><div class="player-name">Derek Carr</div><div class="stat-value">50</div><div class="year">2013</div><div class="school">Fresno State</div></div>
+                    <div class="stats-row"><div class="rank">8</div><div class="player-name">Sam Bradford</div><div class="stat-value">50</div><div class="year">2008</div><div class="school">Oklahoma</div></div>
+                    <div class="stats-row"><div class="rank">9</div><div class="player-name">Brandon Doughty</div><div class="stat-value">49</div><div class="year">2014</div><div class="school">Western Kentucky</div></div>
+                    <div class="stats-row"><div class="rank">10</div><div class="player-name">Anthony Gordon</div><div class="stat-value">48</div><div class="year">2019</div><div class="school">Washington State</div></div>
+                </div>
+            </div>
+
+            <!-- Rushing Yards -->
+            <div class="stat-category">
+                <h3 class="category-title">Rushing Yards</h3>
+                <div class="stats-table">
+                    <div class="stats-row header">
+                        <div class="rank">Rk</div>
+                        <div class="player-name">Player</div>
+                        <div class="stat-value">Yds</div>
+                        <div class="year">Year</div>
+                        <div class="school">School</div>
+                    </div>
+                    <div class="stats-row"><div class="rank">1</div><div class="player-name">Barry Sanders</div><div class="stat-value">2,628</div><div class="year">1988</div><div class="school">Oklahoma State</div></div>
+                    <div class="stats-row"><div class="rank">2</div><div class="player-name">Ashton Jeanty</div><div class="stat-value">2,601</div><div class="year">2024</div><div class="school">Boise State</div></div>
+                    <div class="stats-row"><div class="rank">3</div><div class="player-name">Melvin Gordon</div><div class="stat-value">2,587</div><div class="year">2014</div><div class="school">Wisconsin</div></div>
+                    <div class="stats-row"><div class="rank">4</div><div class="player-name">Kevin Smith</div><div class="stat-value">2,567</div><div class="year">2007</div><div class="school">UCF</div></div>
+                    <div class="stats-row"><div class="rank">5</div><div class="player-name">Marcus Allen</div><div class="stat-value">2,342</div><div class="year">1981</div><div class="school">USC</div></div>
+                    <div class="stats-row"><div class="rank">6</div><div class="player-name">Rashaad Penny</div><div class="stat-value">2,248</div><div class="year">2017</div><div class="school">San Diego State</div></div>
+                    <div class="stats-row"><div class="rank">7</div><div class="player-name">Derrick Henry</div><div class="stat-value">2,219</div><div class="year">2015</div><div class="school">Alabama</div></div>
+                    <div class="stats-row"><div class="rank">8</div><div class="player-name">Jonathan Taylor</div><div class="stat-value">2,194</div><div class="year">2018</div><div class="school">Wisconsin</div></div>
+                    <div class="stats-row"><div class="rank">9</div><div class="player-name">Troy Davis</div><div class="stat-value">2,185</div><div class="year">1996</div><div class="school">Iowa State</div></div>
+                    <div class="stats-row"><div class="rank">10</div><div class="player-name">Andre Williams</div><div class="stat-value">2,177</div><div class="year">2013</div><div class="school">Boston College</div></div>
+                </div>
+            </div>
+
+            <!-- Receiving Yards -->
+            <div class="stat-category">
+                <h3 class="category-title">Receiving Yards</h3>
+                <div class="stats-table">
+                    <div class="stats-row header">
+                        <div class="rank">Rk</div>
+                        <div class="player-name">Player</div>
+                        <div class="stat-value">Yds</div>
+                        <div class="year">Year</div>
+                        <div class="school">School</div>
+                    </div>
+                    <div class="stats-row"><div class="rank">1</div><div class="player-name">Trevor Insley</div><div class="stat-value">2,060</div><div class="year">1999</div><div class="school">Nevada</div></div>
+                    <div class="stats-row"><div class="rank">2</div><div class="player-name">Troy Edwards</div><div class="stat-value">1,996</div><div class="year">1998</div><div class="school">Louisiana Tech</div></div>
+                    <div class="stats-row"><div class="rank">3</div><div class="player-name">Michael Crabtree</div><div class="stat-value">1,962</div><div class="year">2007</div><div class="school">Texas Tech</div></div>
+                    <div class="stats-row"><div class="rank">4</div><div class="player-name">Jordan White</div><div class="stat-value">1,911</div><div class="year">2011</div><div class="school">Western Michigan</div></div>
+                    <div class="stats-row"><div class="rank">5</div><div class="player-name">Jerreth Sterns</div><div class="stat-value">1,902</div><div class="year">2021</div><div class="school">Western Kentucky</div></div>
+                    <div class="stats-row"><div class="rank">6</div><div class="player-name">Greg Salas</div><div class="stat-value">1,889</div><div class="year">2010</div><div class="school">Hawaii</div></div>
+                    <div class="stats-row"><div class="rank">7</div><div class="player-name">DeVonta Smith</div><div class="stat-value">1,856</div><div class="year">2020</div><div class="school">Alabama</div></div>
+                    <div class="stats-row"><div class="rank">8</div><div class="player-name">Alex Van Dyke</div><div class="stat-value">1,854</div><div class="year">1995</div><div class="school">Nevada</div></div>
+                    <div class="stats-row"><div class="rank">9</div><div class="player-name">Terrance Williams</div><div class="stat-value">1,832</div><div class="year">2012</div><div class="school">Baylor</div></div>
+                    <div class="stats-row"><div class="rank">10</div><div class="player-name">Trent Taylor</div><div class="stat-value">1,803</div><div class="year">2016</div><div class="school">Louisiana Tech</div></div>
+                </div>
+            </div>
+
+            <!-- Receiving TDs -->
+            <div class="stat-category">
+                <h3 class="category-title">Receiving Touchdowns</h3>
+                <div class="stats-table">
+                    <div class="stats-row header">
+                        <div class="rank">Rk</div>
+                        <div class="player-name">Player</div>
+                        <div class="stat-value">TDs</div>
+                        <div class="year">Year</div>
+                        <div class="school">School</div>
+                    </div>
+                    <div class="stats-row"><div class="rank">1</div><div class="player-name">Troy Edwards</div><div class="stat-value">27</div><div class="year">1998</div><div class="school">Louisiana Tech</div></div>
+                    <div class="stats-row"><div class="rank">2</div><div class="player-name">Stedman Bailey</div><div class="stat-value">25</div><div class="year">2012</div><div class="school">West Virginia</div></div>
+                    <div class="stats-row"><div class="rank">3</div><div class="player-name">Randy Moss</div><div class="stat-value">25</div><div class="year">1997</div><div class="school">Marshall</div></div>
+                    <div class="stats-row"><div class="rank">4</div><div class="player-name">Davante Adams</div><div class="stat-value">24</div><div class="year">2013</div><div class="school">Fresno State</div></div>
+                    <div class="stats-row"><div class="rank">5</div><div class="player-name">DeVonta Smith</div><div class="stat-value">23</div><div class="year">2020</div><div class="school">Alabama</div></div>
+                    <div class="stats-row"><div class="rank">6</div><div class="player-name">Michael Crabtree</div><div class="stat-value">22</div><div class="year">2007</div><div class="school">Texas Tech</div></div>
+                    <div class="stats-row"><div class="rank">7</div><div class="player-name">Larry Fitzgerald</div><div class="stat-value">22</div><div class="year">2003</div><div class="school">Pitt</div></div>
+                    <div class="stats-row"><div class="rank">8</div><div class="player-name">Manny Hazard</div><div class="stat-value">22</div><div class="year">1989</div><div class="school">Houston</div></div>
+                    <div class="stats-row"><div class="rank">9</div><div class="player-name">Jarett Dillard</div><div class="stat-value">21</div><div class="year">2006</div><div class="school">Rice</div></div>
+                    <div class="stats-row"><div class="rank">10</div><div class="player-name">Ja'Marr Chase</div><div class="stat-value">20</div><div class="year">2019</div><div class="school">LSU</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
