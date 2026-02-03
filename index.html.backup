@@ -83,66 +83,62 @@
             </div>
             <div class="stat-category active" id="passing-yds">
                 <div class="stat-category-title">Top 10 Passing Yards</div>
-                <div class="stat-item"><span class="stat-name">G. Parkhurst <span class="stat-team">???</span></span><span class="stat-value">2,771</span></div>
-                <div class="stat-item"><span class="stat-name">C. Boley <span class="stat-team">???</span></span><span class="stat-value">2,727</span></div>
-                <div class="stat-item"><span class="stat-name">J. Kush <span class="stat-team">BGSU</span></span><span class="stat-value">2,540</span></div>
-                <div class="stat-item"><span class="stat-name">G. Stockton <span class="stat-team">UGA</span></span><span class="stat-value">2,476</span></div>
-                <div class="stat-item"><span class="stat-name">C. Carr <span class="stat-team">ND</span></span><span class="stat-value">2,454</span></div>
-                <div class="stat-item"><span class="stat-name">D. Mestemaker <span class="stat-team">???</span></span><span class="stat-value">2,383</span></div>
-                <div class="stat-item"><span class="stat-name">A. Simmons <span class="stat-team">???</span></span><span class="stat-value">2,284</span></div>
-                <div class="stat-item"><span class="stat-name">T.St. Clair <span class="stat-team">???</span></span><span class="stat-value">2,264</span></div>
-                <div class="stat-item"><span class="stat-name">J. Hoover <span class="stat-team">???</span></span><span class="stat-value">2,222</span></div>
-                <div class="stat-item"><span class="stat-name">W. Howard <span class="stat-team">???</span></span><span class="stat-value">2,212</span></div>
+                <div class="stat-item"><span class="stat-name">J. Brousseau <span class="stat-team">CSU</span></span><span class="stat-value">3,748</span></div>
+                <div class="stat-item"><span class="stat-name">B. Shapen <span class="stat-team">BAY</span></span><span class="stat-value">3,425</span></div>
+                <div class="stat-item"><span class="stat-name">G. Stockton <span class="stat-team">UGA</span></span><span class="stat-value">3,384</span></div>
+                <div class="stat-item"><span class="stat-name">K. Salter <span class="stat-team">AUB</span></span><span class="stat-value">3,332</span></div>
+                <div class="stat-item"><span class="stat-name">B. Braxton <span class="stat-team">KSU</span></span><span class="stat-value">3,179</span></div>
+                <div class="stat-item"><span class="stat-name">M. Alejado <span class="stat-team">MIZZ</span></span><span class="stat-value">3,160</span></div>
+                <div class="stat-item"><span class="stat-name">K. Jennings <span class="stat-team">SMU</span></span><span class="stat-value">3,128</span></div>
+                <div class="stat-item"><span class="stat-name">C. Veltkamp <span class="stat-team">UK</span></span><span class="stat-value">3,096</span></div>
+                <div class="stat-item"><span class="stat-name">C. Morris <span class="stat-team">TCU</span></span><span class="stat-value">3,081</span></div>
+                <div class="stat-item"><span class="stat-name">D. Pyne <span class="stat-team">BGSU</span></span><span class="stat-value">3,061</span></div>
             </div>
             <div class="stat-category" id="passing-tds">
                 <div class="stat-category-title">Top 10 Passing TDs</div>
-                <div class="stat-item"><span class="stat-name">J. Kush <span class="stat-team">BGSU</span></span><span class="stat-value">36</span></div>
-                <div class="stat-item"><span class="stat-name">A. Manning <span class="stat-team">???</span></span><span class="stat-value">30</span></div>
-                <div class="stat-item"><span class="stat-name">G. Stockton <span class="stat-team">UGA</span></span><span class="stat-value">26</span></div>
-                <div class="stat-item"><span class="stat-name">C. Boley <span class="stat-team">???</span></span><span class="stat-value">25</span></div>
-                <div class="stat-item"><span class="stat-name">T.St. Clair <span class="stat-team">???</span></span><span class="stat-value">25</span></div>
-                <div class="stat-item"><span class="stat-name">G. Parkhurst <span class="stat-team">???</span></span><span class="stat-value">19</span></div>
-                <div class="stat-item"><span class="stat-name">J. Hoover <span class="stat-team">???</span></span><span class="stat-value">18</span></div>
-                <div class="stat-item"><span class="stat-name">C. Carr <span class="stat-team">ND</span></span><span class="stat-value">17</span></div>
-                <div class="stat-item"><span class="stat-name">W. Howard <span class="stat-team">???</span></span><span class="stat-value">16</span></div>
-                <div class="stat-item"><span class="stat-name">D. Mestemaker <span class="stat-team">???</span></span><span class="stat-value">15</span></div>
+                <div class="stat-item"><span class="stat-name">J. Brousseau <span class="stat-team">CSU</span></span><span class="stat-value">45</span></div>
+                <div class="stat-item"><span class="stat-name">E. Holstein <span class="stat-team">PITT</span></span><span class="stat-value">33</span></div>
+                <div class="stat-item"><span class="stat-name">K. Jennings <span class="stat-team">SMU</span></span><span class="stat-value">32</span></div>
+                <div class="stat-item"><span class="stat-name">D. Pyne <span class="stat-team">BGSU</span></span><span class="stat-value">32</span></div>
+                <div class="stat-item"><span class="stat-name">K. Anderson <span class="stat-team">WYO</span></span><span class="stat-value">31</span></div>
+                <div class="stat-item"><span class="stat-name">J. Sayin <span class="stat-team">BAMA</span></span><span class="stat-value">30</span></div>
+                <div class="stat-item"><span class="stat-name">G. Stockton <span class="stat-team">UGA</span></span><span class="stat-value">29</span></div>
+                <div class="stat-item"><span class="stat-name">C. Morris <span class="stat-team">TCU</span></span><span class="stat-value">29</span></div>
+                <div class="stat-item"><span class="stat-name">J. Maiava <span class="stat-team">USC</span></span><span class="stat-value">29</span></div>
+                <div class="stat-item"><span class="stat-name">K. Salter <span class="stat-team">AUB</span></span><span class="stat-value">28</span></div>
             </div>
             <div class="stat-category" id="rushing">
                 <div class="stat-category-title">Top 10 Rushing Yards</div>
-                <div class="stat-item"><span class="stat-name">A. Hardy <span class="stat-team">TENN</span></span><span class="stat-value">900</span></div>
-                <div class="stat-item"><span class="stat-name">D. Dowdell <span class="stat-team">NEB</span></span><span class="stat-value">823</span></div>
-                <div class="stat-item"><span class="stat-name">D. Beauchamp <span class="stat-team">MSST</span></span><span class="stat-value">802</span></div>
-                <div class="stat-item"><span class="stat-name">D. Riley <span class="stat-team">USC</span></span><span class="stat-value">791</span></div>
-                <div class="stat-item"><span class="stat-name">J. Baugh <span class="stat-team">AUB</span></span><span class="stat-value">761</span></div>
-                <div class="stat-item"><span class="stat-name">J. Marshall <span class="stat-team">ALA</span></span><span class="stat-value">758</span></div>
-                <div class="stat-item"><span class="stat-name">C. Hansen <span class="stat-team">WIS</span></span><span class="stat-value">752</span></div>
-                <div class="stat-item"><span class="stat-name">L. Brown <span class="stat-team">LOU</span></span><span class="stat-value">749</span></div>
-                <div class="stat-item"><span class="stat-name">O. Allen <span class="stat-team">FSU</span></span><span class="stat-value">732</span></div>
-                <div class="stat-item"><span class="stat-name">O. Joyner <span class="stat-team">UGA</span></span><span class="stat-value">731</span></div>
+                <div class="stat-item"><span class="stat-name">T. Kellman <span class="stat-team">WYO</span></span><span class="stat-value">1,814</span></div>
+                <div class="stat-item"><span class="stat-name">K. Owens <span class="stat-team">TEX</span></span><span class="stat-value">1,272</span></div>
+                <div class="stat-item"><span class="stat-name">I. Brown <span class="stat-team">LOU</span></span><span class="stat-value">1,113</span></div>
+                <div class="stat-item"><span class="stat-name">M. Fletcher Jr <span class="stat-team">CLEM</span></span><span class="stat-value">1,078</span></div>
+                <div class="stat-item"><span class="stat-name">J. Buckley <span class="stat-team">OKST</span></span><span class="stat-value">1,071</span></div>
+                <div class="stat-item"><span class="stat-name">D. Beauchamp <span class="stat-team">MSST</span></span><span class="stat-value">1,052</span></div>
+                <div class="stat-item"><span class="stat-name">A. Hardy <span class="stat-team">TENN</span></span><span class="stat-value">1,021</span></div>
+                <div class="stat-item"><span class="stat-name">R. Hamby <span class="stat-team">NAVY</span></span><span class="stat-value">1,017</span></div>
+                <div class="stat-item"><span class="stat-name">S. McGowan <span class="stat-team">ND</span></span><span class="stat-value">1,015</span></div>
+                <div class="stat-item"><span class="stat-name">C. Hansen <span class="stat-team">WIS</span></span><span class="stat-value">1,013</span></div>
             </div>
             <div class="stat-category" id="receiving">
                 <div class="stat-category-title">Top 10 Receiving Yards</div>
-                <div class="stat-item"><span class="stat-name">A. Boardingham <span class="stat-team">BGSU</span></span><span class="stat-value">1,503</span></div>
-                <div class="stat-item"><span class="stat-name">L. Humphreys <span class="stat-team">???</span></span><span class="stat-value">938</span></div>
-                <div class="stat-item"><span class="stat-name">T. Williams <span class="stat-team">???</span></span><span class="stat-value">814</span></div>
-                <div class="stat-item"><span class="stat-name">K. Saunders <span class="stat-team">???</span></span><span class="stat-value">775</span></div>
-                <div class="stat-item"><span class="stat-name">P. Livingstone <span class="stat-team">???</span></span><span class="stat-value">755</span></div>
-                <div class="stat-item"><span class="stat-name">J. Williams <span class="stat-team">???</span></span><span class="stat-value">752</span></div>
-                <div class="stat-item"><span class="stat-name">L. Johnson Jr. <span class="stat-team">???</span></span><span class="stat-value">751</span></div>
-                <div class="stat-item"><span class="stat-name">P. Thompson <span class="stat-team">???</span></span><span class="stat-value">748</span></div>
-                <div class="stat-item"><span class="stat-name">C. Milliner <span class="stat-team">???</span></span><span class="stat-value">722</span></div>
-                <div class="stat-item"><span class="stat-name">C. Whittemore <span class="stat-team">???</span></span><span class="stat-value">676</span></div>
+                <div class="stat-item"><span class="stat-name">A. Boardingham <span class="stat-team">BGSU</span></span><span class="stat-value">1,819</span></div>
+                <div class="stat-item"><span class="stat-name">Z. Branch <span class="stat-team">USC</span></span><span class="stat-value">1,269</span></div>
+                <div class="stat-item"><span class="stat-name">J. Smith <span class="stat-team">OSU</span></span><span class="stat-value">1,084</span></div>
+                <div class="stat-item"><span class="stat-name">D. Miller <span class="stat-team">PSU</span></span><span class="stat-value">1,082</span></div>
+                <div class="stat-item"><span class="stat-name">K. Antwi <span class="stat-team">CSU</span></span><span class="stat-value">1,021</span></div>
+                <div class="stat-item"><span class="stat-name">M. Lemon <span class="stat-team">ALA</span></span><span class="stat-value">1,007</span></div>
+                <div class="stat-item"><span class="stat-name">I. Strong <span class="stat-team">ALA</span></span><span class="stat-value">958</span></div>
+                <div class="stat-item"><span class="stat-name">W. Harris <span class="stat-team">CLEM</span></span><span class="stat-value">953</span></div>
+                <div class="stat-item"><span class="stat-name">A. Evans III <span class="stat-team">VT</span></span><span class="stat-value">951</span></div>
+                <div class="stat-item"><span class="stat-name">T. Harris <span class="stat-team">MISS</span></span><span class="stat-value">948</span></div>
             </div>
-        </aside>
-        <section class="center-content">
-            <article class="featured-article">
-                <a href="./articles/kirk-durag-diddy-transformation.html">
-                    <img src="./images/kirk-durag.jpg" alt="Coach Kirk in durag" class="featured-image">
+                <a href="./articles/kirk-7-touchdowns-rant.html">
                     <div class="featured-content">
-                        <span class="featured-tag">Breaking News</span>
-                        <h2 class="featured-title">"I'm Tryna Be More Like That N****" - Charlie Kirk's Shocking Diddy Transformation</h2>
-                        <p class="featured-excerpt">Kirk shows up in durag, praises Diddy, starts massaging players. Wyoming goes from 0-3 to 3-3 with upset win over FSU 14-11.</p>
-                        <p class="featured-meta">February 3, 2026</p>
+                        <span class="featured-tag">BREAKING NEWS</span>
+                        <h2 class="featured-title">"Nobody Needs 7 Touchdowns" - Kirk Goes on 43-Minute Rant About Socialism After Wyoming Blowout Loss</h2>
+                        <p class="featured-excerpt">Coach blames DEI refs, George Soros, and "cultural Marxism" for 52-17 defeat. Proposes "Freedom Bowl" without refs.</p>
+                        <p class="featured-meta">February 3, 2026 • TEST ARTICLE</p>
                     </div>
                 </a>
             </article>
@@ -172,19 +168,19 @@
             </div>
         </section>
         <aside class="right-sidebar">
-            <h2 class="sidebar-title">Week 7 Scores</h2>
-            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Georgia State</span><span>28</span></div><div class="score-team loser"><span>South Alabama</span><span>23</span></div></div></div>
-            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Liberty</span><span>17</span></div><div class="score-team loser"><span>Sam Houston</span><span>10</span></div></div></div>
-            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Arizona State</span><span>24</span></div><div class="score-team loser"><span>Baylor</span><span>21</span></div></div></div>
-            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>TCU</span><span>53</span></div><div class="score-team loser"><span>Arizona</span><span>10</span></div></div></div>
-            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>NDSU</span><span>36</span></div><div class="score-team loser"><span>SJSU</span><span>16</span></div></div></div>
-            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Ball State</span><span>27</span></div><div class="score-team loser"><span>Ohio</span><span>24</span></div></div></div>
-            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Stanford</span><span>45</span></div><div class="score-team loser"><span>Georgia Tech</span><span>14</span></div></div></div>
-            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Texas A&M</span><span>41</span></div><div class="score-team loser"><span>Oklahoma</span><span>35</span></div></div></div>
-            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Coastal Carolina</span><span>31</span></div><div class="score-team loser"><span>Louisiana</span><span>19</span></div></div></div>
-            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Miami</span><span>29</span></div><div class="score-team loser"><span>Syracuse</span><span>28</span></div></div></div>
-            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>UCF</span><span>28</span></div><div class="score-team loser"><span>Army</span><span>13</span></div></div></div>
-            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>UAB</span><span>40</span></div><div class="score-team loser"><span>Buffalo</span><span>28</span></div></div></div>
+            <h2 class="sidebar-title">Week 11 Scores</h2>
+            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Ohio</span><span>35</span></div><div class="score-team loser"><span>Miami (OH)</span><span>9</span></div></div></div>
+            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Akron</span><span>20</span></div><div class="score-team loser"><span>Tigers</span><span>17</span></div></div></div>
+            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Ball State</span><span>31</span></div><div class="score-team loser"><span>Kent State</span><span>24</span></div></div></div>
+            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Toledo</span><span>34</span></div><div class="score-team loser"><span>N. Illinois</span><span>9</span></div></div></div>
+            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Ga. Southern</span><span>31</span></div><div class="score-team loser"><span>App State</span><span>17</span></div></div></div>
+            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>#24 Houston</span><span>33</span></div><div class="score-team loser"><span>UCF</span><span>14</span></div></div></div>
+            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>#4 USC</span><span>31</span></div><div class="score-team loser"><span>Northwestern</span><span>26</span></div></div></div>
+            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Wake Forest</span><span>37</span></div><div class="score-team loser"><span>Virginia</span><span>20</span></div></div></div>
+            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>#21 Clemson</span><span>26</span></div><div class="score-team loser"><span>Florida State</span><span>13</span></div></div></div>
+            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>#2 Miami</span><span>34</span></div><div class="score-team loser"><span>Syracuse</span><span>18</span></div></div></div>
+            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Oregon</span><span>52</span></div><div class="score-team loser"><span>Iowa</span><span>14</span></div></div></div>
+            <div class="score-item"><div class="score-teams"><div class="score-team winner"><span>Wyoming</span><span>56</span></div><div class="score-team loser"><span>New Mexico</span><span>6</span></div></div></div>
         </aside>
     </main>
     <footer class="footer"><p>© 2026 CFB Updates. Dynasty League Coverage.</p></footer>
