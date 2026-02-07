@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Updates - College Football Dynasty Coverage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #c8a415; --accent: #E31937; --bg-dark: #0a0a0a; --bg-card: #1a1a1a; --text-primary: #ffffff; --text-secondary: #e0e0e0; --text-muted: #888888; --border: #2a2a2a; }
+        body { font-family: 'Roboto', sans-serif; background-color: var(--bg-dark); color: var(--text-secondary); line-height: 1.6; }
+        
+        /* ===== HEADER ===== */
+        .main-header { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 20px; text-align: center; border-bottom: 3px solid var(--primary); box-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+        .main-header h1 { font-family: 'Oswald', sans-serif; font-size: 2.8rem; font-weight: 800; letter-spacing: 4px; color: var(--text-primary); text-transform: uppercase; }
+        .main-header h1 span { color: var(--accent); }
+        .tagline { color: var(--text-muted); font-size: 0.9rem; margin-top: 8px; font-weight: 500; }
+        
+        /* ===== NAVIGATION ===== */
+        .nav-container { background-color: #0f0f0f; border-bottom: 1px solid var(--border); }
+        .nav-bar { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--text-primary); }
+        .hamburger { display: none; background: none; border: none; color: var(--primary); font-size: 1.8rem; cursor: pointer; }
+        
+        /* ===== MOBILE NAV ===== */
+        .mobile-menu { display: none; position: fixed; top: 60px; left: 0; width: 100%; background: var(--bg-card); flex-direction: column; gap: 0; border-bottom: 1px solid var(--border); z-index: 100; }
+        .mobile-menu a { color: var(--primary); text-decoration: none; font-weight: 600; padding: 15px 20px; border-bottom: 1px solid var(--border); }
+        .mobile-menu a:hover { background: rgba(200, 164, 21, 0.1); }
+        
+        /* ===== STAT CAROUSEL (Mobile Sticky) ===== */
+        .stat-carousel-wrapper { background: var(--bg-card); border-bottom: 2px solid var(--primary); padding: 12px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; position: relative; }
+        .stat-carousel { display: flex; gap: 15px; padding: 0 20px; min-width: 100%; }
+        .stat-item-card { flex-shrink: 0; min-width: 140px; background: rgba(200, 164, 21, 0.05); border-left: 3px solid var(--primary); padding: 12px; border-radius: 4px; }
+        .stat-item-card .label { color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; font-weight: 600; }
+        .stat-item-card .value { color: var(--primary); font-size: 1.2rem; font-weight: 700; margin-top: 4px; }
+        .stat-item-card .name { color: var(--text-secondary); font-size: 0.85rem; margin-top: 4px; }
+        
+        /* ===== MAIN CONTAINER ===== */
+        .main-container { max-width: 1400px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 280px; gap: 25px; }
+        
+        /* ===== CENTER CONTENT ===== */
+        .center-content { display: flex; flex-direction: column; gap: 25px; }
+        
+        /* ===== FEATURED ARTICLE ===== */
+        .featured-section { background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%); border-radius: 8px; overflow: hidden; border: 2px solid var(--border); transition: all 0.3s; }
+        .featured-section:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(227, 25, 55, 0.15); }
+        .featured-image { width: 100%; height: 400px; object-fit: contain; background: #0a0a0a; display: block; }
+        .featured-content { padding: 25px; }
+        .featured-tag { display: inline-block; background: var(--accent); color: white; padding: 6px 14px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; border-radius: 3px; }
+        .featured-title { font-family: 'Oswald', sans-serif; font-size: 2rem; color: var(--text-primary); margin-bottom: 15px; line-height: 1.2; font-weight: 700; }
+        .featured-excerpt { color: var(--text-muted); font-size: 1rem; line-height: 1.6; margin-bottom: 15px; }
+        .featured-meta { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
+        .featured-section a { text-decoration: none; color: inherit; }
+        
+        /* ===== CAROUSEL SECTION ===== */
+        .carousel-section { background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%); border-radius: 8px; padding: 20px; border: 2px solid var(--border); }
+        .carousel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+        .carousel-title { font-family: 'Oswald', sans-serif; color: var(--primary); font-size: 1.3rem; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; }
+        .carousel-nav { display: flex; gap: 10px; }
+        .carousel-btn { background: var(--border); border: none; color: var(--text-primary); width: 38px; height: 38px; border-radius: 4px; cursor: pointer; font-size: 1.1rem; transition: all 0.3s; font-weight: 600; }
+        .carousel-btn:hover { background: var(--primary); color: #000; }
+        .carousel-container { overflow: hidden; }
+        .carousel-track { display: flex; gap: 15px; transition: transform 0.5s ease; }
+        .article-card { flex-shrink: 0; min-width: 200px; background: var(--bg-card); border-radius: 6px; overflow: hidden; border: 1px solid var(--border); transition: all 0.3s; }
+        .article-card:hover { transform: scale(1.04); box-shadow: 0 8px 25px rgba(227, 25, 55, 0.2); }
+        .article-card a { text-decoration: none; color: inherit; display: block; }
+        .article-card-image { width: 100%; height: 120px; object-fit: contain; background: #0a0a0a; }
+        .article-card-content { padding: 12px; }
+        .article-card-title { font-family: 'Oswald', sans-serif; font-size: 0.95rem; color: var(--text-primary); margin-bottom: 6px; line-height: 1.3; font-weight: 700; }
+        .article-card-meta { color: var(--text-muted); font-size: 0.8rem; font-weight: 500; }
+        
+        /* ===== RIGHT SIDEBAR ===== */
+        .right-sidebar { background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%); border-radius: 8px; padding: 20px; border: 2px solid var(--border); height: fit-content; }
+        .sidebar-title { font-family: 'Oswald', sans-serif; color: var(--primary); font-size: 1.1rem; text-transform: uppercase; margin-bottom: 15px; padding-bottom: 12px; border-bottom: 2px solid var(--primary); font-weight: 700; }
+        .score-item { padding: 12px 0; border-bottom: 1px solid var(--border); }
+        .score-item:last-child { border-bottom: none; }
+        .score-teams { display: flex; flex-direction: column; gap: 6px; }
+        .score-team { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+        .score-team.winner { color: var(--primary); font-weight: 700; }
+        .score-team.loser { color: var(--text-muted); }
+        .vs-text { color: var(--text-muted); font-size: 0.75rem; text-align: center; margin: 4px 0; }
+        
+        /* ===== FOOTER ===== */
+        .footer { background-color: #0f0f0f; padding: 30px 20px; text-align: center; margin-top: 50px; border-top: 2px solid var(--primary); }
+        .footer p { color: var(--text-muted); font-size: 0.85rem; }
+        .footer a { color: var(--primary); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1100px) {
+            .main-container { grid-template-columns: 1fr; }
+            .right-sidebar { order: -1; }
+        }
+        
+        @media (max-width: 768px) {
+            /* Header adjustments */
+            .main-header h1 { font-size: 2rem; letter-spacing: 2px; }
+            .main-header { padding: 15px; }
+            
+            /* Nav adjustments */
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .mobile-menu.active { display: flex; }
+            
+            /* Featured adjustments */
+            .featured-image { height: 280px; }
+            .featured-title { font-size: 1.5rem; }
+            .featured-content { padding: 18px; }
+            
+            /* Carousel adjustments */
+            .article-card { min-width: 180px; }
+            
+            /* Main container */
+            .main-container { padding: 12px; gap: 15px; }
+            
+            /* Stat carousel - make more visible */
+            .stat-carousel-wrapper { padding: 10px 0; }
+            .stat-item-card { min-width: 130px; padding: 10px; }
+        }
+        
+        @media (max-width: 480px) {
+            /* Header */
+            .main-header h1 { font-size: 1.6rem; letter-spacing: 1px; }
+            .tagline { font-size: 0.8rem; }
+            
+            /* Featured */
+            .featured-image { height: 220px; }
+            .featured-title { font-size: 1.3rem; }
+            .featured-content { padding: 15px; }
+            .featured-excerpt { font-size: 0.9rem; }
+            
+            /* Carousel */
+            .carousel-title { font-size: 1.1rem; }
+            .article-card { min-width: 160px; }
+            .article-card-image { height: 100px; }
+            .article-card-title { font-size: 0.85rem; }
+            
+            /* Sidebar */
+            .right-sidebar { padding: 15px; }
+            .sidebar-title { font-size: 1rem; }
+            .score-team { font-size: 0.85rem; }
+            
+            /* Stat carousel */
+            .stat-item-card { min-width: 120px; }
+            .stat-carousel { padding: 0 15px; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <h1>CFB <span>Updates</span></h1>
+        <p class="tagline">College Football Dynasty Coverage</p>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-bar">
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./historical.html">Historical Stats</a>
+                <a href="./season-2025.html">2025-26 Season</a>
+                <a href="./archive/index.html">All Articles</a>
+            </div>
+            <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="./index.html">Home</a>
+            <a href="./historical.html">Historical Stats</a>
+            <a href="./season-2025.html">2025-26 Season</a>
+            <a href="./archive/index.html">All Articles</a>
+        </div>
+    </nav>
+    
+    <!-- Stat Carousel (Always Visible on Mobile) -->
+    <div class="stat-carousel-wrapper">
+        <div class="stat-carousel" id="statCarousel">
+            <div class="stat-item-card">
+                <div class="label">Pass Yards</div>
+                <div class="value">2,771</div>
+                <div class="name">G. Parkhurst</div>
+            </div>
+            <div class="stat-item-card">
+                <div class="label">Pass TDs</div>
+                <div class="value">36</div>
+                <div class="name">J. Kush (BGSU)</div>
+            </div>
+            <div class="stat-item-card">
+                <div class="label">Rush Yards</div>
+                <div class="value">1,891</div>
+                <div class="name">T. St. Clair</div>
+            </div>
+            <div class="stat-item-card">
+                <div class="label">Rec Yards</div>
+                <div class="value">2,047</div>
+                <div class="name">A. Boardingham</div>
+            </div>
+            <div class="stat-item-card">
+                <div class="label">Rec TDs</div>
+                <div class="value">32</div>
+                <div class="name">A. Boardingham</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="main-container">
+        <section class="center-content">
+            <!-- Featured Article -->
+            <article class="featured-section">
+                <a href="./articles/diddy-hospitalized-rare-std.html">
+                    <img src="./images/diddy-hospital.jpg" alt="Featured" class="featured-image">
+                    <div class="featured-content">
+                        <span class="featured-tag">Breaking News</span>
+                        <h2 class="featured-title">Coach Diddy Hospitalized With Rare STD Ahead of Big 12 Championship</h2>
+                        <p class="featured-excerpt">Bowling Green head coach Sean Combs admitted to hospital with ultra-rare infection contracted at "Diddy party," ruled out for championship vs. TCU...</p>
+                        <p class="featured-meta">February 7, 2026</p>
+                    </div>
+                </a>
+            </article>
+            
+            <!-- Latest Stories Carousel -->
+            <section class="carousel-section">
+                <div class="carousel-header">
+                    <h3 class="carousel-title">Latest Stories</h3>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn" onclick="slideLeft()">‹</button>
+                        <button class="carousel-btn" onclick="slideRight()">›</button>
+                    </div>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="article-card"><a href="./articles/tony-keke-fraud-indictment.html"><img src="./images/tony-keke-ccu.jpg" class="article-card-image" alt="Tony Keke"><div class="article-card-content"><h3 class="article-card-title">Tony Keke Indicted On 38 Fraud Counts</h3><p class="article-card-meta">Feb 7, 2026</p></div></a></div>
+                        <div class="article-card"><a href="./articles/diddy-arlis-heisman-nfl-rant.html"><img src="./images/arlis-heisman-trophy.jpg" class="article-card-image" alt="Arlis"><div class="article-card-content"><h3 class="article-card-title">Diddy: "NFL Is A Plantation"</h3><p class="article-card-meta">Feb 7, 2026</p></div></a></div>
+                        <div class="article-card"><a href="./articles/kirk-israel-obsession-week9.html"><img src="./images/kirk-israel.jpg" class="article-card-image" alt="Kirk"><div class="article-card-content"><h3 class="article-card-title">Kirk: "Biggest Supporter Of Israel"</h3><p class="article-card-meta">Feb 6, 2026</p></div></a></div>
+                        <div class="article-card"><a href="./articles/kirk-7-touchdowns-rant.html"><img src="./images/kirk.jpg" class="article-card-image" alt="Kirk"><div class="article-card-content"><h3 class="article-card-title">Kirk 7-TD Rant: "DEI Refs Cost Us"</h3><p class="article-card-meta">Feb 5, 2026</p></div></a></div>
+                        <div class="article-card"><a href="./articles/thad-oklahoma-destruction.html"><img src="./images/thad.jpg" class="article-card-image" alt="Thad"><div class="article-card-content"><h3 class="article-card-title">Thad Destroys Oklahoma 49-21</h3><p class="article-card-meta">Feb 4, 2026</p></div></a></div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+        <!-- Right Sidebar: Quick Scores -->
+        <aside class="right-sidebar">
+            <h3 class="sidebar-title">Quick Scores</h3>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team winner">Bowling Green 49</div>
+                    <div class="vs-text">vs</div>
+                    <div class="score-team loser">Oklahoma 21</div>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team winner">Colorado State 42</div>
+                    <div class="vs-text">vs</div>
+                    <div class="score-team loser">Wyoming 14</div>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team loser">Bowling Green 28</div>
+                    <div class="vs-text">vs</div>
+                    <div class="score-team winner">TCU 31</div>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team loser">Wyoming 17</div>
+                    <div class="vs-text">vs</div>
+                    <div class="score-team winner">Colorado State 38</div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CFB Updates. College Football Dynasty Coverage. <a href="#">Privacy Policy</a></p>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+        
+        // Carousel navigation
+        let currentScroll = 0;
+        function slideLeft() {
+            const track = document.getElementById('carouselTrack');
+            currentScroll = Math.max(0, currentScroll - 220);
+            track.style.transform = `translateX(-${currentScroll}px)`;
+        }
+        function slideRight() {
+            const track = document.getElementById('carouselTrack');
+            const maxScroll = track.scrollWidth - track.parentElement.clientWidth;
+            currentScroll = Math.min(maxScroll, currentScroll + 220);
+            track.style.transform = `translateX(-${currentScroll}px)`;
+        }
+    </script>
+</body>
+</html>
