@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Updates - College Football Dynasty Coverage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #c8a415; --accent: #E31937; --bg-dark: #0a0a0a; --bg-card: #1a1a1a; --text-primary: #ffffff; --text-secondary: #e0e0e0; --text-muted: #888888; --border: #2a2a2a; }
+        body { font-family: 'Roboto', sans-serif; background-color: var(--bg-dark); color: var(--text-secondary); line-height: 1.6; }
+        
+        /* ===== HEADER ===== */
+        .main-header { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 22px 20px; text-align: center; border-bottom: 3px solid var(--primary); box-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+        .main-header h1 { font-family: 'Oswald', sans-serif; font-size: 3rem; font-weight: 800; letter-spacing: 4px; color: var(--text-primary); text-transform: uppercase; margin-bottom: 6px; }
+        .main-header h1 span { color: var(--accent); }
+        .tagline { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; }
+        
+        /* ===== NAVIGATION ===== */
+        .nav-container { background-color: #0f0f0f; border-bottom: 2px solid var(--primary); }
+        .nav-bar { max-width: 1600px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; }
+        .nav-links { display: flex; gap: 35px; }
+        .nav-links a { color: var(--primary); text-decoration: none; font-weight: 600; font-size: 1rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--text-primary); }
+        .hamburger { display: none; background: none; border: none; color: var(--primary); font-size: 1.8rem; cursor: pointer; }
+        
+        /* ===== MOBILE NAV ===== */
+        .mobile-menu { display: none; position: fixed; top: 100px; left: 0; width: 100%; background: var(--bg-card); flex-direction: column; gap: 0; border-bottom: 2px solid var(--primary); z-index: 100; }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a { color: var(--primary); text-decoration: none; font-weight: 600; padding: 16px 20px; border-bottom: 1px solid var(--border); }
+        .mobile-menu a:hover { background: rgba(200, 164, 21, 0.1); }
+        
+        /* ===== MAIN CONTAINER ===== */
+        .main-container { max-width: 1600px; margin: 0 auto; padding: 25px 20px; display: grid; grid-template-columns: 280px 1fr 280px; gap: 25px; }
+        
+        /* ===== LEFT SIDEBAR - STATS ===== */
+        .left-sidebar { background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%); border-radius: 8px; padding: 18px; border: 2px solid var(--border); height: fit-content; position: sticky; top: 20px; }
+        .sidebar-title { font-family: 'Oswald', sans-serif; color: var(--primary); font-size: 1.2rem; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--primary); font-weight: 700; letter-spacing: 1px; }
+        .stat-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+        .stat-tab { background: var(--border); border: none; color: var(--text-muted); padding: 7px 11px; font-size: 0.75rem; border-radius: 4px; cursor: pointer; font-family: 'Roboto', sans-serif; transition: all 0.3s; font-weight: 600; }
+        .stat-tab:hover { background: rgba(200, 164, 21, 0.2); color: var(--primary); }
+        .stat-tab.active { background: var(--primary); color: #000; font-weight: 700; }
+        .stat-category { display: none; max-height: 400px; overflow-y: auto; padding-right: 6px; }
+        .stat-category.active { display: block; }
+        .stat-category::-webkit-scrollbar { width: 5px; }
+        .stat-category::-webkit-scrollbar-track { background: var(--border); }
+        .stat-category::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+        .stat-category-title { font-size: 0.8rem; color: var(--primary); text-transform: uppercase; margin-bottom: 10px; font-weight: 700; }
+        .stat-item { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; gap: 8px; }
+        .stat-item:last-child { border-bottom: none; }
+        .stat-name { color: var(--text-secondary); flex-grow: 1; }
+        .stat-team { color: var(--text-muted); font-size: 0.7rem; background: var(--border); padding: 2px 6px; border-radius: 2px; white-space: nowrap; }
+        .stat-value { color: var(--primary); font-weight: 700; white-space: nowrap; }
+        
+        /* ===== CENTER CONTENT ===== */
+        .center-content { display: flex; flex-direction: column; gap: 25px; }
+        
+        /* ===== FEATURED ARTICLE ===== */
+        .featured-section { background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%); border-radius: 8px; overflow: hidden; border: 2px solid var(--border); transition: all 0.3s; }
+        .featured-section:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(227, 25, 55, 0.15); }
+        .featured-image { width: 100%; height: 380px; object-fit: contain; background: #0a0a0a; display: block; }
+        .featured-content { padding: 28px; }
+        .featured-tag { display: inline-block; background: var(--accent); color: white; padding: 7px 16px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 14px; border-radius: 3px; }
+        .featured-title { font-family: 'Oswald', sans-serif; font-size: 2.1rem; color: var(--text-primary); margin-bottom: 16px; line-height: 1.2; font-weight: 700; }
+        .featured-excerpt { color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 16px; }
+        .featured-meta { color: var(--text-muted); font-size: 0.9rem; font-weight: 600; }
+        .featured-section a { text-decoration: none; color: inherit; }
+        
+        /* ===== CAROUSEL SECTION ===== */
+        .carousel-section { background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%); border-radius: 8px; padding: 22px; border: 2px solid var(--border); }
+        .carousel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .carousel-title { font-family: 'Oswald', sans-serif; color: var(--primary); font-size: 1.4rem; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; }
+        .carousel-nav { display: flex; gap: 10px; }
+        .carousel-btn { background: var(--border); border: none; color: var(--text-primary); width: 40px; height: 40px; border-radius: 4px; cursor: pointer; font-size: 1.2rem; transition: all 0.3s; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+        .carousel-btn:hover { background: var(--primary); color: #000; }
+        .carousel-container { overflow: hidden; }
+        .carousel-track { display: flex; gap: 16px; transition: transform 0.5s ease; }
+        .article-card { flex-shrink: 0; min-width: 210px; background: var(--bg-card); border-radius: 6px; overflow: hidden; border: 1px solid var(--border); transition: all 0.3s; }
+        .article-card:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(227, 25, 55, 0.2); }
+        .article-card a { text-decoration: none; color: inherit; display: block; }
+        .article-card-image { width: 100%; height: 130px; object-fit: contain; background: #0a0a0a; }
+        .article-card-content { padding: 13px; }
+        .article-card-title { font-family: 'Oswald', sans-serif; font-size: 0.95rem; color: var(--text-primary); margin-bottom: 6px; line-height: 1.3; font-weight: 700; }
+        .article-card-meta { color: var(--text-muted); font-size: 0.8rem; font-weight: 600; }
+        
+        /* ===== RIGHT SIDEBAR - SCORES ===== */
+        .right-sidebar { background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%); border-radius: 8px; padding: 18px; border: 2px solid var(--border); height: fit-content; position: sticky; top: 20px; }
+        .score-item { padding: 12px 0; border-bottom: 1px solid var(--border); }
+        .score-item:last-child { border-bottom: none; }
+        .score-teams { display: flex; flex-direction: column; gap: 5px; }
+        .score-team { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; font-weight: 600; }
+        .score-team.winner { color: var(--primary); }
+        .score-team.loser { color: var(--text-muted); font-weight: 500; }
+        .vs-text { color: var(--text-muted); font-size: 0.75rem; text-align: center; margin: 3px 0; }
+        
+        /* ===== FOOTER ===== */
+        .footer { background-color: #0f0f0f; padding: 30px 20px; text-align: center; margin-top: 50px; border-top: 2px solid var(--primary); }
+        .footer p { color: var(--text-muted); font-size: 0.85rem; }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            .main-container { grid-template-columns: 240px 1fr 240px; gap: 20px; padding: 18px; }
+            .left-sidebar, .right-sidebar { position: static; }
+        }
+        
+        @media (max-width: 1000px) {
+            .main-container { grid-template-columns: 1fr 220px; gap: 18px; }
+            .left-sidebar { display: none; }
+            .featured-image { height: 320px; }
+            .featured-title { font-size: 1.8rem; }
+            .carousel-title { font-size: 1.2rem; }
+            .article-card { min-width: 190px; }
+        }
+        
+        @media (max-width: 768px) {
+            /* Header */
+            .main-header h1 { font-size: 2.2rem; letter-spacing: 2px; }
+            .main-header { padding: 16px; }
+            .tagline { font-size: 0.9rem; }
+            
+            /* Nav */
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .nav-bar { padding: 12px 20px; }
+            
+            /* Main container */
+            .main-container { grid-template-columns: 1fr; gap: 15px; padding: 12px; }
+            .left-sidebar { display: none; }
+            .right-sidebar { order: -1; }
+            
+            /* Featured */
+            .featured-image { height: 280px; }
+            .featured-title { font-size: 1.5rem; }
+            .featured-content { padding: 20px; }
+            .featured-excerpt { font-size: 0.95rem; }
+            
+            /* Carousel */
+            .carousel-section { padding: 16px; }
+            .carousel-title { font-size: 1.1rem; }
+            .article-card { min-width: 180px; }
+            .article-card-image { height: 115px; }
+            
+            /* Right sidebar */
+            .right-sidebar { padding: 15px; }
+            .sidebar-title { font-size: 1.1rem; }
+            .score-team { font-size: 0.85rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .main-header h1 { font-size: 1.8rem; letter-spacing: 1px; }
+            .main-header { padding: 12px; }
+            
+            .featured-image { height: 220px; }
+            .featured-title { font-size: 1.3rem; }
+            .featured-content { padding: 15px; }
+            
+            .carousel-section { padding: 12px; }
+            .carousel-title { font-size: 1rem; }
+            .article-card { min-width: 160px; }
+            .article-card-image { height: 100px; }
+            .article-card-title { font-size: 0.85rem; }
+            
+            .right-sidebar { padding: 12px; }
+            .sidebar-title { font-size: 1rem; }
+            .score-team { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <h1>CFB <span>Updates</span></h1>
+        <p class="tagline">College Football Dynasty Coverage</p>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-bar">
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./historical.html">Historical Stats</a>
+                <a href="./season-2025.html">2025-26 Season</a>
+                <a href="./archive/index.html">All Articles</a>
+            </div>
+            <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="./index.html">Home</a>
+            <a href="./historical.html">Historical Stats</a>
+            <a href="./season-2025.html">2025-26 Season</a>
+            <a href="./archive/index.html">All Articles</a>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- LEFT SIDEBAR: SEASON STATS LEADERS -->
+        <aside class="left-sidebar">
+            <h2 class="sidebar-title">Season Leaders</h2>
+            <div class="stat-tabs">
+                <button class="stat-tab active" onclick="showStats('passing-yds')">Pass YDS</button>
+                <button class="stat-tab" onclick="showStats('passing-tds')">Pass TD</button>
+                <button class="stat-tab" onclick="showStats('rushing')">Rush YDS</button>
+                <button class="stat-tab" onclick="showStats('receiving')">Rec YDS</button>
+            </div>
+            
+            <!-- Passing Yards -->
+            <div class="stat-category active" id="passing-yds">
+                <div class="stat-category-title">Top 10 Passing Yards</div>
+                <div class="stat-item"><span class="stat-name">G. Parkhurst</span><span class="stat-team">???</span><span class="stat-value">2,771</span></div>
+                <div class="stat-item"><span class="stat-name">C. Boley</span><span class="stat-team">???</span><span class="stat-value">2,727</span></div>
+                <div class="stat-item"><span class="stat-name">J. Kush</span><span class="stat-team">BGSU</span><span class="stat-value">2,540</span></div>
+                <div class="stat-item"><span class="stat-name">G. Stockton</span><span class="stat-team">UGA</span><span class="stat-value">2,476</span></div>
+                <div class="stat-item"><span class="stat-name">C. Carr</span><span class="stat-team">ND</span><span class="stat-value">2,454</span></div>
+                <div class="stat-item"><span class="stat-name">D. Mestemaker</span><span class="stat-team">???</span><span class="stat-value">2,383</span></div>
+                <div class="stat-item"><span class="stat-name">A. Simmons</span><span class="stat-team">???</span><span class="stat-value">2,284</span></div>
+                <div class="stat-item"><span class="stat-name">T.St. Clair</span><span class="stat-team">???</span><span class="stat-value">2,264</span></div>
+                <div class="stat-item"><span class="stat-name">J. Hoover</span><span class="stat-team">???</span><span class="stat-value">2,222</span></div>
+                <div class="stat-item"><span class="stat-name">W. Howard</span><span class="stat-team">???</span><span class="stat-value">2,212</span></div>
+            </div>
+            
+            <!-- Passing TDs -->
+            <div class="stat-category" id="passing-tds">
+                <div class="stat-category-title">Top 10 Passing TDs</div>
+                <div class="stat-item"><span class="stat-name">J. Kush</span><span class="stat-team">BGSU</span><span class="stat-value">36</span></div>
+                <div class="stat-item"><span class="stat-name">A. Manning</span><span class="stat-team">???</span><span class="stat-value">30</span></div>
+                <div class="stat-item"><span class="stat-name">G. Stockton</span><span class="stat-team">UGA</span><span class="stat-value">26</span></div>
+                <div class="stat-item"><span class="stat-name">C. Boley</span><span class="stat-team">???</span><span class="stat-value">25</span></div>
+                <div class="stat-item"><span class="stat-name">T.St. Clair</span><span class="stat-team">???</span><span class="stat-value">25</span></div>
+                <div class="stat-item"><span class="stat-name">G. Parkhurst</span><span class="stat-team">???</span><span class="stat-value">19</span></div>
+                <div class="stat-item"><span class="stat-name">J. Hoover</span><span class="stat-team">???</span><span class="stat-value">18</span></div>
+                <div class="stat-item"><span class="stat-name">C. Carr</span><span class="stat-team">ND</span><span class="stat-value">17</span></div>
+                <div class="stat-item"><span class="stat-name">W. Howard</span><span class="stat-team">???</span><span class="stat-value">16</span></div>
+                <div class="stat-item"><span class="stat-name">D. Mestemaker</span><span class="stat-team">???</span><span class="stat-value">15</span></div>
+            </div>
+            
+            <!-- Rushing Yards -->
+            <div class="stat-category" id="rushing">
+                <div class="stat-category-title">Top 10 Rushing Yards</div>
+                <div class="stat-item"><span class="stat-name">A. Hardy</span><span class="stat-team">TENN</span><span class="stat-value">900</span></div>
+                <div class="stat-item"><span class="stat-name">D. Dowdell</span><span class="stat-team">NEB</span><span class="stat-value">823</span></div>
+                <div class="stat-item"><span class="stat-name">D. Beauchamp</span><span class="stat-team">MSST</span><span class="stat-value">802</span></div>
+                <div class="stat-item"><span class="stat-name">D. Riley</span><span class="stat-team">USC</span><span class="stat-value">791</span></div>
+                <div class="stat-item"><span class="stat-name">J. Baugh</span><span class="stat-team">AUB</span><span class="stat-value">761</span></div>
+                <div class="stat-item"><span class="stat-name">J. Marshall</span><span class="stat-team">ALA</span><span class="stat-value">758</span></div>
+                <div class="stat-item"><span class="stat-name">C. Hansen</span><span class="stat-team">WIS</span><span class="stat-value">752</span></div>
+                <div class="stat-item"><span class="stat-name">L. Brown</span><span class="stat-team">LOU</span><span class="stat-value">749</span></div>
+                <div class="stat-item"><span class="stat-name">O. Allen</span><span class="stat-team">FSU</span><span class="stat-value">732</span></div>
+                <div class="stat-item"><span class="stat-name">O. Joyner</span><span class="stat-team">UGA</span><span class="stat-value">731</span></div>
+            </div>
+            
+            <!-- Receiving Yards -->
+            <div class="stat-category" id="receiving">
+                <div class="stat-category-title">Top 10 Receiving Yards</div>
+                <div class="stat-item"><span class="stat-name">A. Boardingham</span><span class="stat-team">BGSU</span><span class="stat-value">2,047</span></div>
+                <div class="stat-item"><span class="stat-name">L. Humphreys</span><span class="stat-team">???</span><span class="stat-value">938</span></div>
+                <div class="stat-item"><span class="stat-name">T. Williams</span><span class="stat-team">???</span><span class="stat-value">814</span></div>
+                <div class="stat-item"><span class="stat-name">K. Saunders</span><span class="stat-team">???</span><span class="stat-value">775</span></div>
+                <div class="stat-item"><span class="stat-name">P. Livingstone</span><span class="stat-team">???</span><span class="stat-value">755</span></div>
+                <div class="stat-item"><span class="stat-name">J. Williams</span><span class="stat-team">???</span><span class="stat-value">752</span></div>
+                <div class="stat-item"><span class="stat-name">L. Johnson Jr.</span><span class="stat-team">???</span><span class="stat-value">751</span></div>
+                <div class="stat-item"><span class="stat-name">P. Thompson</span><span class="stat-team">???</span><span class="stat-value">748</span></div>
+                <div class="stat-item"><span class="stat-name">C. Milliner</span><span class="stat-team">???</span><span class="stat-value">722</span></div>
+                <div class="stat-item"><span class="stat-name">C. Whittemore</span><span class="stat-team">???</span><span class="stat-value">676</span></div>
+            </div>
+        </aside>
+        
+        <!-- CENTER CONTENT -->
+        <section class="center-content">
+            <!-- Featured Article -->
+            <article class="featured-section">
+                <a href="./articles/diddy-hospitalized-rare-std.html">
+                    <img src="./images/diddy-hospital.jpg" alt="Featured" class="featured-image">
+                    <div class="featured-content">
+                        <span class="featured-tag">Breaking News</span>
+                        <h2 class="featured-title">Coach Diddy Hospitalized With Rare STD Ahead of Big 12 Championship</h2>
+                        <p class="featured-excerpt">Bowling Green head coach Sean Combs admitted to hospital with ultra-rare infection contracted at "Diddy party," ruled out for championship vs. TCU...</p>
+                        <p class="featured-meta">February 7, 2026</p>
+                    </div>
+                </a>
+            </article>
+            
+            <!-- Latest Stories Carousel -->
+            <section class="carousel-section">
+                <div class="carousel-header">
+                    <h3 class="carousel-title">Latest Stories</h3>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn" onclick="slideLeft()">‹</button>
+                        <button class="carousel-btn" onclick="slideRight()">›</button>
+                    </div>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="article-card"><a href="./articles/tony-keke-fraud-indictment.html"><img src="./images/tony-keke-ccu.jpg" class="article-card-image" alt="Tony Keke"><div class="article-card-content"><h3 class="article-card-title">Tony Keke Indicted On 38 Fraud Counts</h3><p class="article-card-meta">Feb 7, 2026</p></div></a></div>
+                        <div class="article-card"><a href="./articles/diddy-arlis-heisman-nfl-rant.html"><img src="./images/arlis-heisman-trophy.jpg" class="article-card-image" alt="Arlis"><div class="article-card-content"><h3 class="article-card-title">Diddy: "NFL Is A Plantation"</h3><p class="article-card-meta">Feb 7, 2026</p></div></a></div>
+                        <div class="article-card"><a href="./articles/kirk-israel-obsession-week9.html"><img src="./images/kirk-israel.jpg" class="article-card-image" alt="Kirk"><div class="article-card-content"><h3 class="article-card-title">Kirk: "Biggest Supporter Of Israel"</h3><p class="article-card-meta">Feb 6, 2026</p></div></a></div>
+                        <div class="article-card"><a href="./articles/kirk-7-touchdowns-rant.html"><img src="./images/kirk.jpg" class="article-card-image" alt="Kirk"><div class="article-card-content"><h3 class="article-card-title">Kirk 7-TD Rant</h3><p class="article-card-meta">Feb 5, 2026</p></div></a></div>
+                        <div class="article-card"><a href="./articles/thad-oklahoma-destruction.html"><img src="./images/thad.jpg" class="article-card-image" alt="Thad"><div class="article-card-content"><h3 class="article-card-title">Thad Destroys Oklahoma 49-21</h3><p class="article-card-meta">Feb 4, 2026</p></div></a></div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+        <!-- RIGHT SIDEBAR: QUICK SCORES -->
+        <aside class="right-sidebar">
+            <h3 class="sidebar-title">Week 7 Scores</h3>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team winner">Georgia State <span>28</span></div>
+                    <div class="score-team loser">S. Alabama <span>23</span></div>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team winner">Liberty <span>17</span></div>
+                    <div class="score-team loser">Sam Houston <span>10</span></div>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team winner">Arizona St <span>24</span></div>
+                    <div class="score-team loser">Baylor <span>21</span></div>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team winner">TCU <span>53</span></div>
+                    <div class="score-team loser">Arizona <span>10</span></div>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team winner">NDSU <span>36</span></div>
+                    <div class="score-team loser">SJSU <span>16</span></div>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team winner">Ball State <span>27</span></div>
+                    <div class="score-team loser">Ohio <span>24</span></div>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team winner">Stanford <span>45</span></div>
+                    <div class="score-team loser">Georgia Tech <span>14</span></div>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team winner">Texas A&M <span>41</span></div>
+                    <div class="score-team loser">Oklahoma <span>35</span></div>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team winner">Coastal Car <span>31</span></div>
+                    <div class="score-team loser">Louisiana <span>19</span></div>
+                </div>
+            </div>
+            
+            <div class="score-item">
+                <div class="score-teams">
+                    <div class="score-team winner">Miami <span>29</span></div>
+                    <div class="score-team loser">Syracuse <span>28</span></div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 CFB Updates. Dynasty League Coverage.</p>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+        
+        // Stats tab switching
+        function showStats(category) {
+            document.querySelectorAll('.stat-category').forEach(cat => cat.classList.remove('active'));
+            document.querySelectorAll('.stat-tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(category).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        // Carousel navigation
+        let currentScroll = 0;
+        const cardWidth = 226;
+        function slideLeft() {
+            const track = document.getElementById('carouselTrack');
+            currentScroll = Math.max(0, currentScroll - cardWidth);
+            track.style.transform = `translateX(-${currentScroll}px)`;
+        }
+        function slideRight() {
+            const track = document.getElementById('carouselTrack');
+            const maxScroll = Math.max(0, track.scrollWidth - track.parentElement.clientWidth);
+            currentScroll = Math.min(maxScroll, currentScroll + cardWidth);
+            track.style.transform = `translateX(-${currentScroll}px)`;
+        }
+    </script>
+</body>
+</html>
