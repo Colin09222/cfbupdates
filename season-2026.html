@@ -29,6 +29,7 @@
         .stats-row { display: grid; grid-template-columns: 40px 2fr 80px 2fr; gap: 10px; padding: 10px 0; border-bottom: 1px solid #222; font-size: 0.9rem; align-items: center; }
         .stats-row:last-child { border-bottom: none; }
         .stats-row.header { font-weight: 600; color: #c8a415; border-bottom: 2px solid #c8a415; }
+        .stats-row.legend { background-color: rgba(200, 164, 21, 0.1); border-left: 3px solid #FFD700; }
         .rank { color: #666; text-align: center; }
         .player-info { color: #fff; }
         .player-name { font-weight: 600; }
@@ -68,6 +69,7 @@
     <nav class="nav-bar">
         <a href="./index.html">Home</a>
         <a href="./historical.html">Historical Stats</a>
+        <a href="./season-2025.html">2025-26 Season</a>
         <a href="./season-2026.html">2026-27 Season</a>
         <a href="./archive/index.html">All Articles</a>
     </nav>
@@ -75,38 +77,17 @@
         <h1 class="page-title">2026-27 Season Stats</h1>
         <p class="season-subtitle">Complete statistical leaders from the championship season</p>
         
-        <!-- Final Rankings -->
+        <!-- CFP Final Rankings -->
         <div class="section">
-            <h2 class="section-title">Final AP Top 25</h2>
+            <h2 class="section-title">CFP Final Rankings</h2>
             <div class="rankings-grid">
                 <div>
-                    <div class="ranking-item"><div class="rank-num">1</div><div><div class="team-name">USC</div><div class="team-record">15-1</div></div><div class="team-record">1,625 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">2</div><div><div class="team-name">Ole Miss</div><div class="team-record">14-3</div></div><div class="team-record">1,331 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">3</div><div><div class="team-name">Miami</div><div class="team-record">13-2</div></div><div class="team-record">1,088 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">4</div><div><div class="team-name">Duke</div><div class="team-record">12-2</div></div><div class="team-record">1,060 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">5</div><div><div class="team-name">Texas Tech</div><div class="team-record">13-2</div></div><div class="team-record">1,033 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">6</div><div><div class="team-name">Louisville</div><div class="team-record">12-2</div></div><div class="team-record">1,003 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">7</div><div><div class="team-name">Indiana</div><div class="team-record">13-2</div></div><div class="team-record">975 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">8</div><div><div class="team-name">Texas A&M</div><div class="team-record">12-2</div></div><div class="team-record">944 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">9</div><div><div class="team-name">Alabama</div><div class="team-record">9-4</div></div><div class="team-record">899 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">10</div><div><div class="team-name">Colorado</div><div class="team-record">11-3</div></div><div class="team-record">876 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">11</div><div><div class="team-name">Ohio State</div><div class="team-record">10-4</div></div><div class="team-record">838 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">12</div><div><div class="team-name">Notre Dame</div><div class="team-record">10-3</div></div><div class="team-record">811 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">13</div><div><div class="team-name">Georgia</div><div class="team-record">10-3</div></div><div class="team-record">779 pts</div></div>
-                </div>
-                <div>
-                    <div class="ranking-item"><div class="rank-num">14</div><div><div class="team-name">Houston</div><div class="team-record">11-2</div></div><div class="team-record">753 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">15</div><div><div class="team-name">Kansas State</div><div class="team-record">11-2</div></div><div class="team-record">720 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">16</div><div><div class="team-name">Auburn</div><div class="team-record">9-4</div></div><div class="team-record">669 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">17</div><div><div class="team-name">Oregon</div><div class="team-record">10-3</div></div><div class="team-record">643 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">18</div><div><div class="team-name">Colorado State</div><div class="team-record">13-1</div></div><div class="team-record">624 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">19</div><div><div class="team-name">Tulane</div><div class="team-record">11-3</div></div><div class="team-record">573 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">20</div><div><div class="team-name">Tennessee</div><div class="team-record">9-4</div></div><div class="team-record">526 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">21</div><div><div class="team-name">Wyoming</div><div class="team-record">12-2</div></div><div class="team-record">508 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">22</div><div><div class="team-name">Nebraska</div><div class="team-record">10-3</div></div><div class="team-record">460 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">23</div><div><div class="team-name">Florida</div><div class="team-record">8-5</div></div><div class="team-record">404 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">24</div><div><div class="team-name">Iowa</div><div class="team-record">9-4</div></div><div class="team-record">374 pts</div></div>
-                    <div class="ranking-item"><div class="rank-num">25</div><div><div class="team-name">Toledo</div><div class="team-record">10-3</div></div><div class="team-record">340 pts</div></div>
+                    <div class="ranking-item"><div class="rank-num">1</div><div><div class="team-name">Colorado State</div><div class="team-record">16-0 (Champions)</div></div><div class="team-record">🏆</div></div>
+                    <div class="ranking-item"><div class="rank-num">2</div><div><div class="team-name">Bowling Green</div><div class="team-record">15-1 (Finals)</div></div><div class="team-record">Runner-up</div></div>
+                    <div class="ranking-item"><div class="rank-num">3</div><div><div class="team-name">Clemson</div><div class="team-record">14-1</div></div><div class="team-record">Semifinal</div></div>
+                    <div class="ranking-item"><div class="rank-num">4</div><div><div class="team-name">Alabama</div><div class="team-record">10-4</div></div><div class="team-record">Semifinal</div></div>
+                    <div class="ranking-item"><div class="rank-num">5</div><div><div class="team-name">Penn State</div><div class="team-record">12-3</div></div><div class="team-record">Quarterfinal</div></div>
+                    <div class="ranking-item"><div class="rank-num">6</div><div><div class="team-name">LSU</div><div class="team-record">11-4</div></div><div class="team-record">Quarterfinal</div></div>
                 </div>
             </div>
         </div>
@@ -114,76 +95,14 @@
         <!-- CFP Bracket -->
         <div class="section">
             <h2 class="section-title">College Football Playoff</h2>
-            <p style="text-align: center; color: #888; margin-bottom: 30px;">2025 CFP Tournament Bracket</p>
+            <p style="text-align: center; color: #888; margin-bottom: 30px;">2026 CFP Tournament Bracket</p>
             
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 40px;">
-                <!-- First Round -->
-                <div style="display: flex; gap: 50px; flex-wrap: wrap; justify-content: center;">
-                    <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; min-width: 220px;">
-                        <div style="color: #c8a415; font-size: 0.8rem; text-align: center; margin-bottom: 10px;">FIRST ROUND</div>
-                        <div style="padding: 8px; border-bottom: 1px solid #222; display: flex; justify-content: space-between;"><span style="color: #fff; font-weight: 600;">12 Tulane</span><span style="color: #c8a415; font-weight: 700;">13</span></div>
-                        <div style="padding: 8px; display: flex; justify-content: space-between;"><span style="color: #666;">5 Indiana</span><span style="color: #666;">45</span></div>
-                    </div>
-                    <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; min-width: 220px;">
-                        <div style="color: #c8a415; font-size: 0.8rem; text-align: center; margin-bottom: 10px;">FIRST ROUND</div>
-                        <div style="padding: 8px; border-bottom: 1px solid #222; display: flex; justify-content: space-between;"><span style="color: #666;">9 Alabama</span><span style="color: #666;">42</span></div>
-                        <div style="padding: 8px; display: flex; justify-content: space-between;"><span style="color: #fff; font-weight: 600;">8 Ole Miss</span><span style="color: #c8a415; font-weight: 700;">43</span></div>
-                    </div>
-                    <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; min-width: 220px;">
-                        <div style="color: #c8a415; font-size: 0.8rem; text-align: center; margin-bottom: 10px;">FIRST ROUND</div>
-                        <div style="padding: 8px; border-bottom: 1px solid #222; display: flex; justify-content: space-between;"><span style="color: #fff; font-weight: 600;">11 Ohio State</span><span style="color: #c8a415; font-weight: 700;">23</span></div>
-                        <div style="padding: 8px; display: flex; justify-content: space-between;"><span style="color: #666;">6 Texas A&M</span><span style="color: #666;">22</span></div>
-                    </div>
-                    <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; min-width: 220px;">
-                        <div style="color: #c8a415; font-size: 0.8rem; text-align: center; margin-bottom: 10px;">FIRST ROUND</div>
-                        <div style="padding: 8px; border-bottom: 1px solid #222; display: flex; justify-content: space-between;"><span style="color: #666;">10 Colorado</span><span style="color: #666;">20</span></div>
-                        <div style="padding: 8px; display: flex; justify-content: space-between;"><span style="color: #fff; font-weight: 600;">7 Duke</span><span style="color: #c8a415; font-weight: 700;">48</span></div>
-                    </div>
-                </div>
-                
-                <!-- Quarterfinals -->
-                <div style="display: flex; gap: 50px; flex-wrap: wrap; justify-content: center;">
-                    <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; min-width: 220px;">
-                        <div style="color: #c8a415; font-size: 0.8rem; text-align: center; margin-bottom: 10px;">QUARTERFINAL</div>
-                        <div style="padding: 8px; border-bottom: 1px solid #222; display: flex; justify-content: space-between;"><span style="color: #fff; font-weight: 600;">5 Indiana</span><span style="color: #c8a415; font-weight: 700;">45</span></div>
-                        <div style="padding: 8px; display: flex; justify-content: space-between;"><span style="color: #666;">4 Texas Tech</span><span style="color: #666;">30</span></div>
-                    </div>
-                    <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; min-width: 220px;">
-                        <div style="color: #c8a415; font-size: 0.8rem; text-align: center; margin-bottom: 10px;">QUARTERFINAL</div>
-                        <div style="padding: 8px; border-bottom: 1px solid #222; display: flex; justify-content: space-between;"><span style="color: #fff; font-weight: 600;">8 Ole Miss</span><span style="color: #c8a415; font-weight: 700;">36</span></div>
-                        <div style="padding: 8px; display: flex; justify-content: space-between;"><span style="color: #666;">1 Louisville</span><span style="color: #666;">17</span></div>
-                    </div>
-                    <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; min-width: 220px;">
-                        <div style="color: #c8a415; font-size: 0.8rem; text-align: center; margin-bottom: 10px;">QUARTERFINAL</div>
-                        <div style="padding: 8px; border-bottom: 1px solid #222; display: flex; justify-content: space-between;"><span style="color: #fff; font-weight: 600;">11 Ohio State</span><span style="color: #c8a415; font-weight: 700;">6</span></div>
-                        <div style="padding: 8px; display: flex; justify-content: space-between;"><span style="color: #666;">3 Miami</span><span style="color: #666;">11</span></div>
-                    </div>
-                    <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; min-width: 220px;">
-                        <div style="color: #c8a415; font-size: 0.8rem; text-align: center; margin-bottom: 10px;">QUARTERFINAL</div>
-                        <div style="padding: 8px; border-bottom: 1px solid #222; display: flex; justify-content: space-between;"><span style="color: #fff; font-weight: 600;">2 USC</span><span style="color: #c8a415; font-weight: 700;">47</span></div>
-                        <div style="padding: 8px; display: flex; justify-content: space-between;"><span style="color: #666;">7 Duke</span><span style="color: #666;">12</span></div>
-                    </div>
-                </div>
-                
-                <!-- Semifinals -->
-                <div style="display: flex; gap: 50px; flex-wrap: wrap; justify-content: center;">
-                    <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; min-width: 220px;">
-                        <div style="color: #c8a415; font-size: 0.8rem; text-align: center; margin-bottom: 10px;">SEMIFINAL</div>
-                        <div style="padding: 8px; border-bottom: 1px solid #222; display: flex; justify-content: space-between;"><span style="color: #fff; font-weight: 600;">4 Texas Tech</span><span style="color: #c8a415; font-weight: 700;">30</span></div>
-                        <div style="padding: 8px; display: flex; justify-content: space-between;"><span style="color: #666;">8 Ole Miss</span><span style="color: #666;">45</span></div>
-                    </div>
-                    <div style="background: #1a1a1a; border: 1px solid #333; border-radius: 6px; padding: 15px; min-width: 220px;">
-                        <div style="color: #c8a415; font-size: 0.8rem; text-align: center; margin-bottom: 10px;">SEMIFINAL</div>
-                        <div style="padding: 8px; border-bottom: 1px solid #222; display: flex; justify-content: space-between;"><span style="color: #666;">3 Miami</span><span style="color: #666;">15</span></div>
-                        <div style="padding: 8px; display: flex; justify-content: space-between;"><span style="color: #fff; font-weight: 600;">2 USC</span><span style="color: #c8a415; font-weight: 700;">17</span></div>
-                    </div>
-                </div>
-                
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
                 <!-- Championship -->
                 <div style="background: linear-gradient(135deg, #1a1a1a, #2d2d2d); border: 2px solid #c8a415; border-radius: 8px; padding: 20px; min-width: 280px; max-width: 320px;">
                     <div style="color: #c8a415; font-size: 1rem; text-align: center; margin-bottom: 15px; font-family: 'Oswald', sans-serif; text-transform: uppercase;">National Championship</div>
-                    <div style="padding: 12px; border-bottom: 1px solid #333; display: flex; justify-content: space-between;"><span style="color: #fff; font-weight: 700; font-size: 1.1rem;">2 USC 🏆</span><span style="color: #c8a415; font-weight: 700; font-size: 1.1rem;">35</span></div>
-                    <div style="padding: 12px; display: flex; justify-content: space-between;"><span style="color: #888;">8 Ole Miss</span><span style="color: #888;">29</span></div>
+                    <div style="padding: 12px; border-bottom: 1px solid #333; display: flex; justify-content: space-between;"><span style="color: #fff; font-weight: 700; font-size: 1.1rem;">1 Colorado State 🏆</span><span style="color: #c8a415; font-weight: 700; font-size: 1.1rem;">64</span></div>
+                    <div style="padding: 12px; display: flex; justify-content: space-between;"><span style="color: #888;">2 Bowling Green</span><span style="color: #888;">28</span></div>
                 </div>
             </div>
         </div>
@@ -197,100 +116,83 @@
                     <h3 class="category-title">Passing Yards</h3>
                     <div class="stats-table">
                         <div class="stats-row header"><div class="rank">Rk</div><div class="player-info">Player</div><div class="stat-value">Yds</div><div class="school">Team</div></div>
-                        <div class="stats-row"><div class="rank">1</div><div class="player-info"><div class="player-name">Jackson Brousseau</div><div class="player-team">QB</div></div><div class="stat-value">5,602</div><div class="school">Colorado State</div></div>
-                        <div class="stats-row"><div class="rank">2</div><div class="player-info"><div class="player-name">Kaidon Salter</div><div class="player-team">QB</div></div><div class="stat-value">4,580</div><div class="school">Auburn</div></div>
-                        <div class="stats-row"><div class="rank">3</div><div class="player-info"><div class="player-name">Drew Pyne</div><div class="player-team">QB</div></div><div class="stat-value">4,607</div><div class="school">Bowling Green</div></div>
-                        <div class="stats-row"><div class="rank">4</div><div class="player-info"><div class="player-name">Jayden Maiava</div><div class="player-team">QB</div></div><div class="stat-value">4,342</div><div class="school">USC</div></div>
-                        <div class="stats-row"><div class="rank">5</div><div class="player-info"><div class="player-name">Julian Sayin</div><div class="player-team">QB</div></div><div class="stat-value">4,390</div><div class="school">Ohio State</div></div>
-                        <div class="stats-row"><div class="rank">6</div><div class="player-info"><div class="player-name">Kevin Jennings</div><div class="player-team">QB</div></div><div class="stat-value">4,379</div><div class="school">SMU</div></div>
-                        <div class="stats-row"><div class="rank">7</div><div class="player-info"><div class="player-name">Maddux Madsen</div><div class="player-team">QB</div></div><div class="stat-value">4,264</div><div class="school">Boise State</div></div>
-                        <div class="stats-row"><div class="rank">8</div><div class="player-info"><div class="player-name">Trinidad Chambliss</div><div class="player-team">QB</div></div><div class="stat-value">4,123</div><div class="school">Ole Miss</div></div>
-                        <div class="stats-row"><div class="rank">9</div><div class="player-info"><div class="player-name">Jayden Denegal</div><div class="player-team">QB</div></div><div class="stat-value">4,159</div><div class="school">Miami</div></div>
-                        <div class="stats-row"><div class="rank">10</div><div class="player-info"><div class="player-name">Mateo Alejado</div><div class="player-team">QB</div></div><div class="stat-value">4,109</div><div class="school">Missouri</div></div>
+                        <div class="stats-row"><div class="rank">1</div><div class="player-info"><div class="player-name">G. Parkhurst</div><div class="player-team">QB</div></div><div class="stat-value">4,606</div><div class="school">SMU</div></div>
+                        <div class="stats-row"><div class="rank">2</div><div class="player-info"><div class="player-name">J. Kush</div><div class="player-team">QB</div></div><div class="stat-value">4,566</div><div class="school">Bowling Green</div></div>
+                        <div class="stats-row"><div class="rank">3</div><div class="player-info"><div class="player-name">C. Carr</div><div class="player-team">QB</div></div><div class="stat-value">4,199</div><div class="school">UNC</div></div>
+                        <div class="stats-row"><div class="rank">4</div><div class="player-info"><div class="player-name">C. Boley</div><div class="player-team">QB</div></div><div class="stat-value">4,125</div><div class="school">Indiana</div></div>
+                        <div class="stats-row"><div class="rank">5</div><div class="player-info"><div class="player-name">G. Stockton</div><div class="player-team">QB</div></div><div class="stat-value">4,120</div><div class="school">Georgia</div></div>
+                        <div class="stats-row"><div class="rank">6</div><div class="player-info"><div class="player-name">T.S. Clair</div><div class="player-team">QB</div></div><div class="stat-value">4,050</div><div class="school">Colorado State</div></div>
+                        <div class="stats-row"><div class="rank">7</div><div class="player-info"><div class="player-name">B. Sorsby</div><div class="player-team">QB</div></div><div class="stat-value">4,018</div><div class="school">LSU</div></div>
+                        <div class="stats-row"><div class="rank">8</div><div class="player-info"><div class="player-name">A. Simmons</div><div class="player-team">QB</div></div><div class="stat-value">3,946</div><div class="school">Ole Miss</div></div>
+                        <div class="stats-row"><div class="rank">9</div><div class="player-info"><div class="player-name">K. Jennings</div><div class="player-team">QB</div></div><div class="stat-value">3,821</div><div class="school">Wyoming</div></div>
+                        <div class="stats-row"><div class="rank">10</div><div class="player-info"><div class="player-name">J. Sayin</div><div class="player-team">QB</div></div><div class="stat-value">3,679</div><div class="school">Ohio State</div></div>
                     </div>
+                </div>
                     
-                    <!-- Passing TDs -->
-                    <div class="stat-category">
-                        <h3 class="category-title">Passing Touchdowns</h3>
-                        <div class="stats-table">
-                            <div class="stats-row header"><div class="rank">Rk</div><div class="player-info">Player</div><div class="stat-value">TDs</div><div class="school">Team</div></div>
-                            <div class="stats-row"><div class="rank">1</div><div class="player-info"><div class="player-name">Jackson Brousseau</div><div class="player-team">QB</div></div><div class="stat-value">66</div><div class="school">Colorado State</div></div>
-                            <div class="stats-row"><div class="rank">2</div><div class="player-info"><div class="player-name">Drew Pyne</div><div class="player-team">QB</div></div><div class="stat-value">50</div><div class="school">Bowling Green</div></div>
-                            <div class="stats-row"><div class="rank">3</div><div class="player-info"><div class="player-name">Kevin Jennings</div><div class="player-team">QB</div></div><div class="stat-value">45</div><div class="school">SMU</div></div>
-                            <div class="stats-row"><div class="rank">4</div><div class="player-info"><div class="player-name">Kaidon Salter</div><div class="player-team">QB</div></div><div class="stat-value">41</div><div class="school">Auburn</div></div>
-                            <div class="stats-row"><div class="rank">5</div><div class="player-info"><div class="player-name">Fernando Mendoza</div><div class="player-team">QB</div></div><div class="stat-value">40</div><div class="school">Miami</div></div>
-                            <div class="stats-row"><div class="rank">6</div><div class="player-info"><div class="player-name">Caden Veltkamp</div><div class="player-team">QB</div></div><div class="stat-value">39</div><div class="school">Kentucky</div></div>
-                            <div class="stats-row"><div class="rank">7</div><div class="player-info"><div class="player-name">Julian Sayin</div><div class="player-team">QB</div></div><div class="stat-value">39</div><div class="school">Ohio State</div></div>
-                            <div class="stats-row"><div class="rank">8</div><div class="player-info"><div class="player-name">Kaden Anderson</div><div class="player-team">QB</div></div><div class="stat-value">39</div><div class="school">Wyoming</div></div>
-                            <div class="stats-row"><div class="rank">9</div><div class="player-info"><div class="player-name">Jayden Maiava</div><div class="player-team">QB</div></div><div class="stat-value">38</div><div class="school">USC</div></div>
-                            <div class="stats-row"><div class="rank">10</div><div class="player-info"><div class="player-name">Eli Holstein</div><div class="player-team">QB</div></div><div class="stat-value">38</div><div class="school">Pitt</div></div>
-                        </div>
+                <!-- Passing TDs -->
+                <div class="stat-category">
+                    <h3 class="category-title">Passing Touchdowns</h3>
+                    <div class="stats-table">
+                        <div class="stats-row header"><div class="rank">Rk</div><div class="player-info">Player</div><div class="stat-value">TDs</div><div class="school">Team</div></div>
+                        <div class="stats-row"><div class="rank">1</div><div class="player-info"><div class="player-name">J. Kush</div><div class="player-team">QB</div></div><div class="stat-value">57</div><div class="school">Bowling Green</div></div>
+                        <div class="stats-row"><div class="rank">2</div><div class="player-info"><div class="player-name">A. Manning</div><div class="player-team">QB</div></div><div class="stat-value">50</div><div class="school">Alabama</div></div>
+                        <div class="stats-row"><div class="rank">3</div><div class="player-info"><div class="player-name">T.S. Clair</div><div class="player-team">QB</div></div><div class="stat-value">45</div><div class="school">Colorado State</div></div>
+                        <div class="stats-row"><div class="rank">4</div><div class="player-info"><div class="player-name">K. Jennings</div><div class="player-team">QB</div></div><div class="stat-value">40</div><div class="school">Wyoming</div></div>
+                        <div class="stats-row"><div class="rank">5</div><div class="player-info"><div class="player-name">I. Simpson</div><div class="player-team">QB</div></div><div class="stat-value">39</div><div class="school">Pittsburgh</div></div>
+                        <div class="stats-row"><div class="rank">6</div><div class="player-info"><div class="player-name">B. Sorsby</div><div class="player-team">QB</div></div><div class="stat-value">37</div><div class="school">LSU</div></div>
+                        <div class="stats-row"><div class="rank">7</div><div class="player-info"><div class="player-name">J. French</div><div class="player-team">QB</div></div><div class="stat-value">37</div><div class="school">UAB</div></div>
+                        <div class="stats-row"><div class="rank">8</div><div class="player-info"><div class="player-name">J. Sayin</div><div class="player-team">QB</div></div><div class="stat-value">37</div><div class="school">Ohio State</div></div>
+                        <div class="stats-row"><div class="rank">9</div><div class="player-info"><div class="player-name">A. Simmons</div><div class="player-team">QB</div></div><div class="stat-value">36</div><div class="school">Ole Miss</div></div>
+                        <div class="stats-row"><div class="rank">10</div><div class="player-info"><div class="player-name">M. Madsen</div><div class="player-team">QB</div></div><div class="stat-value">36</div><div class="school">Boise State</div></div>
                     </div>
+                </div>
                     
-                    <!-- Rushing Yards -->
-                    <div class="stat-category">
-                        <h3 class="category-title">Rushing Yards</h3>
-                        <div class="stats-table">
-                            <div class="stats-row header"><div class="rank">Rk</div><div class="player-info">Player</div><div class="stat-value">Yds</div><div class="school">Team</div></div>
-                            <div class="stats-row"><div class="rank">1</div><div class="player-info"><div class="player-name">Terron Kellman</div><div class="player-team">HB</div></div><div class="stat-value">2,140</div><div class="school">Wyoming</div></div>
-                            <div class="stats-row"><div class="rank">2</div><div class="player-info"><div class="player-name">Ahmad Hardy</div><div class="player-team">HB</div></div><div class="stat-value">1,563</div><div class="school">Memphis</div></div>
-                            <div class="stats-row"><div class="rank">3</div><div class="player-info"><div class="player-name">Mark Fletcher Jr.</div><div class="player-team">HB</div></div><div class="stat-value">1,551</div><div class="school">Miami</div></div>
-                            <div class="stats-row"><div class="rank">4</div><div class="player-info"><div class="player-name">Al-Jay Henderson</div><div class="player-team">HB</div></div><div class="stat-value">1,548</div><div class="school">Buffalo</div></div>
-                            <div class="stats-row"><div class="rank">5</div><div class="player-info"><div class="player-name">Keion Owens</div><div class="player-team">HB</div></div><div class="stat-value">1,472</div><div class="school">UCF</div></div>
-                            <div class="stats-row"><div class="rank">6</div><div class="player-info"><div class="player-name">Desean Beauchamp</div><div class="player-team">HB</div></div><div class="stat-value">1,450</div><div class="school">Cincinnati</div></div>
-                            <div class="stats-row"><div class="rank">7</div><div class="player-info"><div class="player-name">Roman Hemby</div><div class="player-team">HB</div></div><div class="stat-value">1,356</div><div class="school">Indiana</div></div>
-                            <div class="stats-row"><div class="rank">8</div><div class="player-info"><div class="player-name">Tawee Walker</div><div class="player-team">HB</div></div><div class="stat-value">1,313</div><div class="school">Wisconsin</div></div>
-                            <div class="stats-row"><div class="rank">9</div><div class="player-info"><div class="player-name">Justice Haynes</div><div class="player-team">HB</div></div><div class="stat-value">1,295</div><div class="school">Alabama</div></div>
-                            <div class="stats-row"><div class="rank">10</div><div class="player-info"><div class="player-name">Jalen Buckley</div><div class="player-team">HB</div></div><div class="stat-value">1,287</div><div class="school">SMU</div></div>
-                        </div>
+                <!-- Rushing Yards -->
+                <div class="stat-category">
+                    <h3 class="category-title">Rushing Yards</h3>
+                    <div class="stats-table">
+                        <div class="stats-row header"><div class="rank">Rk</div><div class="player-info">Player</div><div class="stat-value">Yds</div><div class="school">Team</div></div>
+                        <div class="stats-row"><div class="rank">1</div><div class="player-info"><div class="player-name">A. Hardy</div><div class="player-team">HB</div></div><div class="stat-value">1,405</div><div class="school">Tennessee</div></div>
+                        <div class="stats-row"><div class="rank">2</div><div class="player-info"><div class="player-name">D. Beauchamp</div><div class="player-team">HB</div></div><div class="stat-value">1,393</div><div class="school">C. Michigan</div></div>
+                        <div class="stats-row"><div class="rank">3</div><div class="player-info"><div class="player-name">J. Baugh</div><div class="player-team">HB</div></div><div class="stat-value">1,342</div><div class="school">Baylor</div></div>
+                        <div class="stats-row"><div class="rank">4</div><div class="player-info"><div class="player-name">C. Brown</div><div class="player-team">HB</div></div><div class="stat-value">1,320</div><div class="school">UNC</div></div>
+                        <div class="stats-row"><div class="rank">5</div><div class="player-info"><div class="player-name">J. Davison</div><div class="player-team">HB</div></div><div class="stat-value">1,306</div><div class="school">Duke</div></div>
+                        <div class="stats-row"><div class="rank">6</div><div class="player-info"><div class="player-name">D. Dowdell</div><div class="player-team">HB</div></div><div class="stat-value">1,303</div><div class="school">TCU</div></div>
+                        <div class="stats-row"><div class="rank">7</div><div class="player-info"><div class="player-name">O. Joyner</div><div class="player-team">HB</div></div><div class="stat-value">1,297</div><div class="school">UAB</div></div>
+                        <div class="stats-row"><div class="rank">8</div><div class="player-info"><div class="player-name">I. Brown</div><div class="player-team">HB</div></div><div class="stat-value">1,272</div><div class="school">Colorado State</div></div>
+                        <div class="stats-row"><div class="rank">9</div><div class="player-info"><div class="player-name">B. Washington</div><div class="player-team">HB</div></div><div class="stat-value">1,260</div><div class="school">BYU</div></div>
+                        <div class="stats-row"><div class="rank">10</div><div class="player-info"><div class="player-name">J. Marshall</div><div class="player-team">HB</div></div><div class="stat-value">1,243</div><div class="school">Colorado State</div></div>
                     </div>
+                </div>
                     
-                    <!-- Receiving Yards -->
-                    <div class="stat-category">
-                        <h3 class="category-title">Receiving Yards</h3>
-                        <div class="stats-table">
-                            <div class="stats-row header"><div class="rank">Rk</div><div class="player-info">Player</div><div class="stat-value">Yds</div><div class="school">Team</div></div>
-                            <div class="stats-row"><div class="rank">1</div><div class="player-info"><div class="player-name">Arlis Boardingham</div><div class="player-team">TE</div></div><div class="stat-value">2,488</div><div class="school">Bowling Green</div></div>
-                            <div class="stats-row"><div class="rank">2</div><div class="player-info"><div class="player-name">Kojo Antwi</div><div class="player-team">WR</div></div><div class="stat-value">1,661</div><div class="school">SMU</div></div>
-                            <div class="stats-row"><div class="rank">3</div><div class="player-info"><div class="player-name">Jeremiah Smith</div><div class="player-team">WR</div></div><div class="stat-value">1,463</div><div class="school">Ohio State</div></div>
-                            <div class="stats-row"><div class="rank">4</div><div class="player-info"><div class="player-name">Zachariah Branch</div><div class="player-team">WR</div></div><div class="stat-value">1,422</div><div class="school">USC</div></div>
-                            <div class="stats-row"><div class="rank">5</div><div class="player-info"><div class="player-name">Tommy Maher</div><div class="player-team">WR</div></div><div class="stat-value">1,414</div><div class="school">Georgia</div></div>
-                            <div class="stats-row"><div class="rank">6</div><div class="player-info"><div class="player-name">Makai Lemon</div><div class="player-team">WR</div></div><div class="stat-value">1,396</div><div class="school">Texas Tech</div></div>
-                            <div class="stats-row"><div class="rank">7</div><div class="player-info"><div class="player-name">Drelon Miller</div><div class="player-team">WR</div></div><div class="stat-value">1,387</div><div class="school">Colorado</div></div>
-                            <div class="stats-row"><div class="rank">8</div><div class="player-info"><div class="player-name">Demetrius Roebuck</div><div class="player-team">WR</div></div><div class="stat-value">1,381</div><div class="school">UCF</div></div>
-                            <div class="stats-row"><div class="rank">9</div><div class="player-info"><div class="player-name">Nick Marsh</div><div class="player-team">WR</div></div><div class="stat-value">1,309</div><div class="school">Michigan State</div></div>
-                            <div class="stats-row"><div class="rank">10</div><div class="player-info"><div class="player-name">Corey Rucker</div><div class="player-team">WR</div></div><div class="stat-value">1,226</div><div class="school">Louisville</div></div>
+                <!-- Receiving Yards -->
+                <div class="stat-category">
+                    <h3 class="category-title">Receiving Yards</h3>
+                    <div class="stats-table">
+                        <div class="stats-row header"><div class="rank">Rk</div><div class="player-info">Player</div><div class="stat-value">Yds</div><div class="school">Team</div></div>
+                        <div class="stats-row legend"><div class="rank">🌟</div><div class="player-info"><div class="player-name">A. Boardingham</div><div class="player-team">TE (ALL-TIME #1)</div></div><div class="stat-value">2,522</div><div class="school">Bowling Green</div></div>
+                        <div class="stats-row"><div class="rank">1</div><div class="player-info"><div class="player-name">C. Milliner</div><div class="player-team">WR</div></div><div class="stat-value">1,427</div><div class="school">UAB</div></div>
+                        <div class="stats-row"><div class="rank">2</div><div class="player-info"><div class="player-name">L. Johnson Jr.</div><div class="player-team">WR</div></div><div class="stat-value">1,387</div><div class="school">Texas A&M</div></div>
+                        <div class="stats-row"><div class="rank">3</div><div class="player-info"><div class="player-name">P. Livingstone</div><div class="player-team">WR</div></div><div class="stat-value">1,294</div><div class="school">Colorado</div></div>
+                        <div class="stats-row"><div class="rank">4</div><div class="player-info"><div class="player-name">K. Saunders</div><div class="player-team">WR</div></div><div class="stat-value">1,283</div><div class="school">SMU</div></div>
+                        <div class="stats-row"><div class="rank">5</div><div class="player-info"><div class="player-name">C. High</div><div class="player-team">WR</div></div><div class="stat-value">1,274</div><div class="school">Stanford</div></div>
+                        <div class="stats-row"><div class="rank">6</div><div class="player-info"><div class="player-name">L. Humphreys</div><div class="player-team">WR</div></div><div class="stat-value">1,272</div><div class="school">BYU</div></div>
+                        <div class="stats-row"><div class="rank">7</div><div class="player-info"><div class="player-name">J. Smith</div><div class="player-team">WR</div></div><div class="stat-value">1,244</div><div class="school">Rice</div></div>
+                        <div class="stats-row"><div class="rank">8</div><div class="player-info"><div class="player-name">D. Singleton</div><div class="player-team">WR</div></div><div class="stat-value">1,234</div><div class="school">SMU</div></div>
+                        <div class="stats-row"><div class="rank">9</div><div class="player-info"><div class="player-name">K. Antwi</div><div class="player-team">WR</div></div><div class="stat-value">1,227</div><div class="school">Colorado State</div></div>
+                        <div class="stats-row"><div class="rank">10</div><div class="player-info"><div class="player-name">J. Nicholas</div><div class="player-team">WR</div></div><div class="stat-value">1,219</div><div class="school">Rice</div></div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- All Articles -->
+        <!-- Featured Articles -->
         <div class="section">
-            <h2 class="section-title">All 2025-26 Season Stories</h2>
+            <h2 class="section-title">Featured Articles</h2>
             <div class="articles-grid">
-                <div class="article-card"><a href="./articles/trump-csugate-address.html"><img src="./images/trump-castle-csugate.jpg" class="article-image"><div class="article-info"><h3 class="article-title">Commissioner Trump Addresses CSUGate</h3><p class="article-meta">Jan 31, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/diddy-bg-season-recap.html"><img src="./images/diddy-season-recap.jpg" class="article-image"><div class="article-info"><h3 class="article-title">"I Gave Him All The Love" - Diddy</h3><p class="article-meta">Jan 31, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/csu-ai-thad-castle.html"><img src="./images/thad-castle-ai-announcement.jpg" class="article-image"><div class="article-info"><h3 class="article-title">"F*** THE PLAYERS" - Thad AI Rant</h3><p class="article-meta">Jan 31, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/csu-utahstate-thad-week11.html"><img src="./images/castle_week11.jpg" class="article-image"><div class="article-info"><h3 class="article-title">CSU Survives Utah State 56-49</h3><p class="article-meta">Nov 8, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/bg-emu-diddy-week11.html"><img src="./images/diddy_week11.jpg" class="article-image"><div class="article-info"><h3 class="article-title">"The F*** Did He Say?" - Diddy</h3><p class="article-meta">Nov 8, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/wyoming-newmexico-kirk-week11.html"><img src="./images/kirk_week11.jpg" class="article-image"><div class="article-info"><h3 class="article-title">Kirk: "Diddy Has Hood Rats"</h3><p class="article-meta">Nov 8, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/thad-castle-wyoming-preview-week9.html"><img src="./images/thadcoach_week9.jpg" class="article-image"><div class="article-info"><h3 class="article-title">Thad: "HALF BACK TOSS"</h3><p class="article-meta">Feb 1, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/bg-cmu-diddy-week9.html"><img src="./images/diddycoach_week9.jpg" class="article-image"><div class="article-info"><h3 class="article-title">Diddy: "I Need To Touch Players"</h3><p class="article-meta">Feb 1, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/wyoming-airforce-kirk-week9.html"><img src="./images/wyomingcoach_week9.jpg" class="article-image"><div class="article-info"><h3 class="article-title">Kirk: "Black Pilots" Rant</h3><p class="article-meta">Feb 1, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/wyoming-fresno-state-kirk.html"><img src="./images/kirk.jpg" class="article-image"><div class="article-info"><h3 class="article-title">Kirk: "Civil Rights Act Mistake"</h3><p class="article-meta">Jan 30, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/csu-new-mexico-thad.html"><img src="./images/thad.jpg" class="article-image"><div class="article-info"><h3 class="article-title">CSU Crushes New Mexico 49-26</h3><p class="article-meta">Jan 30, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/diddy-recruiting-youth.html"><img src="./images/diddy.jpg" class="article-image"><div class="article-info"><h3 class="article-title">Starting Them Young: Diddy</h3><p class="article-meta">Jan 30, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/louisville-upsets-ohio-state.html"><img src="./images/ohiostate.webp" class="article-image"><div class="article-info"><h3 class="article-title">Louisville Stuns Ohio State</h3><p class="article-meta">Jan 30, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/kansas-state-iowa-state.html"><img src="./images/Kansas_state.webp" class="article-image"><div class="article-info"><h3 class="article-title">KSU Dominates in Dublin</h3><p class="article-meta">Jan 29, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/georgia-charlotte.html"><img src="./images/uga.webp" class="article-image"><div class="article-info"><h3 class="article-title">Georgia Dismantles Charlotte</h3><p class="article-meta">Jan 29, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/mississippi-state-fiu.html"><img src="./images/mstate.png" class="article-image"><div class="article-info"><h3 class="article-title">Miss State Rolls Past FIU</h3><p class="article-meta">Jan 29, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/kirk-bye-week-epstein.html"><img src="./images/kirk.jpg" class="article-image"><div class="article-info"><h3 class="article-title">Kirk Mourns Epstein</h3><p class="article-meta">Jan 29, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/csu-unlv.html"><img src="./images/csu.png" class="article-image"><div class="article-info"><h3 class="article-title">CSU Dominates UNLV</h3><p class="article-meta">Jan 29, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/csu-murders-fcs-west.html"><img src="./images/csu.png" class="article-image"><div class="article-info"><h3 class="article-title">CSU Destroys FCS West</h3><p class="article-meta">Jan 29, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/bg-loses-to-cincinnati.html"><img src="./images/bg.png" class="article-image"><div class="article-info"><h3 class="article-title">BG Falls to Cincinnati</h3><p class="article-meta">Jan 29, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/bg-liberty.html"><img src="./images/bg.png" class="article-image"><div class="article-info"><h3 class="article-title">BG Battles Liberty</h3><p class="article-meta">Jan 29, 2026</p></div></a></div>
-                <div class="article-card"><a href="./articles/wyoming-sdsu.html"><img src="./images/wyoming.png" class="article-image"><div class="article-info"><h3 class="article-title">Wyoming vs San Diego State</h3><p class="article-meta">Jan 29, 2026</p></div></a></div>
+                <div class="article-card"><a href="#"><img src="./images/csu-natty.jpg" class="article-image"><div class="article-info"><h3 class="article-title">CSU Wins National Championship 64-28</h3><p class="article-meta">Feb 8, 2027</p></div></a></div>
+                <div class="article-card"><a href="#"><img src="./images/thad-lsu.jpg" class="article-image"><div class="article-info"><h3 class="article-title">Thad Beats LSU 42-36 in Playoff</h3><p class="article-meta">Feb 7, 2027</p></div></a></div>
+                <div class="article-card"><a href="#"><img src="./images/diddy-big12.jpg" class="article-image"><div class="article-info"><h3 class="article-title">BGSU Wins Big 12 Championship</h3><p class="article-meta">Feb 7, 2027</p></div></a></div>
             </div>
         </div>
     </div>
