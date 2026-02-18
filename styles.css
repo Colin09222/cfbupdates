@@ -167,11 +167,12 @@ ul, ol { list-style: none; }
 }
 @media (max-width: 1100px) {
     .home-grid { grid-template-columns: 1fr 260px; }
-    .home-grid .sidebar-left { display: none; }
+    .home-grid .sidebar-left, aside.sidebar-left { display: none !important; }
 }
 @media (max-width: 768px) {
-    .home-grid { grid-template-columns: 1fr; }
-    .home-grid .sidebar-right { display: none; }
+    .home-grid { grid-template-columns: 1fr !important; display: block !important; }
+    .home-grid .sidebar-right, aside.sidebar-right, aside.sidebar-left { display: none !important; }
+    .home-grid .main-content { width: 100% !important; max-width: 100% !important; }
 }
 
 /* === HERO FEATURED === */
@@ -781,9 +782,10 @@ ul, ol { list-style: none; }
     .article-card .card-body { padding: 10px; }
     .article-card .meta { font-size: 0.65rem; }
 
-    /* Home grid — hide sidebars on mobile */
-    .home-grid { grid-template-columns: 1fr !important; gap: 20px; }
-    .sidebar-left, .sidebar-right { display: none; }
+    /* Home grid — force single column, hide sidebars */
+    .home-grid { display: block !important; }
+    .sidebar-left, .sidebar-right, aside.sidebar-left, aside.sidebar-right { display: none !important; }
+    .main-content { width: 100% !important; }
 
     /* Page titles */
     .page-title { font-size: 1.5rem; margin-bottom: 8px; }
