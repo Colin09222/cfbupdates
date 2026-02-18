@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall of Fame | CFB Updates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background-color: #0a0a0a; color: #e0e0e0; }
+        .main-header { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 15px 20px; text-align: center; border-bottom: 4px solid #c8a415; }
+        .main-header h1 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: #ffffff; text-transform: uppercase; letter-spacing: 3px; }
+        .main-header h1 span { color: #c8a415; }
+        .tagline { color: #888; font-size: 0.85rem; margin-top: 5px; }
+        .nav-bar { background-color: #151515; padding: 10px 20px; display: flex; justify-content: center; gap: 30px; border-bottom: 1px solid #333; flex-wrap: wrap; }
+        .nav-bar a { color: #c8a415; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+        .nav-bar a:hover { color: #fff; }
+        .nav-bar a.active { color: #fff; border-bottom: 2px solid #c8a415; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+
+        /* Hero Banner */
+        .hof-hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, rgba(200,164,21,0.15) 0%, rgba(10,10,10,0) 100%);
+            border-bottom: 2px solid #c8a415;
+            margin-bottom: 50px;
+        }
+        .hof-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            color: #c8a415;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-bottom: 10px;
+        }
+        .hof-hero .trophy { font-size: 4rem; margin-bottom: 15px; }
+        .hof-hero .subtitle {
+            color: #999;
+            font-size: 1.1rem;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Inductee Card */
+        .inductee {
+            background: linear-gradient(180deg, #1a1a1a 0%, #111 100%);
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            margin-bottom: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+        .inductee::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+        .inductee.gold::before { background: linear-gradient(90deg, #c8a415, #FFD700, #c8a415); }
+        .inductee.green::before { background: linear-gradient(90deg, #1E4D2B, #4CAF50, #1E4D2B); }
+        .inductee.brown::before { background: linear-gradient(90deg, #492F24, #8B6914, #492F24); }
+        .inductee.orange::before { background: linear-gradient(90deg, #FF6600, #FF9933, #FF6600); }
+
+        .inductee-header {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .player-badge {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            border: 3px solid #c8a415;
+        }
+        .badge-brown { background: linear-gradient(135deg, #492F24, #6B4226); }
+        .badge-green { background: linear-gradient(135deg, #1E4D2B, #2E7D32); }
+        .badge-orange { background: linear-gradient(135deg, #FF6600, #E65100); }
+        .badge-gold { background: linear-gradient(135deg, #c8a415, #8B6914); }
+
+        .player-headline { flex: 1; min-width: 250px; }
+        .player-headline h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.2rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .player-headline .pos-tag {
+            display: inline-block;
+            background: #c8a415;
+            color: #000;
+            padding: 3px 12px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-right: 8px;
+        }
+        .player-headline .team-tag {
+            display: inline-block;
+            padding: 3px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            border: 1px solid #555;
+            color: #ccc;
+        }
+        .player-headline .meta-line {
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+        .ovr-badge {
+            background: linear-gradient(135deg, #c8a415, #FFD700);
+            color: #000;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .ovr-label { font-size: 0.6rem; font-weight: 400; }
+
+        /* Bio Section */
+        .inductee-bio {
+            padding: 0 30px 25px;
+            color: #bbb;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        .inductee-bio p { margin-bottom: 12px; }
+
+        /* Awards */
+        .awards-section {
+            padding: 0 30px 25px;
+        }
+        .awards-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            color: #c8a415;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
+        }
+        .awards-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .award-pill {
+            background: rgba(200, 164, 21, 0.15);
+            border: 1px solid rgba(200, 164, 21, 0.3);
+            color: #c8a415;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .award-pill.major {
+            background: rgba(255, 215, 0, 0.2);
+            border: 1px solid #FFD700;
+            color: #FFD700;
+            font-weight: 700;
+        }
+
+        /* Stats Tables */
+        .stats-section {
+            padding: 0 30px 30px;
+        }
+        .stats-tabs {
+            display: flex;
+            gap: 0;
+            margin-bottom: 15px;
+        }
+        .stats-tab-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            color: #c8a415;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
+        }
+        .career-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .career-table th {
+            background: #222;
+            color: #c8a415;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #c8a415;
+        }
+        .career-table td {
+            padding: 10px 8px;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+        .career-table tr:hover { background: rgba(200, 164, 21, 0.05); }
+        .career-table .highlight-row {
+            background: rgba(255, 215, 0, 0.1);
+            font-weight: 600;
+        }
+        .career-table .totals-row {
+            background: rgba(200, 164, 21, 0.15);
+            font-weight: 700;
+            color: #c8a415;
+            border-top: 2px solid #c8a415;
+        }
+        .career-table .team-cell { text-align: left; }
+
+        /* Draft Box */
+        .draft-box {
+            margin: 0 30px 30px;
+            background: linear-gradient(135deg, rgba(200, 164, 21, 0.1), rgba(200, 164, 21, 0.05));
+            border: 1px solid rgba(200, 164, 21, 0.3);
+            border-radius: 8px;
+            padding: 20px 25px;
+        }
+        .draft-box h4 {
+            font-family: 'Oswald', sans-serif;
+            color: #c8a415;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        .draft-box .draft-pick {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #FFD700;
+            margin-bottom: 5px;
+        }
+        .draft-box .draft-story {
+            color: #999;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hof-hero h1 { font-size: 2.2rem; letter-spacing: 3px; }
+            .inductee-header { flex-direction: column; text-align: center; }
+            .player-headline h2 { font-size: 1.6rem; }
+            .career-table { font-size: 0.75rem; }
+            .career-table th, .career-table td { padding: 6px 4px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1>CFB <span>Updates</span></h1>
+        <p class="tagline">Your Source for College Football Dynasty Coverage</p>
+    </header>
+    <nav class="nav-bar">
+        <a href="./index.html">Home</a>
+        <a href="./hall-of-fame.html" class="active">Hall of Fame</a>
+        <a href="./historical.html">Historical Stats</a>
+        <a href="./season-2025.html">2025-26 Season</a>
+        <a href="./season-2026.html">2026-27 Season</a>
+        <a href="./archive/index.html">All Articles</a>
+    </nav>
+
+    <div class="hof-hero">
+        <div class="trophy">🏆</div>
+        <h1>Hall of Fame</h1>
+        <p class="subtitle">Honoring the legends who defined college football dynasty history. These players transcended the game — and the sanity of their coaches.</p>
+    </div>
+
+    <div class="container">
+
+        <!-- ============================================ -->
+        <!-- TERRY BUSSEY -->
+        <!-- ============================================ -->
+        <div class="inductee brown">
+            <div class="inductee-header">
+                <div class="player-badge badge-brown">#88</div>
+                <div class="player-headline">
+                    <h2>Terry Bussey</h2>
+                    <span class="pos-tag">HB</span>
+                    <span class="team-tag">🤠 Wyoming Cowboys</span>
+                    <p class="meta-line">5'10" • 198 lbs • Timpson, Texas • Class of 2027 • East/West Playmaker</p>
+                </div>
+                <div class="ovr-badge">88<br><span class="ovr-label">OVR</span></div>
+            </div>
+
+            <div class="inductee-bio">
+                <p>Terry Bussey arrived at Texas A&M as a quiet freshman who barely saw the field — zero carries, zero yards, just a name buried on a depth chart. He transferred to Wyoming after one season and sat behind the starters for another year, managing just 1 carry for 2 yards in 2026. Nobody expected what came next.</p>
+                <p>In 2027, Bussey didn't just emerge — he <em>detonated</em>. Under Charlie Kirk's chaotic regime in Laramie, the 5'10" dynamo from Timpson, Texas rushed for <strong>1,956 yards</strong> on 161 carries with <strong>19 touchdowns</strong>, averaging a jaw-dropping 12.1 yards per carry with a 100-yard long run. He added 10 receptions for 151 yards and 3 receiving TDs for good measure. He won the Heisman Trophy, the Doak Walker Award, the Maxwell Award, AND the Walter Camp Award in a single season — the most decorated one-year breakout in dynasty history.</p>
+                <p>Kirk, of course, credited the success to "AIPAC-funded nutrition science" and "playing with the passion of the Israeli Defense Forces." Bussey just smiled and kept running.</p>
+            </div>
+
+            <div class="awards-section">
+                <h4 class="awards-title">🏅 Awards & Honors</h4>
+                <div class="awards-grid">
+                    <span class="award-pill major">🏆 2027 Heisman Memorial Trophy</span>
+                    <span class="award-pill major">🏆 2027 Doak Walker Award</span>
+                    <span class="award-pill major">🏆 2027 Maxwell Award</span>
+                    <span class="award-pill major">🏆 2027 Walter Camp Award</span>
+                    <span class="award-pill">2027 ACC Champion</span>
+                    <span class="award-pill">2025 SEC Champion</span>
+                    <span class="award-pill">2027 1st Team All-American</span>
+                    <span class="award-pill">2027 1st Team All-ACC</span>
+                    <span class="award-pill">2x ACC Offensive Player of the Week</span>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <h4 class="stats-tab-title">📊 Career Rushing Stats</h4>
+                <table class="career-table">
+                    <tr>
+                        <th>Year</th><th>Team</th><th>GP</th><th>CAR</th><th>YDS</th><th>AVG</th><th>TD</th><th>YPG</th><th>LONG</th><th>FUMB</th>
+                    </tr>
+                    <tr>
+                        <td>2025</td><td class="team-cell">Texas A&M</td><td>14</td><td>0</td><td>0</td><td>0.0</td><td>0</td><td>0.0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2026</td><td class="team-cell">Wyoming</td><td>13</td><td>1</td><td>2</td><td>2.0</td><td>0</td><td>0.2</td><td>2</td><td>0</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>2027</td><td class="team-cell">Wyoming</td><td>12</td><td>161</td><td>1,956</td><td>12.1</td><td>19</td><td>163.0</td><td>100</td><td>3</td>
+                    </tr>
+                    <tr class="totals-row">
+                        <td colspan="2">CAREER</td><td>39</td><td>162</td><td>1,958</td><td>12.1</td><td>19</td><td>—</td><td>100</td><td>3</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="stats-section">
+                <h4 class="stats-tab-title">📊 Career Receiving Stats</h4>
+                <table class="career-table">
+                    <tr>
+                        <th>Year</th><th>Team</th><th>GP</th><th>REC</th><th>YDS</th><th>AVG</th><th>TD</th><th>YPG</th><th>LONG</th>
+                    </tr>
+                    <tr>
+                        <td>2025</td><td class="team-cell">Texas A&M</td><td>14</td><td>16</td><td>175</td><td>10.9</td><td>4</td><td>12.5</td><td>18</td>
+                    </tr>
+                    <tr>
+                        <td>2026</td><td class="team-cell">Wyoming</td><td>13</td><td>8</td><td>101</td><td>12.6</td><td>3</td><td>7.8</td><td>21</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>2027</td><td class="team-cell">Wyoming</td><td>12</td><td>10</td><td>151</td><td>15.1</td><td>3</td><td>12.6</td><td>51</td>
+                    </tr>
+                    <tr class="totals-row">
+                        <td colspan="2">CAREER</td><td>39</td><td>34</td><td>427</td><td>12.6</td><td>10</td><td>—</td><td>51</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="draft-box">
+                <h4>🏈 NFL Draft</h4>
+                <div class="draft-pick">Round 1, Pick 4 — Arizona Cardinals</div>
+                <p class="draft-story">The Cardinals traded up to snag Bussey, calling him "the most electric back we've evaluated since Barry Sanders." At the podium, Bussey thanked Coach Kirk for "believing in me... I think?" Kirk immediately claimed credit on X, posting: "I RECRUITED him. I DEVELOPED him. AIPAC FUNDED his protein shakes. YOU'RE WELCOME, ARIZONA." The Cardinals declined to comment.</p>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- TAVIEN ST. CLAIR -->
+        <!-- ============================================ -->
+        <div class="inductee green">
+            <div class="inductee-header">
+                <div class="player-badge badge-green">#12</div>
+                <div class="player-headline">
+                    <h2>Tavien St. Clair</h2>
+                    <span class="pos-tag">QB</span>
+                    <span class="team-tag">🐏 Colorado State Rams</span>
+                    <p class="meta-line">6'4" • 236 lbs • Bellefontaine, Ohio • Class of 2027 (RS SO) • Dual Threat</p>
+                </div>
+                <div class="ovr-badge">97<br><span class="ovr-label">OVR</span></div>
+            </div>
+
+            <div class="inductee-bio">
+                <p>Tavien St. Clair didn't just play quarterback for Colorado State — he <em>was</em> Colorado State. The 6'4", 236-pound dual-threat from Bellefontaine, Ohio arrived under Coach Thad Castle's powder-fueled program and immediately became the most dominant signal-caller in dynasty history.</p>
+                <p>As a redshirt freshman in 2026, St. Clair threw for <strong>5,245 yards and 57 touchdowns</strong> while leading the Rams to a <strong>16-0 record and the National Championship</strong>, demolishing Bowling Green 64-28 in the title game. Thad celebrated by allegedly doing lines off the championship trophy — a claim he neither confirmed nor denied. "I was BLACKED OUT but we WON. HALF BACK TOSS!" he screamed at the post-game presser.</p>
+                <p>In 2027, St. Clair followed up with another elite season: <strong>4,556 yards and 49 TDs</strong> with a ridiculous 229.9 passer rating across 13 games. He led Colorado State to another SEC Championship, though the Rams fell short in the playoff this time around. His two-year totals are staggering: <strong>9,801 passing yards, 106 touchdowns</strong>, and a career passer rating over 220. He's still only a redshirt sophomore — but with a 97 OVR, the NFL came calling early.</p>
+            </div>
+
+            <div class="awards-section">
+                <h4 class="awards-title">🏅 Awards & Honors</h4>
+                <div class="awards-grid">
+                    <span class="award-pill major">🏆 2026 National Champion</span>
+                    <span class="award-pill">2027 SEC Champion</span>
+                    <span class="award-pill">2026 SEC Champion</span>
+                    <span class="award-pill">2027 2nd Team All-SEC</span>
+                    <span class="award-pill">2x SEC Offensive Player of the Week</span>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <h4 class="stats-tab-title">📊 Career Passing Stats</h4>
+                <table class="career-table">
+                    <tr>
+                        <th>Year</th><th>Team</th><th>GP</th><th>RTG</th><th>COMP</th><th>ATT</th><th>COMP%</th><th>YDS</th><th>TD</th><th>INT</th><th>YPA</th><th>YPG</th>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>2026</td><td class="team-cell">Colorado State</td><td>16</td><td>216.4</td><td>374</td><td>454</td><td>82%</td><td>5,245</td><td>57</td><td>10</td><td>11.6</td><td>327.8</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>2027</td><td class="team-cell">Colorado State</td><td>13</td><td>229.9</td><td>281</td><td>352</td><td>79%</td><td>4,556</td><td>49</td><td>8</td><td>12.9</td><td>350.5</td>
+                    </tr>
+                    <tr class="totals-row">
+                        <td colspan="2">CAREER</td><td>29</td><td>222.3</td><td>655</td><td>806</td><td>81%</td><td>9,801</td><td>106</td><td>18</td><td>12.2</td><td>337.9</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="draft-box">
+                <h4>🏈 NFL Draft</h4>
+                <div class="draft-pick">Round 1, Pick 1 — New England Patriots</div>
+                <p class="draft-story">The first overall pick was never in question. The Patriots selected St. Clair to be the franchise cornerstone, calling him "a generational talent — the size of Cam Newton with the accuracy of Joe Burrow." At the draft, Thad Castle stormed the green room uninvited, grabbed the microphone, and screamed: "THAT'S MY QUARTERBACK! I COACHED HIM HIGH AS A KITE AND HE STILL THREW 106 TOUCHDOWNS! HALF BACK TOSS!" Security escorted him out. St. Clair just laughed and put on the Patriots hat.</p>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- ARLIS BOARDINGHAM -->
+        <!-- ============================================ -->
+        <div class="inductee gold">
+            <div class="inductee-header">
+                <div class="player-badge badge-gold">TE</div>
+                <div class="player-headline">
+                    <h2>Arlis Boardingham</h2>
+                    <span class="pos-tag">TE</span>
+                    <span class="team-tag">🟤 Bowling Green Falcons</span>
+                    <p class="meta-line">All-Time Receiving Yards & TD Leader • Bowling Green Legend • Class of 2026</p>
+                </div>
+                <div class="ovr-badge">⭐<br><span class="ovr-label">GOAT</span></div>
+            </div>
+
+            <div class="inductee-bio">
+                <p>Arlis Boardingham is, was, and forever will be the greatest tight end in dynasty history. Period. The man rewrote the record books at Bowling Green under Coach Diddy's unhinged leadership, retiring as the <strong>all-time leader in both receiving yards (2,522) and receiving touchdowns (36)</strong>.</p>
+                <p>Boardingham was the security blanket, the deep threat, and the red zone nightmare all rolled into one. Diddy called him "my SON, my BROTHER, my OILED-UP WARRIOR" on multiple occasions, often while visibly weeping. When Boardingham graduated, Diddy held an impromptu press conference where he accused the NFL of "STEALING my baby" and threatened to "oil up Roger Goodell personally."</p>
+                <p>No player in dynasty history has meant more to a program — or to an emotionally unstable coach — than Arlis Boardingham.</p>
+            </div>
+
+            <div class="awards-section">
+                <h4 class="awards-title">🏅 Awards & Honors</h4>
+                <div class="awards-grid">
+                    <span class="award-pill major">🌟 All-Time Receiving Yards Leader (2,522)</span>
+                    <span class="award-pill major">🌟 All-Time Receiving TDs Leader (36)</span>
+                    <span class="award-pill">BGSU All-Time Great</span>
+                    <span class="award-pill">Multiple Conference Honors</span>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <h4 class="stats-tab-title">📊 Career Highlights</h4>
+                <table class="career-table">
+                    <tr>
+                        <th>Stat</th><th>Value</th><th>Rank</th>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>Career Receiving Yards</td><td>2,522</td><td style="color: #FFD700; font-weight: 700;">#1 ALL-TIME</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td>Career Receiving TDs</td><td>36</td><td style="color: #FFD700; font-weight: 700;">#1 ALL-TIME</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="draft-box">
+                <h4>🏈 NFL Draft</h4>
+                <div class="draft-pick">Round 1, Pick 12 — Dallas Cowboys</div>
+                <p class="draft-story">Jerry Jones called Boardingham "the best tight end prospect since Gonzalez" and flew to Bowling Green personally to deliver the news. Diddy crashed the draft party, climbed on a table, and screamed: "DALLAS DOESN'T DESERVE HIM! NOBODY DOES! I OILED THAT MAN UP EVERY GAME DAY AND THIS IS HOW THE UNIVERSE REPAYS ME?!" Boardingham quietly signed his rookie deal for $24.5 million guaranteed and posted a simple message on Instagram: "Thank you, BGSU. Forever a Falcon. 🟤🟠"</p>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- ADD NEW INDUCTEES ABOVE THIS LINE -->
+        <!-- Copy any inductee block above as a template -->
+        <!-- Change class: gold, green, brown, orange -->
+        <!-- Change badge class: badge-gold, badge-green, badge-brown, badge-orange -->
+        <!-- ============================================ -->
+
+    </div>
+
+    <footer style="text-align: center; padding: 40px; color: #555; font-size: 0.8rem; border-top: 1px solid #222;">
+        <p>CFB Updates Hall of Fame — Where Legends Live Forever (and Their Coaches Need Therapy)</p>
+    </footer>
+</body>
+</html>
