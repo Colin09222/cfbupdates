@@ -7,32 +7,24 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <!-- ESPN-STYLE SCOREBOARD STRIP -->
+    <!-- ESPN-STYLE SCOREBOARD STRIP (fills in as games are played) -->
     <div class="scorebar">
         <div class="scorebar-inner">
             <span class="scorebar-label">CFB&nbsp;Sim&nbsp;League</span>
-            <a class="sb-game" href="./articles/diddy-bgsu-big12-champs-ttu.html"><span class="sb-meta">Final · Big 12 Champ</span><span class="sb-row sb-win"><b>BGSU</b><i>28</i></span><span class="sb-row"><b>TTU</b><i>24</i></span></a>
-            <a class="sb-game" href="./articles/thad-lsu-playoff-win.html"><span class="sb-meta">Final · CFP Semi</span><span class="sb-row sb-win"><b>CSU</b><i>42</i></span><span class="sb-row"><b>LSU</b><i>36</i></span></a>
-            <a class="sb-game" href="./articles/kirk-bc-week9-thad-realization.html"><span class="sb-meta">Final · Week 9</span><span class="sb-row sb-win"><b>WYO</b><i>64</i></span><span class="sb-row"><b>BC</b><i>36</i></span></a>
-            <a class="sb-game" href="./articles/thad-oklahoma-destruction.html"><span class="sb-meta">Final · Week 8</span><span class="sb-row sb-win"><b>CSU</b><i>49</i></span><span class="sb-row"><b>OU</b><i>21</i></span></a>
-            <a class="sb-game" href="./articles/wyoming-fresno-state-kirk.html"><span class="sb-meta">Final · Week 4</span><span class="sb-row sb-win"><b>FRES</b><i>34</i></span><span class="sb-row"><b>WYO</b><i>31</i></span></a>
-            <a class="sb-game" href="./articles/kirk-wyoming-texastech-week3-2028.html"><span class="sb-meta">Final · 2028 Wk3</span><span class="sb-row sb-win"><b>WYO</b><i>38</i></span><span class="sb-row"><b>TTU</b><i>17</i></span></a>
-            <a class="sb-full" href="./archive/index.html">Full Scoreboard ›</a>
+            <span class="sb-game sb-empty"><span class="sb-meta">Season Kickoff</span><span class="sb-row"><b>New season — no games played yet</b></span></span>
+            <a class="sb-full" href="./hall-of-fame.html">Hall of Fame ›</a>
         </div>
     </div>
+
     <!-- NEWS TICKER -->
     <div class="ticker-wrap">
         <div class="ticker" id="ticker">
-            <span class="ticker-item"><a href="./articles/kirk-wyoming-texastech-week3-2028.html">Kirk's Wyoming Smashes Texas Tech 38-17 — AIPAC Money Pays Off</a></span>
-            <span class="ticker-item"><a href="./articles/diddy-bgsu-big12-champs-ttu.html">BGSU Wins Big 12 Championship 28-24 Over #7 Texas Tech</a></span>
-            <span class="ticker-item"><a href="./articles/thad-castle-epstein-allegations.html">BREAKING: Thad Castle Named in Epstein Files!</a></span>
-            <span class="ticker-item"><a href="./articles/diddy-arlis-arrested.html">BREAKING: Diddy & Arlis Arrested!</a></span>
-            <span class="ticker-item"><a href="./articles/diddy-college-football-rigged.html">DIDDY: "College Football Is RIGGED"</a></span>
-            <span class="ticker-item"><a href="./articles/tony-keke-fraud-indictment.html">Tony Keke Indicted On 38 Fraud Counts</a></span>
-            <span class="ticker-item"><a href="./articles/kirk-wyoming-texastech-week3-2028.html">Kirk's Wyoming Smashes Texas Tech 38-17 — AIPAC Money Pays Off</a></span>
-            <span class="ticker-item"><a href="./articles/diddy-bgsu-big12-champs-ttu.html">BGSU Wins Big 12 Championship 28-24 Over #7 Texas Tech</a></span>
-            <span class="ticker-item"><a href="./articles/thad-castle-epstein-allegations.html">BREAKING: Thad Castle Named in Epstein Files!</a></span>
-            <span class="ticker-item"><a href="./articles/diddy-arlis-arrested.html">BREAKING: Diddy & Arlis Arrested!</a></span>
+            <span class="ticker-item"><a href="./index.html">A NEW SEASON BEGINS — New coaches, new teams, new chaos</a></span>
+            <span class="ticker-item"><a href="./hall-of-fame.html">The legends of Season 1 live forever in the Hall of Fame</a></span>
+            <span class="ticker-item"><a href="./index.html">Coaches are picking their programs now — stay tuned</a></span>
+            <span class="ticker-item"><a href="./index.html">A NEW SEASON BEGINS — New coaches, new teams, new chaos</a></span>
+            <span class="ticker-item"><a href="./hall-of-fame.html">The legends of Season 1 live forever in the Hall of Fame</a></span>
+            <span class="ticker-item"><a href="./index.html">Coaches are picking their programs now — stay tuned</a></span>
         </div>
     </div>
 
@@ -49,9 +41,6 @@
         <a href="./index.html" class="active">Home</a>
         <a href="./hall-of-fame.html">🏆 Hall of Fame</a>
         <a href="./historical.html">Historical Stats</a>
-        <a href="./season-2025.html">2025-26 Season</a>
-        <a href="./season-2026.html">2026-27 Season</a>
-        <a href="./season-2027.html">2027-28 Season</a>
         <a href="./archive/index.html">All Articles</a>
     </nav>
 
@@ -69,64 +58,24 @@
                     <div class="stat-tab" onclick="showStat('rush-yds')">Rush YDS</div>
                     <div class="stat-tab" onclick="showStat('rec-yds')">Rec YDS</div>
                 </div>
-                <!-- PASSING YARDS -->
                 <div class="stat-content active" id="pass-yds">
                     <ul class="stat-list">
-                        <li class="stat-item"><span class="stat-rank">1</span><div class="stat-player"><span class="stat-player-name">G. Parkhurst</span></div><span class="stat-value">2,771</span></li>
-                        <li class="stat-item"><span class="stat-rank">2</span><div class="stat-player"><span class="stat-player-name">C. Boley</span></div><span class="stat-value">2,727</span></li>
-                        <li class="stat-item"><span class="stat-rank">3</span><div class="stat-player"><span class="stat-player-name">J. Kush</span><span class="stat-player-team">BGSU</span></div><span class="stat-value">2,540</span></li>
-                        <li class="stat-item"><span class="stat-rank">4</span><div class="stat-player"><span class="stat-player-name">G. Stockton</span><span class="stat-player-team">UGA</span></div><span class="stat-value">2,476</span></li>
-                        <li class="stat-item"><span class="stat-rank">5</span><div class="stat-player"><span class="stat-player-name">C. Carr</span><span class="stat-player-team">ND</span></div><span class="stat-value">2,454</span></li>
-                        <li class="stat-item"><span class="stat-rank">6</span><div class="stat-player"><span class="stat-player-name">D. Mestemaker</span></div><span class="stat-value">2,383</span></li>
-                        <li class="stat-item"><span class="stat-rank">7</span><div class="stat-player"><span class="stat-player-name">A. Simmons</span></div><span class="stat-value">2,284</span></li>
-                        <li class="stat-item"><span class="stat-rank">8</span><div class="stat-player"><span class="stat-player-name">T. St. Clair</span></div><span class="stat-value">2,264</span></li>
-                        <li class="stat-item"><span class="stat-rank">9</span><div class="stat-player"><span class="stat-player-name">J. Hoover</span></div><span class="stat-value">2,222</span></li>
-                        <li class="stat-item"><span class="stat-rank">10</span><div class="stat-player"><span class="stat-player-name">W. Howard</span></div><span class="stat-value">2,212</span></li>
+                        <li class="stat-item"><span class="stat-rank">—</span><div class="stat-player"><span class="stat-player-name">Awaiting Week 1</span></div><span class="stat-value">—</span></li>
                     </ul>
                 </div>
-                <!-- PASSING TDS -->
                 <div class="stat-content" id="pass-tds">
                     <ul class="stat-list">
-                        <li class="stat-item"><span class="stat-rank">1</span><div class="stat-player"><span class="stat-player-name">J. Kush</span><span class="stat-player-team">BGSU</span></div><span class="stat-value">36</span></li>
-                        <li class="stat-item"><span class="stat-rank">2</span><div class="stat-player"><span class="stat-player-name">A. Manning</span></div><span class="stat-value">30</span></li>
-                        <li class="stat-item"><span class="stat-rank">3</span><div class="stat-player"><span class="stat-player-name">G. Stockton</span><span class="stat-player-team">UGA</span></div><span class="stat-value">26</span></li>
-                        <li class="stat-item"><span class="stat-rank">4</span><div class="stat-player"><span class="stat-player-name">C. Boley</span></div><span class="stat-value">25</span></li>
-                        <li class="stat-item"><span class="stat-rank">5</span><div class="stat-player"><span class="stat-player-name">T. St. Clair</span></div><span class="stat-value">25</span></li>
-                        <li class="stat-item"><span class="stat-rank">6</span><div class="stat-player"><span class="stat-player-name">G. Parkhurst</span></div><span class="stat-value">19</span></li>
-                        <li class="stat-item"><span class="stat-rank">7</span><div class="stat-player"><span class="stat-player-name">J. Hoover</span></div><span class="stat-value">18</span></li>
-                        <li class="stat-item"><span class="stat-rank">8</span><div class="stat-player"><span class="stat-player-name">C. Carr</span><span class="stat-player-team">ND</span></div><span class="stat-value">17</span></li>
-                        <li class="stat-item"><span class="stat-rank">9</span><div class="stat-player"><span class="stat-player-name">W. Howard</span></div><span class="stat-value">16</span></li>
-                        <li class="stat-item"><span class="stat-rank">10</span><div class="stat-player"><span class="stat-player-name">D. Mestemaker</span></div><span class="stat-value">15</span></li>
+                        <li class="stat-item"><span class="stat-rank">—</span><div class="stat-player"><span class="stat-player-name">Awaiting Week 1</span></div><span class="stat-value">—</span></li>
                     </ul>
                 </div>
-                <!-- RUSHING YARDS -->
                 <div class="stat-content" id="rush-yds">
                     <ul class="stat-list">
-                        <li class="stat-item"><span class="stat-rank">1</span><div class="stat-player"><span class="stat-player-name">A. Hardy</span><span class="stat-player-team">TENN</span></div><span class="stat-value">900</span></li>
-                        <li class="stat-item"><span class="stat-rank">2</span><div class="stat-player"><span class="stat-player-name">D. Dowdell</span><span class="stat-player-team">NEB</span></div><span class="stat-value">823</span></li>
-                        <li class="stat-item"><span class="stat-rank">3</span><div class="stat-player"><span class="stat-player-name">D. Beauchamp</span><span class="stat-player-team">MSST</span></div><span class="stat-value">802</span></li>
-                        <li class="stat-item"><span class="stat-rank">4</span><div class="stat-player"><span class="stat-player-name">D. Riley</span><span class="stat-player-team">USC</span></div><span class="stat-value">791</span></li>
-                        <li class="stat-item"><span class="stat-rank">5</span><div class="stat-player"><span class="stat-player-name">J. Baugh</span><span class="stat-player-team">AUB</span></div><span class="stat-value">761</span></li>
-                        <li class="stat-item"><span class="stat-rank">6</span><div class="stat-player"><span class="stat-player-name">J. Marshall</span><span class="stat-player-team">ALA</span></div><span class="stat-value">758</span></li>
-                        <li class="stat-item"><span class="stat-rank">7</span><div class="stat-player"><span class="stat-player-name">C. Hansen</span><span class="stat-player-team">WIS</span></div><span class="stat-value">752</span></li>
-                        <li class="stat-item"><span class="stat-rank">8</span><div class="stat-player"><span class="stat-player-name">L. Brown</span><span class="stat-player-team">LOU</span></div><span class="stat-value">749</span></li>
-                        <li class="stat-item"><span class="stat-rank">9</span><div class="stat-player"><span class="stat-player-name">O. Allen</span><span class="stat-player-team">FSU</span></div><span class="stat-value">732</span></li>
-                        <li class="stat-item"><span class="stat-rank">10</span><div class="stat-player"><span class="stat-player-name">O. Joyner</span><span class="stat-player-team">UGA</span></div><span class="stat-value">731</span></li>
+                        <li class="stat-item"><span class="stat-rank">—</span><div class="stat-player"><span class="stat-player-name">Awaiting Week 1</span></div><span class="stat-value">—</span></li>
                     </ul>
                 </div>
-                <!-- RECEIVING YARDS -->
                 <div class="stat-content" id="rec-yds">
                     <ul class="stat-list">
-                        <li class="stat-item"><span class="stat-rank">1</span><div class="stat-player"><span class="stat-player-name">A. Boardingham</span><span class="stat-player-team">BGSU</span></div><span class="stat-value">2,047</span></li>
-                        <li class="stat-item"><span class="stat-rank">2</span><div class="stat-player"><span class="stat-player-name">L. Humphreys</span></div><span class="stat-value">938</span></li>
-                        <li class="stat-item"><span class="stat-rank">3</span><div class="stat-player"><span class="stat-player-name">T. Williams</span></div><span class="stat-value">814</span></li>
-                        <li class="stat-item"><span class="stat-rank">4</span><div class="stat-player"><span class="stat-player-name">K. Saunders</span></div><span class="stat-value">775</span></li>
-                        <li class="stat-item"><span class="stat-rank">5</span><div class="stat-player"><span class="stat-player-name">P. Livingstone</span></div><span class="stat-value">755</span></li>
-                        <li class="stat-item"><span class="stat-rank">6</span><div class="stat-player"><span class="stat-player-name">J. Williams</span></div><span class="stat-value">752</span></li>
-                        <li class="stat-item"><span class="stat-rank">7</span><div class="stat-player"><span class="stat-player-name">L. Johnson Jr.</span></div><span class="stat-value">751</span></li>
-                        <li class="stat-item"><span class="stat-rank">8</span><div class="stat-player"><span class="stat-player-name">P. Thompson</span></div><span class="stat-value">748</span></li>
-                        <li class="stat-item"><span class="stat-rank">9</span><div class="stat-player"><span class="stat-player-name">C. Milliner</span></div><span class="stat-value">722</span></li>
-                        <li class="stat-item"><span class="stat-rank">10</span><div class="stat-player"><span class="stat-player-name">C. Whittemore</span></div><span class="stat-value">676</span></li>
+                        <li class="stat-item"><span class="stat-rank">—</span><div class="stat-player"><span class="stat-player-name">Awaiting Week 1</span></div><span class="stat-value">—</span></li>
                     </ul>
                 </div>
             </div>
@@ -136,18 +85,18 @@
         <main class="main-content">
             <!-- HERO FEATURED -->
             <article class="hero-featured">
-                <a href="./articles/kirk-bc-week9-thad-realization.html">
-                    <img src="./images/kirk-bc-wince.jpg" alt="Charlie Kirk wincing at press conference after BC win">
+                <a href="./index.html">
+                    <img src="./images/hero-placeholder.jpg" alt="A new CFB season begins" onerror="this.style.display='none'">
                     <div class="hero-body">
-                        <span class="tag">WEEK 9 RECAP</span>
-                        <h2>Charlie Kirk After 64-36 Demolition Of Boston College: "I Have WHO Next Week...? F*** Me."</h2>
-                        <p class="excerpt">#2 Wyoming drops 702 yards on BC, but Kirk's joy lasts exactly until a reporter reminds him Thad Castle's #1 Colorado State is on deck. He is 1-3 lifetime against Thad. He cursed live on TV.</p>
-                        <p class="meta">April 6, 2026</p>
+                        <span class="tag">SEASON KICKOFF</span>
+                        <h2>A New Season Begins: New Coaches, New Teams, New Chaos</h2>
+                        <p class="excerpt">The league resets. Everyone's picking new programs and the slate is wiped clean. First stories drop as soon as Week 1 kicks off. Stay tuned, buddehs.</p>
+                        <p class="meta">Preseason</p>
                     </div>
                 </a>
             </article>
 
-            <!-- LATEST NEWS GRID -->
+            <!-- LATEST NEWS -->
             <section class="carousel-section">
                 <div class="carousel-header">
                     <h3>Latest News</h3>
@@ -157,33 +106,18 @@
                     </div>
                 </div>
                 <div class="carousel-container" id="carousel">
-                    <div class="carousel-track">
-                        <div class="article-card"><a href="./articles/kirk-bc-week9-thad-realization.html"><img src="./images/kirk-bc-wince.jpg"><div class="card-body"><h4>Kirk After 64-36 BC Win: "I Have WHO Next Week...? F*** Me."</h4><p class="meta">Apr 6, 2026</p></div></a></div>
-                        <div class="article-card"><a href="./articles/thad-castle-arc-raiders-breakdown.html"><img src="./images/thad-castle-psych-ward-arc-raiders.jpg"><div class="card-body"><h4>Thad Castle Has Mental Breakdown: "THE BOTS WERE EVERYWHERE"</h4><p class="meta">Mar 11, 2026</p></div></a></div>
-                        <div class="article-card"><a href="./articles/kirk-wyoming-texastech-week3-2028.html"><img src="./images/kirk-wyoming-texastech-2028.jpg"><div class="card-body"><h4>Kirk's Wyoming Smashes Texas Tech 38-17</h4><p class="meta">Sep 15, 2028</p></div></a></div>
-                        <div class="article-card"><a href="./articles/kirk-georgia-loss-israel.html"><img src="./images/kirk-praying-israel.jpg"><div class="card-body"><h4>Kirk's AIPAC-Driven Decision Costs Wyoming 38-37 Loss</h4><p class="meta">Feb 12, 2026</p></div></a></div>
-                        <div class="article-card"><a href="./articles/thad-castle-epstein-allegations.html"><img src="./images/thad-castle-allegations.jpg"><div class="card-body"><h4>BREAKING: Thad Castle Named in Epstein Files!</h4><p class="meta">Feb 12, 2026</p></div></a></div>
-                        <div class="article-card"><a href="./articles/diddy-bgsu-big12-champs-ttu.html"><img src="./images/bgsu-big12-champs-trophy.jpg"><div class="card-body"><h4>BGSU Wins Big 12 Championship 28-24 Over #7 Texas Tech!</h4><p class="meta">Feb 11, 2026</p></div></a></div>
-                        <div class="article-card"><a href="./articles/diddy-college-football-rigged.html"><img src="./images/diddy-rant.jpg"><div class="card-body"><h4>DIDDY: "College Football Is RIGGED" & West Virginia CHEATS</h4><p class="meta">Feb 10, 2026</p></div></a></div>
-                        <div class="article-card"><a href="./articles/kirk-conservative-tennessee.html"><img src="./images/kirk-cowboy.jpg"><div class="card-body"><h4>Kirk's "Conservative" Recruiting Beats #17 Tennessee 41-36</h4><p class="meta">Feb 9, 2026</p></div></a></div>
-                        <div class="article-card"><a href="./articles/diddy-arlis-arrested.html"><img src="./images/diddy-arlis-arrested.jpg"><div class="card-body"><h4>BREAKING: Diddy & Arlis Arrested!</h4><p class="meta">Feb 9, 2026</p></div></a></div>
-                        <div class="article-card"><a href="./articles/diddy-bgsu-big12-champs.html"><img src="./images/diddy-bgsu-champs.jpg"><div class="card-body"><h4>BGSU Big 12 Champs 36-7!</h4><p class="meta">Feb 7, 2026</p></div></a></div>
-                        <div class="article-card"><a href="./articles/tony-keke-fraud-indictment.html"><img src="./images/tony-keke-ccu.jpg"><div class="card-body"><h4>Tony Keke Indicted On 38 Fraud Counts</h4><p class="meta">Feb 7, 2026</p></div></a></div>
-                        <div class="article-card"><a href="./articles/diddy-arlis-heisman-nfl-rant.html"><img src="./images/arlis-heisman-trophy.jpg"><div class="card-body"><h4>Diddy: "NFL Is A Plantation"</h4><p class="meta">Feb 7, 2026</p></div></a></div>
-                        <div class="article-card"><a href="./articles/kirk-israel-obsession-week9.html"><img src="./images/kirk-israel.jpg"><div class="card-body"><h4>Kirk: "Biggest Supporter Of Israel"</h4><p class="meta">Feb 6, 2026</p></div></a></div>
-                        <div class="article-card"><a href="./articles/thad-oklahoma-destruction.html"><img src="./images/thad.jpg"><div class="card-body"><h4>Thad Destroys Oklahoma 49-21</h4><p class="meta">Feb 4, 2026</p></div></a></div>
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- New articles get added here, newest first -->
+                        <div class="article-card"><a href="./index.html"><div class="card-body"><h4>No articles yet — the new season starts soon</h4><p class="meta">Preseason</p></div></a></div>
                     </div>
                 </div>
             </section>
 
-            <!-- FEATURED STORIES GRID -->
+            <!-- FEATURED STORIES -->
             <section class="featured-section">
                 <h3>Featured Stories</h3>
                 <div class="article-grid">
-                    <div class="article-card"><a href="./articles/diddy-natty-loss-rigged.html"><img src="./images/diddy-natty-loss.jpg"><div class="card-body"><h4>Diddy: "The Natty Was RIGGED"</h4><p class="meta">Feb 12, 2026</p></div></a></div>
-                    <div class="article-card"><a href="./articles/diddy-hospitalized-rare-std.html"><img src="./images/diddy-hospital.jpg"><div class="card-body"><h4>BREAKING: Diddy Hospitalized With Rare STD</h4><p class="meta">Feb 10, 2026</p></div></a></div>
-                    <div class="article-card"><a href="./articles/kirk-durag-diddy-transformation.html"><img src="./images/kirk-durag.jpg"><div class="card-body"><h4>Kirk Wears Durag, Claims "Cultural Exchange"</h4><p class="meta">Feb 9, 2026</p></div></a></div>
-                    <div class="article-card"><a href="./articles/thad-lsu-playoff-win.html"><img src="./images/thad-lsu-playoff.jpg"><div class="card-body"><h4>Thad's CSU Beats LSU in Playoff</h4><p class="meta">Feb 8, 2026</p></div></a></div>
+                    <div class="article-card"><a href="./hall-of-fame.html"><div class="card-body"><h4>🏆 Visit the Hall of Fame — the legends of Season 1</h4><p class="meta">All-Time</p></div></a></div>
                 </div>
             </section>
         </main>
@@ -191,26 +125,10 @@
         <!-- RIGHT SIDEBAR: SCORES -->
         <aside class="sidebar-right">
             <div class="scores-widget" style="position: sticky; top: 60px;">
-                <h3>Week 7 Scores</h3>
+                <h3>Latest Scores</h3>
                 <div class="score-item">
-                    <div class="score-team winner">Georgia State <span>28</span></div>
-                    <div class="score-team loser">S. Alabama <span>23</span></div>
-                </div>
-                <div class="score-item">
-                    <div class="score-team winner">Liberty <span>17</span></div>
-                    <div class="score-team loser">Sam Houston <span>10</span></div>
-                </div>
-                <div class="score-item">
-                    <div class="score-team winner">Arizona St <span>24</span></div>
-                    <div class="score-team loser">Baylor <span>21</span></div>
-                </div>
-                <div class="score-item">
-                    <div class="score-team winner">TCU <span>53</span></div>
-                    <div class="score-team loser">Arizona <span>10</span></div>
-                </div>
-                <div class="score-item">
-                    <div class="score-team winner">NDSU <span>36</span></div>
-                    <div class="score-team loser">SJSU <span>16</span></div>
+                    <div class="score-team">No games yet</div>
+                    <div class="score-team loser">Season starts soon</div>
                 </div>
             </div>
         </aside>
@@ -231,24 +149,21 @@
                 <a href="./archive/index.html">All Articles</a>
             </div>
             <div class="footer-links">
-                <h4>Seasons</h4>
-                <a href="./season-2025.html">2025-26 Season</a>
-                <a href="./season-2026.html">2026-27 Season</a>
-        <a href="./season-2027.html">2027-28 Season</a>
+                <h4>League</h4>
+                <a href="./index.html">New Season</a>
+                <a href="./hall-of-fame.html">Legends</a>
             </div>
         </div>
         <div class="footer-bottom">&copy; 2026 CFB Updates. Dynasty League Coverage. Where Legends Live Forever (and Their Coaches Need Therapy).</div>
     </footer>
 
     <script>
-        // Stat tabs
         function showStat(id) {
             document.querySelectorAll('.stat-content').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.stat-tab').forEach(el => el.classList.remove('active'));
             document.getElementById(id).classList.add('active');
             event.target.classList.add('active');
         }
-        // Carousel scroll
         function scrollCarousel(dir) {
             document.getElementById('carousel').scrollBy({ left: dir * 220, behavior: 'smooth' });
         }

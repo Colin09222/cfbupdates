@@ -58,6 +58,8 @@ h1,h2,h3,h4,p{overflow-wrap:break-word}
 .sb-row.sb-win i{color:var(--ink);font-weight:900}
 .sb-full{display:flex;align-items:center;padding:0 16px;font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.3px;color:var(--red);white-space:nowrap;flex-shrink:0}
 .sb-full:hover{color:var(--red-600)}
+.sb-game.sb-empty{cursor:default;min-width:auto}
+.sb-game.sb-empty .sb-row b{color:var(--gray);font-weight:700}
 
 /* ============ TOP TICKER (slim, ESPN scoreboard-ribbon vibe) ============ */
 .ticker-wrap{background:var(--surface);overflow:hidden;white-space:nowrap;position:relative;z-index:60;border-bottom:1px solid var(--line);-webkit-mask-image:linear-gradient(to right,transparent,#000 2%,#000 98%,transparent);mask-image:linear-gradient(to right,transparent,#000 2%,#000 98%,transparent)}
