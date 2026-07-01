@@ -129,3 +129,25 @@ Reminder: the rotating white SCORES ticker at the top of every page appears
 automatically as soon as `scores` in data.js has at least one game — no other
 step needed. Same data also fills the scoreboard tiles and the Latest Scores
 widget.
+
+## v4.5 — DEPLOY FIX (READ IF THE SITE LOOKS UNSTYLED)
+
+If the live site shows plain text lists / giant black icons, the HTML updated
+but **styles.css didn't** (missed upload or cached old copy). Fix:
+
+1. **Verify the repo**: open styles.css on GitHub — line 2 must say
+   "ESPN-authentic design system v4". If it says "v3", the new file never
+   landed. Re-upload it.
+2. **File checklist at repo ROOT** (not inside a subfolder!):
+   index.html · styles.css · app.js · data.js · manifest.json ·
+   404.html · hall-of-fame.html · historical.html · icon-180/192/512.png ·
+   archive/index.html · articles/*.html  (+ existing images/ and CNAME)
+   ⚠ When unzipping: copy the CONTENTS of the cfbupdates-redesign folder into
+   the repo root — don't drop the folder itself in.
+3. **Cache**: all pages now load styles.css?v=44, app.js?v=44, data.js?v=44 —
+   this forces every phone to fetch fresh copies. If you ever change
+   styles.css or app.js again, bump the number in all pages
+   (find/replace "v=44" → "v=45"). Routine data.js edits do NOT need a bump —
+   GitHub Pages caches for only ~10 minutes.
+4. Still stale? Hard-refresh (desktop: Ctrl+Shift+R; iPhone Safari:
+   Settings → Safari → Clear History, or just wait 10 min for the CDN).
