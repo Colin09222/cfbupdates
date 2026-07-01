@@ -2,108 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>CFB Updates - College Football Dynasty Coverage</title>
+    <meta name="description" content="Satirical ESPN-style coverage of the CFB sim dynasty league — scores, storylines, and chaos.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23d50a0a'/%3E%3Ctext x='34' y='47' font-family='Arial,Helvetica,sans-serif' font-size='42' font-weight='900' font-style='italic' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CFB Updates">
+    <meta property="og:title" content="CFB Updates — College Football Dynasty Coverage">
+    <meta property="og:description" content="Satirical ESPN-style coverage of the CFB sim dynasty league — scores, storylines, and chaos.">
+    <meta property="og:image" content="https://cfbupdates.com/images/thad-castle-presser.jpg">
+    <meta property="og:url" content="https://cfbupdates.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#1b1c1f">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icon-180.png">
+    <meta name="apple-mobile-web-app-title" content="CFB Updates">
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
-    <!-- ESPN-STYLE SCOREBOARD STRIP (fills in as games are played) -->
+<body data-root="./">
+    <!-- ============ SCOREBOARD STRIP (fills in as games are played) ============ -->
     <div class="scorebar">
         <div class="scorebar-inner">
-            <span class="scorebar-label">CFB&nbsp;Sim&nbsp;League</span>
-            <a class="sb-game sb-empty" href="./articles/thad-castle-coaching-decision.html"><span class="sb-meta">Breaking</span><span class="sb-row"><b>Thad Castle weighs 4 head coaching jobs</b></span></a>
+            <span class="scorebar-label"><b>NCAAF</b><i>Sim League</i></span>
+
+            <!-- Game tiles auto-render here from data.js → scores.
+                 The two story slots below disappear automatically once scores exist. -->
+
+            <a class="sb-game sb-story" href="./articles/thad-castle-coaching-decision.html">
+                <span class="sb-meta">Breaking</span>
+                <span class="sb-row"><b>Thad Castle weighs 4 head coaching jobs</b></span>
+            </a>
+            <a class="sb-game sb-story" href="./articles/kirk-ayahuasca-rebirth-commitment.html">
+                <span class="sb-meta">Carousel</span>
+                <span class="sb-row"><b>Kirk "reborn," mulls coaching offers</b></span>
+            </a>
             <a class="sb-full" href="./hall-of-fame.html">Hall of Fame ›</a>
         </div>
     </div>
 
-    <!-- NEWS TICKER -->
-    <div class="ticker-wrap">
-        <div class="ticker" id="ticker">
-            <span class="ticker-item"><a href="./articles/thad-castle-coaching-decision.html">BREAKING: Thad Castle weighs USF, Tulsa, Coastal Carolina, Colorado State</a></span>
-            <span class="ticker-item"><a href="./articles/kirk-ayahuasca-rebirth-commitment.html">Charlie Kirk reborn after ayahuasca trip — weighs coaching offers</a></span>
-            <span class="ticker-item"><a href="./index.html">A NEW SEASON BEGINS — New coaches, new teams, new chaos</a></span>
-            <span class="ticker-item"><a href="./hall-of-fame.html">The legends of Season 1 live forever in the Hall of Fame</a></span>
-            <span class="ticker-item"><a href="./articles/thad-castle-coaching-decision.html">BREAKING: Thad Castle weighs USF, Tulsa, Coastal Carolina, Colorado State</a></span>
-            <span class="ticker-item"><a href="./index.html">A NEW SEASON BEGINS — New coaches, new teams, new chaos</a></span>
-            <span class="ticker-item"><a href="./hall-of-fame.html">The legends of Season 1 live forever in the Hall of Fame</a></span>
-        </div>
-    </div>
-
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="header-inner">
-            <h1><a href="./index.html">CFB <span>Updates</span></a></h1>
-            <p class="tagline">College Football Dynasty Coverage</p>
+    <!-- ============ GLOBAL NAV (dark, sticky) ============ -->
+    <header class="global-nav">
+        <div class="global-nav-inner">
+            <a class="brand" href="./index.html" aria-label="CFB Updates home">
+                <span class="brand-logo">CFB<span>Updates</span></span>
+            </a>
+            <nav aria-label="Main">
+                <a href="./index.html" class="active">Home</a>
+                <a href="./hall-of-fame.html">Hall of Fame</a>
+                <a href="./historical.html">Historical</a>
+                <a href="./archive/index.html">All Articles</a>
+            </nav>
+            <div class="nav-right"><span class="season-pill">Season 1 · 2026</span></div>
         </div>
     </header>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <a href="./index.html" class="active">Home</a>
-        <a href="./hall-of-fame.html">🏆 Hall of Fame</a>
-        <a href="./historical.html">Historical Stats</a>
-        <a href="./archive/index.html">All Articles</a>
-    </nav>
+    <!-- ============ BREAKING TICKER ============ -->
+    <div class="ticker-wrap">
+        <div class="ticker-bug">Top</div>
+        <div class="ticker-scroll">
+            <div class="ticker" id="ticker"><!-- items render from data.js → storyTicker (fallback below) -->
+                <span class="ticker-item"><a href="./articles/thad-castle-coaching-decision.html">BREAKING: Thad Castle weighs USF, Tulsa, Coastal Carolina, Colorado State</a></span>
+                <span class="ticker-item"><a href="./articles/kirk-ayahuasca-rebirth-commitment.html">Charlie Kirk reborn after ayahuasca trip — weighs coaching offers</a></span>
+                <span class="ticker-item"><a href="./index.html">A NEW SEASON BEGINS — New coaches, new teams, new chaos</a></span>
+                <span class="ticker-item"><a href="./hall-of-fame.html">The legends of Season 1 live forever in the Hall of Fame</a></span>
+                <span class="ticker-item"><a href="./articles/thad-castle-coaching-decision.html">BREAKING: Thad Castle weighs USF, Tulsa, Coastal Carolina, Colorado State</a></span>
+                <span class="ticker-item"><a href="./index.html">A NEW SEASON BEGINS — New coaches, new teams, new chaos</a></span>
+                <span class="ticker-item"><a href="./hall-of-fame.html">The legends of Season 1 live forever in the Hall of Fame</a></span>
+            </div>
+        </div>
+    </div>
 
-    <!-- MAIN LAYOUT -->
-    <div class="container home-grid">
-        <!-- LEFT SIDEBAR: STAT LEADERS -->
+    <!-- ============ MAIN LAYOUT ============ -->
+    <div class="home-grid">
+        <!-- LEFT RAIL: SEASON LEADERS -->
         <aside class="sidebar-left">
-            <div class="stat-leaders" style="position: sticky; top: 60px;">
-                <div class="stat-leaders-header">
-                    <h2>Season Leaders</h2>
+            <div class="sticky-col">
+                <div class="stat-leaders">
+                    <div class="stat-leaders-header"><h2>Season Leaders</h2></div>
+                    <div class="stat-tabs">
+                        <div class="stat-tab active" onclick="showStat('pass-yds', this)">Pass YDS</div>
+                        <div class="stat-tab" onclick="showStat('pass-tds', this)">Pass TD</div>
+                        <div class="stat-tab" onclick="showStat('rush-yds', this)">Rush YDS</div>
+                        <div class="stat-tab" onclick="showStat('rec-yds', this)">Rec YDS</div>
+                    </div>
+                    <!-- LEADER ROW TEMPLATE:
+                    <li class="stat-item"><span class="stat-rank">1</span><div class="stat-player"><span class="stat-player-name">Player Name</span><span class="stat-player-team">TEAM</span></div><span class="stat-value">1,234</span></li>
+                    -->
+                    <div class="stat-content active" id="pass-yds">
+                        <ul class="stat-list">
+                            <li class="stat-item"><span class="stat-rank">—</span><div class="stat-player"><span class="stat-player-name">Awaiting Week 1</span></div><span class="stat-value">—</span></li>
+                        </ul>
+                    </div>
+                    <div class="stat-content" id="pass-tds">
+                        <ul class="stat-list">
+                            <li class="stat-item"><span class="stat-rank">—</span><div class="stat-player"><span class="stat-player-name">Awaiting Week 1</span></div><span class="stat-value">—</span></li>
+                        </ul>
+                    </div>
+                    <div class="stat-content" id="rush-yds">
+                        <ul class="stat-list">
+                            <li class="stat-item"><span class="stat-rank">—</span><div class="stat-player"><span class="stat-player-name">Awaiting Week 1</span></div><span class="stat-value">—</span></li>
+                        </ul>
+                    </div>
+                    <div class="stat-content" id="rec-yds">
+                        <ul class="stat-list">
+                            <li class="stat-item"><span class="stat-rank">—</span><div class="stat-player"><span class="stat-player-name">Awaiting Week 1</span></div><span class="stat-value">—</span></li>
+                        </ul>
+                    </div>
+                    <a class="widget-footlink" href="./historical.html">Full Stats ›</a>
                 </div>
-                <div class="stat-tabs">
-                    <div class="stat-tab active" onclick="showStat('pass-yds')">Pass YDS</div>
-                    <div class="stat-tab" onclick="showStat('pass-tds')">Pass TD</div>
-                    <div class="stat-tab" onclick="showStat('rush-yds')">Rush YDS</div>
-                    <div class="stat-tab" onclick="showStat('rec-yds')">Rec YDS</div>
-                </div>
-                <div class="stat-content active" id="pass-yds">
-                    <ul class="stat-list">
-                        <li class="stat-item"><span class="stat-rank">—</span><div class="stat-player"><span class="stat-player-name">Awaiting Week 1</span></div><span class="stat-value">—</span></li>
-                    </ul>
-                </div>
-                <div class="stat-content" id="pass-tds">
-                    <ul class="stat-list">
-                        <li class="stat-item"><span class="stat-rank">—</span><div class="stat-player"><span class="stat-player-name">Awaiting Week 1</span></div><span class="stat-value">—</span></li>
-                    </ul>
-                </div>
-                <div class="stat-content" id="rush-yds">
-                    <ul class="stat-list">
-                        <li class="stat-item"><span class="stat-rank">—</span><div class="stat-player"><span class="stat-player-name">Awaiting Week 1</span></div><span class="stat-value">—</span></li>
-                    </ul>
-                </div>
-                <div class="stat-content" id="rec-yds">
-                    <ul class="stat-list">
-                        <li class="stat-item"><span class="stat-rank">—</span><div class="stat-player"><span class="stat-player-name">Awaiting Week 1</span></div><span class="stat-value">—</span></li>
-                    </ul>
+
+                <div class="widget" id="rankings-widget">
+                    <!-- AP Top 25 renders here from data.js -->
                 </div>
             </div>
         </aside>
 
-        <!-- MAIN CONTENT -->
+        <!-- CENTER: LEAD STORY + NEWS -->
         <main class="main-content">
-            <!-- HERO FEATURED -->
+            <!-- HERO LEAD -->
             <article class="hero-featured">
                 <a href="./articles/thad-castle-coaching-decision.html">
                     <img src="./images/thad-castle-presser.jpg" alt="Coach Thad Castle at his Head Coach Introduction press conference">
                     <div class="hero-body">
-                        <span class="tag">BREAKING NEWS</span>
+                        <span class="tag">Breaking News</span>
                         <h2>Where Will He Land? Coach Thad Castle's Big Decision Looms</h2>
                         <p class="excerpt">Thad Castle has four programs calling — USF, Tulsa, Coastal Carolina, and Colorado State. We break down every landing spot as the loudest man in coaching weighs his next move.</p>
-                        <p class="meta">July 1, 2026 • Breaking News</p>
+                        <p class="meta">July 1, 2026 · Coaching Carousel</p>
                     </div>
                 </a>
+                <div class="hero-links">
+                    <a href="./articles/kirk-ayahuasca-rebirth-commitment.html">"I Feel Reborn" — Kirk returns from ayahuasca trip, mulls offers</a>
+                    <a href="./hall-of-fame.html">Hall of Fame opens its doors — who gets enshrined first?</a>
+                </div>
             </article>
 
-            <!-- LATEST NEWS -->
+            <!-- SECONDARY STORY ROW -->
+            <section class="carousel-section">
+                <div class="section-bar">
+                    <h3>Top Stories</h3>
+                    <a class="see-all" href="./archive/index.html">See All ›</a>
+                </div>
+                <div class="story-row">
+                    <div class="article-card">
+                        <a href="./articles/kirk-ayahuasca-rebirth-commitment.html">
+                            <img src="./images/kirk-commitment-day.jpg" class="article-card-image" alt="Charlie Kirk Commitment Day">
+                            <div class="card-body">
+                                <div class="card-kicker">Coaching Carousel</div>
+                                <h4>"I Feel Reborn" — Kirk Returns From Ayahuasca Trip, Mulls Offers</h4>
+                                <p class="meta">Jun 30, 2026</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="article-card">
+                        <a href="./articles/thad-castle-coaching-decision.html">
+                            <img src="./images/thad-castle-presser.jpg" class="article-card-image" alt="Thad Castle Head Coach Introduction">
+                            <div class="card-body">
+                                <div class="card-kicker">Breaking News</div>
+                                <h4>Castle's Board: The Case For All Four Landing Spots</h4>
+                                <p class="meta">Jul 1, 2026</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LATEST NEWS CAROUSEL -->
             <section class="carousel-section">
                 <div class="carousel-header">
                     <h3>Latest News</h3>
                     <div class="carousel-nav">
-                        <button onclick="scrollCarousel(-1)">‹</button>
-                        <button onclick="scrollCarousel(1)">›</button>
+                        <button onclick="scrollCarousel(-1)" aria-label="Scroll left">‹</button>
+                        <button onclick="scrollCarousel(1)" aria-label="Scroll right">›</button>
                     </div>
                 </div>
                 <div class="carousel-container" id="carousel">
@@ -114,29 +183,42 @@
                     </div>
                 </div>
             </section>
-
-            <!-- FEATURED STORIES -->
-            <section class="featured-section">
-                <h3>Featured Stories</h3>
-                <div class="article-grid">
-                    <div class="article-card"><a href="./hall-of-fame.html"><div class="card-body"><h4>🏆 Visit the Hall of Fame — the legends of Season 1</h4><p class="meta">All-Time</p></div></a></div>
-                </div>
-            </section>
         </main>
 
-        <!-- RIGHT SIDEBAR: SCORES -->
+        <!-- RIGHT RAIL: HEADLINES + SCORES -->
         <aside class="sidebar-right">
-            <div class="scores-widget" style="position: sticky; top: 60px;">
-                <h3>Latest Scores</h3>
-                <div class="score-item">
-                    <div class="score-team">No games yet</div>
-                    <div class="score-team loser">Season starts soon</div>
+            <div class="sticky-col">
+                <div class="headlines-widget">
+                    <h3 class="widget-title">Top Headlines</h3>
+                    <ul class="headlines-list">
+                        <li><a href="./articles/thad-castle-coaching-decision.html">Thad Castle weighs USF, Tulsa, Coastal Carolina, Colorado State</a></li>
+                        <li><a href="./articles/kirk-ayahuasca-rebirth-commitment.html">Kirk "reborn" after ayahuasca ceremony, weighs coaching offers</a></li>
+                        <li><a href="./hall-of-fame.html">Hall of Fame awaits its first class of legends</a></li>
+                        <li><a href="./historical.html">The record book is blank — history starts now</a></li>
+                    </ul>
+                </div>
+                <div class="headlines-widget">
+                    <h3 class="widget-title">Trending Now</h3>
+                    <ul class="trending-list">
+                        <li><a href="./articles/kirk-ayahuasca-rebirth-commitment.html">Kirk's "reboot card" story raises more questions than answers</a></li>
+                        <li><a href="./articles/thad-castle-coaching-decision.html">Castle brings commemorative beer bottles to his own presser</a></li>
+                        <li><a href="./historical.html">Every league record is currently up for grabs</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget" id="fanpoll">
+                    <!-- Fan Poll renders here from data.js -->
+                </div>
+
+                <div class="scores-widget">
+                    <h3>Latest Scores</h3>
+                    <div id="scores-widget-body"><!-- renders from data.js --></div>
                 </div>
             </div>
         </aside>
     </div>
 
-    <!-- FOOTER -->
+    <!-- ============ FOOTER ============ -->
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-brand">
@@ -146,7 +228,7 @@
             <div class="footer-links">
                 <h4>Navigation</h4>
                 <a href="./index.html">Home</a>
-                <a href="./hall-of-fame.html">🏆 Hall of Fame</a>
+                <a href="./hall-of-fame.html">Hall of Fame</a>
                 <a href="./historical.html">Historical Stats</a>
                 <a href="./archive/index.html">All Articles</a>
             </div>
@@ -157,18 +239,21 @@
             </div>
         </div>
         <div class="footer-bottom">&copy; 2026 CFB Updates. Dynasty League Coverage. Where Legends Live Forever (and Their Coaches Need Therapy).</div>
+    <div class="footer-disclaimer">CFB Updates is a satirical fan site covering a private video-game dynasty league. All stories are fiction. Not affiliated with ESPN, the NCAA, any university, or any real person depicted. Please do not sue us, buddehs.</div>
     </footer>
 
     <script>
-        function showStat(id) {
-            document.querySelectorAll('.stat-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.stat-tab').forEach(el => el.classList.remove('active'));
+        function showStat(id, el) {
+            document.querySelectorAll('.stat-content').forEach(x => x.classList.remove('active'));
+            document.querySelectorAll('.stat-tab').forEach(x => x.classList.remove('active'));
             document.getElementById(id).classList.add('active');
-            event.target.classList.add('active');
+            el.classList.add('active');
         }
         function scrollCarousel(dir) {
-            document.getElementById('carousel').scrollBy({ left: dir * 220, behavior: 'smooth' });
+            document.getElementById('carousel').scrollBy({ left: dir * 232, behavior: 'smooth' });
         }
     </script>
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>

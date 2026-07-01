@@ -2,49 +2,138 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Hall of Fame | CFB Updates</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23d50a0a'/%3E%3Ctext x='34' y='47' font-family='Arial,Helvetica,sans-serif' font-size='42' font-weight='900' font-style='italic' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CFB Updates">
+    <meta property="og:title" content="Hall of Fame | CFB Updates">
+    <meta property="og:description" content="The legends of the league, enshrined forever.">
+    <meta property="og:image" content="https://cfbupdates.com/images/thad-castle-presser.jpg">
+    <meta property="og:url" content="https://cfbupdates.com/hall-of-fame.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#1b1c1f">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icon-180.png">
+    <meta name="apple-mobile-web-app-title" content="CFB Updates">
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
-    <div class="ticker-wrap"><div class="ticker"><span class="ticker-item"><a href="./index.html">A NEW SEASON BEGINS — New coaches, new teams, new chaos</a></span><span class="ticker-item"><a href="./index.html">The Hall of Fame awaits its first inductees</a></span><span class="ticker-item"><a href="./index.html">Coaches are picking their programs now — stay tuned</a></span><span class="ticker-item"><a href="./index.html">A NEW SEASON BEGINS — New coaches, new teams, new chaos</a></span><span class="ticker-item"><a href="./index.html">The Hall of Fame awaits its first inductees</a></span></div></div>
+<body data-root="./">
+    <div class="scorebar">
+        <div class="scorebar-inner">
+            <span class="scorebar-label"><b>NCAAF</b><i>Sim League</i></span>
+            <a class="sb-game sb-story" href="./articles/thad-castle-coaching-decision.html">
+                <span class="sb-meta">Breaking</span>
+                <span class="sb-row"><b>Thad Castle weighs 4 head coaching jobs</b></span>
+            </a>
+            <a class="sb-game sb-story" href="./articles/kirk-ayahuasca-rebirth-commitment.html">
+                <span class="sb-meta">Carousel</span>
+                <span class="sb-row"><b>Kirk "reborn," mulls coaching offers</b></span>
+            </a>
+            <a class="sb-full" href="./archive/index.html">All Articles ›</a>
+        </div>
+    </div>
 
-    <header class="site-header">
-        <div class="header-inner">
-            <h1><a href="./index.html">CFB <span>Updates</span></a></h1>
-            <p class="tagline">College Football Dynasty Coverage</p>
+    <header class="global-nav">
+        <div class="global-nav-inner">
+            <a class="brand" href="./index.html" aria-label="CFB Updates home">
+                <span class="brand-logo">CFB<span>Updates</span></span>
+            </a>
+            <nav aria-label="Main">
+                <a href="./index.html">Home</a>
+                <a href="./hall-of-fame.html" class="active">Hall of Fame</a>
+                <a href="./historical.html">Historical</a>
+                <a href="./archive/index.html">All Articles</a>
+            </nav>
+            <div class="nav-right"><span class="season-pill">Season 1 · 2026</span></div>
         </div>
     </header>
 
-    <nav class="navbar">
-        <a href="./index.html">Home</a>
-        <a href="./hall-of-fame.html" class="active">🏆 Hall of Fame</a>
-        <a href="./historical.html">Historical Stats</a>
-        <a href="./archive/index.html">All Articles</a>
-    </nav>
+    <div class="ticker-wrap">
+        <div class="ticker-bug">Top</div>
+        <div class="ticker-scroll">
+            <div class="ticker">
+                <span class="ticker-item"><a href="./index.html">A NEW SEASON BEGINS — New coaches, new teams, new chaos</a></span>
+                <span class="ticker-item"><a href="./hall-of-fame.html">The Hall of Fame awaits its first inductees</a></span>
+                <span class="ticker-item"><a href="./index.html">Coaches are picking their programs now — stay tuned</a></span>
+                <span class="ticker-item"><a href="./index.html">A NEW SEASON BEGINS — New coaches, new teams, new chaos</a></span>
+                <span class="ticker-item"><a href="./hall-of-fame.html">The Hall of Fame awaits its first inductees</a></span>
+            </div>
+        </div>
+    </div>
 
     <div class="hof-hero">
         <div class="trophy">🏆</div>
-        <h1>Hall of Fame</h1>
+        <h1>Hall of <span class="gold">Fame</span></h1>
         <p class="subtitle">The legends of this league haven't been written yet. A new era begins — who will be the first enshrined?</p>
     </div>
 
     <div class="container-narrow">
-        <div class="inductee" style="text-align:center;">
-            <div class="inductee-header" style="justify-content:center;">
-                <h2>No Inductees Yet</h2>
+        <!-- ============ INDUCTEE ROSTER TABLE ============
+        Once inductees exist, uncomment this table and add one <tr> per legend.
+        The header row stays stuck to the top while scrolling.
+
+        <div class="table-card">
+            <h2>Inducted Legends</h2>
+            <div class="table-scroll">
+                <table class="espn-table">
+                    <thead>
+                        <tr>
+                            <th class="tl">Player</th><th>Pos</th><th>Team</th><th>Seasons</th><th>OVR</th><th>Titles</th><th>Awards</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="nm">Player Name</td><td>QB</td><td class="tm">BGSU</td><td>2025–28</td><td class="hi">99</td><td class="hi">2</td><td>Heisman '27</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <p style="color:var(--gray);">It's a fresh league with a clean slate. The Hall of Fame will fill up as players carve their names into history this season. Greatness is earned on the field — check back as the legends emerge, buddehs.</p>
         </div>
+        -->
+
+        <div class="table-card">
+            <h2>Inducted Legends</h2>
+            <div class="empty-state">
+                <b>No Inductees Yet</b>
+                It's a fresh league with a clean slate. The Hall of Fame will fill up as players carve their names into history this season. Greatness is earned on the field — check back as the legends emerge, buddehs.
+            </div>
+        </div>
+
+        <!-- ============ FULL INDUCTEE PROFILE ============
+        For each enshrined legend, add a profile card like this below the table:
+
+        <div class="inductee">
+            <div class="inductee-header">
+                <div>
+                    <div class="ovr-badge">99</div>
+                    <div class="ovr-label">OVR</div>
+                </div>
+                <div>
+                    <h2>Player Name</h2>
+                    <span class="pos-tag">QB</span>
+                    <span class="team-tag">Bowling Green</span>
+                </div>
+            </div>
+            <p>[The legend's story — records, moments, chaos.]</p>
+            <div class="awards-grid">
+                <span class="award-pill">🏆 Heisman 2027</span>
+                <span class="award-pill">🏈 2x National Champion</span>
+            </div>
+        </div>
+        -->
     </div>
 
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-brand"><h3>CFB <span>Updates</span></h3><p>Dynasty League Coverage Since 2025</p></div>
-            <div class="footer-links"><h4>Navigation</h4><a href="./index.html">Home</a><a href="./hall-of-fame.html">🏆 Hall of Fame</a><a href="./historical.html">Historical Stats</a><a href="./archive/index.html">All Articles</a></div>
+            <div class="footer-links"><h4>Navigation</h4><a href="./index.html">Home</a><a href="./hall-of-fame.html">Hall of Fame</a><a href="./historical.html">Historical Stats</a><a href="./archive/index.html">All Articles</a></div>
             <div class="footer-links"><h4>League</h4><a href="./index.html">New Season</a><a href="./archive/index.html">All Articles</a></div>
         </div>
         <div class="footer-bottom">&copy; 2026 CFB Updates. Hall of Fame — Where Legends Will Live Forever.</div>
+    <div class="footer-disclaimer">CFB Updates is a satirical fan site covering a private video-game dynasty league. All stories are fiction. Not affiliated with ESPN, the NCAA, any university, or any real person depicted. Please do not sue us, buddehs.</div>
     </footer>
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- ARTICLE TEMPLATE — copy this file, rename it, and fill every [BRACKET]. -->
+    <title>[HEADLINE] | CFB Updates</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23d50a0a'/%3E%3Ctext x='34' y='47' font-family='Arial,Helvetica,sans-serif' font-size='42' font-weight='900' font-style='italic' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CFB Updates">
+    <meta property="og:title" content="[HEADLINE] | CFB Updates">
+    <meta property="og:description" content="[One-sentence excerpt for link previews]">
+    <meta property="og:image" content="https://cfbupdates.com/images/[IMAGE].jpg">
+    <meta property="og:url" content="https://cfbupdates.com/articles/[FILE].html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#1b1c1f">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icon-180.png">
+    <meta name="apple-mobile-web-app-title" content="CFB Updates">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-root="../">
+    <!-- SCOREBAR: keep the two most current headlines/games here -->
+    <div class="scorebar">
+        <div class="scorebar-inner">
+            <span class="scorebar-label"><b>NCAAF</b><i>Sim League</i></span>
+            <!-- Game slot (post-season-start):
+            <a class="sb-game" href="./GAME-RECAP.html">
+                <span class="sb-meta">Final</span>
+                <span class="sb-row sb-win"><b>BGSU</b><i>34</i></span>
+                <span class="sb-row"><b>TOL</b><i>17</i></span>
+            </a> -->
+            <a class="sb-game sb-story" href="../articles/[LATEST-ARTICLE].html">
+                <span class="sb-meta">Breaking</span>
+                <span class="sb-row"><b>[Short headline]</b></span>
+            </a>
+            <a class="sb-full" href="../hall-of-fame.html">Hall of Fame ›</a>
+        </div>
+    </div>
+
+    <header class="global-nav">
+        <div class="global-nav-inner">
+            <a class="brand" href="../index.html" aria-label="CFB Updates home">
+                <span class="brand-logo">CFB<span>Updates</span></span>
+            </a>
+            <nav aria-label="Main">
+                <a href="../index.html">Home</a>
+                <a href="../hall-of-fame.html">Hall of Fame</a>
+                <a href="../historical.html">Historical</a>
+                <a href="../archive/index.html">All Articles</a>
+            </nav>
+            <div class="nav-right"><span class="season-pill">Season 1 · 2026</span></div>
+        </div>
+    </header>
+
+    <div class="ticker-wrap">
+        <div class="ticker-bug">Top</div>
+        <div class="ticker-scroll">
+            <div class="ticker">
+                <!-- 5-7 items, repeat the first couple at the end so the loop reads continuously -->
+                <span class="ticker-item"><a href="../articles/[ARTICLE].html">[TICKER HEADLINE 1]</a></span>
+                <span class="ticker-item"><a href="../articles/[ARTICLE].html">[TICKER HEADLINE 2]</a></span>
+                <span class="ticker-item"><a href="../index.html">[TICKER HEADLINE 3]</a></span>
+                <span class="ticker-item"><a href="../articles/[ARTICLE].html">[TICKER HEADLINE 1]</a></span>
+                <span class="ticker-item"><a href="../articles/[ARTICLE].html">[TICKER HEADLINE 2]</a></span>
+            </div>
+        </div>
+    </div>
+
+    <article class="article-page">
+        <div class="crumbs"><a href="../index.html">NCAAF</a><span class="sep">›</span><a href="../archive/index.html">News</a></div>
+        <div class="article-kicker">[SECTION · e.g. Week 3 Recap / Breaking News / Coaching Carousel]</div>
+        <h1 class="article-title">[HEADLINE]</h1>
+        <div class="byline-bar">
+            <div class="avatar">CU</div>
+            <div class="byline-stack">
+                <span class="byline">By <b>CFB Updates Staff</b></span>
+                <span class="timestamp">[Month D, YYYY · H:MM AM/PM ET]</span>
+            </div>
+            <span class="readtime">[X] min read</span>
+        </div>
+        <figure class="article-figure">
+            <img src="../images/[IMAGE].jpg" alt="[Describe the image]" class="article-image">
+            <figcaption>[Caption for the photo]. — CFB Updates</figcaption>
+        </figure>
+
+        <div class="article-content">
+            <p>[Lede paragraph — this renders slightly larger automatically.]</p>
+            <p>[Body paragraph.]</p>
+
+            <!-- OPTIONAL BLOCKS — delete the ones you don't need -->
+
+            <!-- Box score / list box -->
+            <div class="score-box">
+                <h3>[Box title, e.g. Final Score]</h3>
+                <p><strong>[Team A] 34, [Team B] 17</strong></p>
+                <p>[Supporting line]</p>
+            </div>
+
+            <h2>[Section heading]</h2>
+            <p>[More body.]</p>
+
+            <!-- Pull quote -->
+            <blockquote class="pull-quote">"[The best quote in the article.]"<cite>— [Who said it]</cite></blockquote>
+
+            <!-- Big stat callout -->
+            <div class="stat-highlight">
+                <span class="stat-value">[347]</span>
+                <span class="stat-label">[Passing yards — player name]</span>
+            </div>
+
+            <!-- Press conference Q&A -->
+            <div class="qa-section">
+                <h3>Press Conference Transcript</h3>
+                <div class="qa-item">
+                    <p class="qa-question">Q: [Question]</p>
+                    <p class="qa-answer">"[Answer]"</p>
+                </div>
+            </div>
+
+            <!-- Tweet-style social embed (great for coach "posts") -->
+            <div class="social-card">
+                <div class="social-head">
+                    <div class="avatar">[TC]</div>
+                    <div class="social-id">
+                        <span class="social-name">[Coach Name] <span class="verified">✔</span></span>
+                        <span class="social-handle">@[handle]</span>
+                    </div>
+                </div>
+                <div class="social-body">[The post text.]</div>
+                <div class="social-meta"><span>[7:38 PM · Oct 12, 2026]</span><span>[12.4K Reposts]</span><span>[89K Likes]</span></div>
+            </div>
+
+            <!-- For a "video" card on the homepage, add class="watch" to the card-kicker:
+                 <div class="card-kicker watch">Watch</div>  → renders as ▶ WATCH in red -->
+
+            <p>[Closing paragraph.]</p>
+        </div>
+
+        <div class="article-tags">
+            <a class="tag-chip" href="../archive/index.html">[Tag 1]</a>
+            <a class="tag-chip" href="../archive/index.html">[Tag 2]</a>
+        </div>
+
+        <div class="more-coverage">
+            <h3>More Coverage</h3>
+            <a href="../articles/[RELATED-1].html">[Related headline 1]</a>
+            <a href="../articles/[RELATED-2].html">[Related headline 2]</a>
+            <a href="../archive/index.html">All articles from the season</a>
+        </div>
+
+        <div class="share-buttons">
+            <span class="share-btn">📋 Copy Link</span>
+            <span class="share-btn">🐦 Tweet</span>
+            <span class="share-btn">📱 Share</span>
+        </div>
+        <a href="../index.html" class="back-link">← Back to Home</a>
+    </article>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand"><h3>CFB <span>Updates</span></h3><p>Dynasty League Coverage Since 2025</p></div>
+            <div class="footer-links"><h4>Navigation</h4><a href="../index.html">Home</a><a href="../hall-of-fame.html">Hall of Fame</a><a href="../historical.html">Historical Stats</a><a href="../archive/index.html">All Articles</a></div>
+            <div class="footer-links"><h4>League</h4><a href="../index.html">New Season</a><a href="../hall-of-fame.html">Legends</a></div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 CFB Updates. Dynasty League Coverage.</div>
+    <div class="footer-disclaimer">CFB Updates is a satirical fan site covering a private video-game dynasty league. All stories are fiction. Not affiliated with ESPN, the NCAA, any university, or any real person depicted. Please do not sue us, buddehs.</div>
+    </footer>
+    <script src="../data.js"></script>
+    <script src="../app.js"></script>
+</body>
+</html>
