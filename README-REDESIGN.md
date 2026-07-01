@@ -117,3 +117,15 @@ Preseason AP Top 25 is pre-loaded (Josh Pate's 2026 projection).
   tables, notch-safe padding in landscape.
 - NEW FILES at repo root: app icons (icon-192.png, icon-512.png, icon-180.png)
   and manifest.json. Keep them at the root.
+
+## v4.4 — Mobile ordering fix
+
+On phones the homepage now stacks: news feed → Latest Scores → Season Leaders
+→ AP Top 25 → Top Headlines → Trending → Fan Poll. (Everything was previously
+below the fold-of-all-folds; scores/leaders/rankings now sit right under the
+stories.) Desktop 3-column layout unchanged.
+
+Reminder: the rotating white SCORES ticker at the top of every page appears
+automatically as soon as `scores` in data.js has at least one game — no other
+step needed. Same data also fills the scoreboard tiles and the Latest Scores
+widget.
