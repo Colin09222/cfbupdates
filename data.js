@@ -62,6 +62,8 @@ const CFB_DATA = {
        link: "articles/csu-wyo-recap.html", odds: "" },
   */
   scores: [
+    { status: "Final", note: "Week 3", away: { team: "SAC", score: 7 },
+      home: { team: "NDSU", score: 28 }, winner: "home", link: "articles/kirk-ndsu-3-0-sacramento-state.html", odds: "" },
     { status: "Final", note: "Week 2", away: { team: "OSU", score: 24 },
       home: { team: "TEX", score: 17 }, winner: "away", link: "index.html", odds: "" },
     { status: "Final", note: "Week 2", away: { team: "OU", score: 29 },
@@ -86,7 +88,8 @@ const CFB_DATA = {
 
   /* ---------- STORY TICKER (dark "TOP" strip, every page) ---------- */
   storyTicker: [
-    { text: "BREAKING: Charlie Kirk commits to NDSU, names Kim Jong Un assistant coach", href: "articles/kirk-ndsu-kim-jong-un.html" },
+    { text: "BISON UNBEATEN: NDSU rolls Sacramento State 28-7 to move to 3-0", href: "articles/kirk-ndsu-3-0-sacramento-state.html" },
+    { text: "Charlie Kirk commits to NDSU, names Kim Jong Un assistant coach", href: "articles/kirk-ndsu-kim-jong-un.html" },
     { text: "Alex Jones leaves media, enters head coaching free agent market", href: "articles/alex-jones-coaching-announcement.html" },
     { text: "Ohio State jumps Miami for No. 1 after 24-17 win at Texas", href: "index.html" },
     { text: "Upset alert: Kentucky stuns No. 12 Alabama 29-28", href: "index.html" },
