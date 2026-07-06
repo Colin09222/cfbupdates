@@ -16,7 +16,7 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/icon-180.png">
     <meta name="apple-mobile-web-app-title" content="CFB Updates">
-    <link rel="stylesheet" href="./styles.css?v=46">
+    <link rel="stylesheet" href="./styles.css?v=47">
 </head>
 <body data-root="./">
     <div class="scorebar">
@@ -64,7 +64,7 @@
 
     <div class="container-narrow">
         <h1 class="page-title">Historical Stats</h1>
-        <p class="page-subtitle">The all-time record book — currently a blank page</p>
+        <p class="page-subtitle">The all-time record book · Season 1 · 2026</p>
 
         <!-- ============ CHAMPIONS TABLE ============
         Uncomment and add one row per completed season:
@@ -106,19 +106,314 @@
         Single-Season Records, Coaching Wins, etc.
         -->
 
+        <!-- ============ NATIONAL CHAMPIONS ============ -->
         <div class="table-card">
             <h2>National Champions</h2>
-            <div class="empty-state">
-                <b>No Champions Yet</b>
-                The first title is still up for grabs. Every banner in this building gets hung this season or later.
+            <div class="table-scroll">
+                <table class="espn-table">
+                    <thead>
+                        <tr><th class="tl">Season</th><th class="tl">Champion</th><th>Title Game</th><th class="tl">Site</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="champ-row"><td>2026</td><td class="nm tl">TBD — CFP Final Pending</td><td class="hi">(5) Ohio State vs (2) Oklahoma</td><td class="tl">Las Vegas, NV (UNLV)</td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
+        <!-- ============ 2026 CFP BRACKET ============ -->
         <div class="table-card">
-            <h2>All-Time Records</h2>
-            <div class="empty-state">
-                <b>The Record Book Is Blank</b>
-                New league, clean slate. Every all-time record, championship, and statistical milestone is up for grabs. The record book fills in as the season unfolds — nobody owns anything yet. Make history, buddehs.
+            <h2>2026 College Football Playoff</h2>
+            <div class="bracket-tree">
+                <div class="bracket-round">
+                    <div class="round-label">First Round</div>
+                    <div class="bracket-game">
+                        <div class="bracket-team winner"><span class="bt-name"><span class="bracket-seed">5</span>Ohio State</span><span class="bt-score">27</span></div>
+                        <div class="bracket-team"><span class="bt-name"><span class="bracket-seed">12</span>Texas Tech</span><span class="bt-score">6</span></div>
+                    </div>
+                    <div class="bracket-game">
+                        <div class="bracket-team winner"><span class="bt-name"><span class="bracket-seed">8</span>USC</span><span class="bt-score">28</span></div>
+                        <div class="bracket-team"><span class="bt-name"><span class="bracket-seed">9</span>Texas A&amp;M</span><span class="bt-score">10</span></div>
+                    </div>
+                    <div class="bracket-game">
+                        <div class="bracket-team winner"><span class="bt-name"><span class="bracket-seed">6</span>Alabama</span><span class="bt-score">31</span></div>
+                        <div class="bracket-team"><span class="bt-name"><span class="bracket-seed">11</span>Colorado State</span><span class="bt-score">27</span></div>
+                    </div>
+                    <div class="bracket-game">
+                        <div class="bracket-team winner"><span class="bt-name"><span class="bracket-seed">7</span>Indiana</span><span class="bt-score">33</span></div>
+                        <div class="bracket-team"><span class="bt-name"><span class="bracket-seed">10</span>Notre Dame</span><span class="bt-score">16</span></div>
+                    </div>
+                </div>
+                <div class="bracket-round">
+                    <div class="round-label">Quarterfinals</div>
+                    <div class="bracket-game">
+                        <div class="bracket-team winner"><span class="bt-name"><span class="bracket-seed">5</span>Ohio State</span><span class="bt-score">35</span></div>
+                        <div class="bracket-team"><span class="bt-name"><span class="bracket-seed">4</span>Virginia</span><span class="bt-score">10</span></div>
+                    </div>
+                    <div class="bracket-game">
+                        <div class="bracket-team winner"><span class="bt-name"><span class="bracket-seed">1</span>Oregon</span><span class="bt-score">30</span></div>
+                        <div class="bracket-team"><span class="bt-name"><span class="bracket-seed">8</span>USC</span><span class="bt-score">22</span></div>
+                    </div>
+                    <div class="bracket-game">
+                        <div class="bracket-team winner"><span class="bt-name"><span class="bracket-seed">6</span>Alabama</span><span class="bt-score">45</span></div>
+                        <div class="bracket-team"><span class="bt-name"><span class="bracket-seed">3</span>Miami</span><span class="bt-score">39</span></div>
+                    </div>
+                    <div class="bracket-game">
+                        <div class="bracket-team winner"><span class="bt-name"><span class="bracket-seed">2</span>Oklahoma</span><span class="bt-score">34</span></div>
+                        <div class="bracket-team"><span class="bt-name"><span class="bracket-seed">7</span>Indiana</span><span class="bt-score">31</span></div>
+                    </div>
+                </div>
+                <div class="bracket-round">
+                    <div class="round-label">Semifinals</div>
+                    <div class="bracket-game">
+                        <div class="bracket-team winner"><span class="bt-name"><span class="bracket-seed">5</span>Ohio State</span><span class="bt-score">28</span></div>
+                        <div class="bracket-team"><span class="bt-name"><span class="bracket-seed">1</span>Oregon</span><span class="bt-score">27</span></div>
+                    </div>
+                    <div class="bracket-game">
+                        <div class="bracket-team winner"><span class="bt-name"><span class="bracket-seed">2</span>Oklahoma</span><span class="bt-score">55</span></div>
+                        <div class="bracket-team"><span class="bt-name"><span class="bracket-seed">6</span>Alabama</span><span class="bt-score">20</span></div>
+                    </div>
+                </div>
+                <div class="bracket-round">
+                    <div class="round-label">National Championship</div>
+                    <div class="bracket-championship">
+                        <div class="bracket-team"><span class="bt-name"><span class="bracket-seed">5</span>Ohio State</span><span class="bt-score">—</span></div>
+                        <div class="bracket-team"><span class="bt-name"><span class="bracket-seed">2</span>Oklahoma</span><span class="bt-score">—</span></div>
+                    </div>
+                    <div class="round-label" style="margin-top:8px">Las Vegas, NV · UNLV · Final Pending</div>
+                    <div style="text-align:center"><span class="trophy">🏆</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ 2026 AWARDS ============ -->
+        <div class="table-card">
+            <h2>2026 Heisman Trophy</h2>
+            <div class="table-scroll">
+                <table class="espn-table">
+                    <thead>
+                        <tr><th class="tl">Winner</th><th>Pos</th><th>Team</th><th>Rush Yds</th><th>Rush TD</th><th>Rec Yds</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="champ-row"><td class="nm tl">DJ Scott</td><td>HB</td><td class="tm">NDSU</td><td class="hi">1,639</td><td class="hi">20</td><td>699</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ============ 2026 FINAL AP TOP 25 ============ -->
+        <div class="table-card">
+            <h2>2026 Final AP Top 25</h2>
+            <div class="table-scroll">
+                <table class="espn-table">
+                    <thead><tr><th>RK</th><th class="tl">Team</th><th>Abbr</th><th>Record</th></tr></thead>
+                    <tbody>
+                        <tr><td class="rk">1</td><td class="nm tl">Oregon</td><td class="tm">ORE</td><td class="hi">13-2</td></tr>
+                        <tr><td class="rk">2</td><td class="nm tl">Oklahoma</td><td class="tm">OU</td><td class="hi">13-2</td></tr>
+                        <tr><td class="rk">3</td><td class="nm tl">Miami</td><td class="tm">MIA</td><td class="hi">12-2</td></tr>
+                        <tr><td class="rk">4</td><td class="nm tl">Virginia</td><td class="tm">UVA</td><td class="hi">12-2</td></tr>
+                        <tr><td class="rk">5</td><td class="nm tl">Ohio State</td><td class="tm">OSU</td><td class="hi">14-2</td></tr>
+                        <tr><td class="rk">6</td><td class="nm tl">Alabama</td><td class="tm">BAMA</td><td class="hi">11-4</td></tr>
+                        <tr><td class="rk">7</td><td class="nm tl">Indiana</td><td class="tm">IND</td><td class="hi">10-4</td></tr>
+                        <tr><td class="rk">8</td><td class="nm tl">USC</td><td class="tm">USC</td><td class="hi">10-4</td></tr>
+                        <tr><td class="rk">9</td><td class="nm tl">Texas A&amp;M</td><td class="tm">TAMU</td><td class="hi">10-4</td></tr>
+                        <tr><td class="rk">10</td><td class="nm tl">Notre Dame</td><td class="tm">ND</td><td class="hi">9-4</td></tr>
+                        <tr><td class="rk">11</td><td class="nm tl">Colorado State</td><td class="tm">CSU</td><td class="hi">12-2</td></tr>
+                        <tr><td class="rk">12</td><td class="nm tl">Florida</td><td class="tm">FLA</td><td class="hi">9-4</td></tr>
+                        <tr><td class="rk">13</td><td class="nm tl">SMU</td><td class="tm">SMU</td><td class="hi">10-3</td></tr>
+                        <tr><td class="rk">14</td><td class="nm tl">Memphis</td><td class="tm">MEM</td><td class="hi">11-2</td></tr>
+                        <tr><td class="rk">15</td><td class="nm tl">Colorado</td><td class="tm">COLO</td><td class="hi">9-4</td></tr>
+                        <tr><td class="rk">16</td><td class="nm tl">North Dakota State</td><td class="tm">NDSU</td><td class="hi">12-2</td></tr>
+                        <tr><td class="rk">17</td><td class="nm tl">Texas Tech</td><td class="tm">TTU</td><td class="hi">10-4</td></tr>
+                        <tr><td class="rk">18</td><td class="nm tl">Arizona</td><td class="tm">ARIZ</td><td class="hi">10-4</td></tr>
+                        <tr><td class="rk">19</td><td class="nm tl">UNLV</td><td class="tm">UNLV</td><td class="hi">11-3</td></tr>
+                        <tr><td class="rk">20</td><td class="nm tl">Ole Miss</td><td class="tm">MISS</td><td class="hi">8-5</td></tr>
+                        <tr><td class="rk">21</td><td class="nm tl">USF</td><td class="tm">USF</td><td class="hi">10-4</td></tr>
+                        <tr><td class="rk">22</td><td class="nm tl">Penn State</td><td class="tm">PSU</td><td class="hi">8-5</td></tr>
+                        <tr><td class="rk">23</td><td class="nm tl">Texas State</td><td class="tm">TXST</td><td class="hi">10-3</td></tr>
+                        <tr><td class="rk">24</td><td class="nm tl">Boise State</td><td class="tm">BSU</td><td class="hi">9-5</td></tr>
+                        <tr><td class="rk">25</td><td class="nm tl">Georgia</td><td class="tm">UGA</td><td class="hi">9-4</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h2 class="page-title" style="margin-top:34px;font-size:1.4rem">2026 Statistical Leaders</h2>
+
+        <!-- Passing Yards -->
+        <div class="table-card">
+            <h2>Passing Yards</h2>
+            <div class="table-scroll">
+                <table class="espn-table">
+                    <thead><tr><th>RK</th><th class="tl">Player</th><th>Team</th><th>Yards</th></tr></thead>
+                    <tbody>
+                        <tr><td class="rk">1</td><td class="nm tl">J. Maiava</td><td class="tm">USC</td><td class="hi">4,391</td></tr>
+                        <tr><td class="rk">2</td><td class="nm tl">J. Denegal</td><td class="tm">SDSU</td><td class="hi">4,288</td></tr>
+                        <tr><td class="rk">3</td><td class="nm tl">T. Jackson</td><td class="tm">UNT</td><td class="hi">4,169</td></tr>
+                        <tr><td class="rk">4</td><td class="nm tl">A. Noland</td><td class="tm">MEM</td><td class="hi">4,111</td></tr>
+                        <tr><td class="rk">5</td><td class="nm tl">D. Moore</td><td class="tm">ORE</td><td class="hi">4,106</td></tr>
+                        <tr><td class="rk">6</td><td class="nm tl">E. Holstein</td><td class="tm">UVA</td><td class="hi">4,019</td></tr>
+                        <tr><td class="rk">7</td><td class="nm tl">W. Hammond</td><td class="tm">TTU</td><td class="hi">4,000</td></tr>
+                        <tr><td class="rk">8</td><td class="nm tl">T. Owens</td><td class="tm">ARST</td><td class="hi">3,999</td></tr>
+                        <tr><td class="rk">9</td><td class="nm tl">C. Veltkamp</td><td class="tm">FAU</td><td class="hi">3,974</td></tr>
+                        <tr><td class="rk">10</td><td class="nm tl">J. Mateer</td><td class="tm">OU</td><td class="hi">3,968</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Passing TDs -->
+        <div class="table-card">
+            <h2>Passing Touchdowns</h2>
+            <div class="table-scroll">
+                <table class="espn-table">
+                    <thead><tr><th>RK</th><th class="tl">Player</th><th>Team</th><th>TD</th></tr></thead>
+                    <tbody>
+                        <tr><td class="rk">1</td><td class="nm tl">J. Lewis</td><td class="tm">COLO</td><td class="hi">40</td></tr>
+                        <tr><td class="rk">2</td><td class="nm tl">K. Jennings</td><td class="tm">SMU</td><td class="hi">37</td></tr>
+                        <tr><td class="rk">3</td><td class="nm tl">J. Sayin</td><td class="tm">OSU</td><td class="hi">37</td></tr>
+                        <tr><td class="rk">4</td><td class="nm tl">S. Leavitt</td><td class="tm">LSU</td><td class="hi">36</td></tr>
+                        <tr><td class="rk">5</td><td class="nm tl">W. Hammond</td><td class="tm">TTU</td><td class="hi">35</td></tr>
+                        <tr><td class="rk">6</td><td class="nm tl">M. Madsen</td><td class="tm">BSU</td><td class="hi">35</td></tr>
+                        <tr><td class="rk">7</td><td class="nm tl">B. Jackson</td><td class="tm">TXST</td><td class="hi">33</td></tr>
+                        <tr><td class="rk">8</td><td class="nm tl">M. Reed</td><td class="tm">TAMU</td><td class="hi">33</td></tr>
+                        <tr><td class="rk">9</td><td class="nm tl">E. Holstein</td><td class="tm">UVA</td><td class="hi">33</td></tr>
+                        <tr><td class="rk">10</td><td class="nm tl">C. Veltkamp</td><td class="tm">FAU</td><td class="hi">33</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Rushing Yards -->
+        <div class="table-card">
+            <h2>Rushing Yards</h2>
+            <div class="table-scroll">
+                <table class="espn-table">
+                    <thead><tr><th>RK</th><th class="tl">Player</th><th>Pos</th><th>Team</th><th>Yards</th></tr></thead>
+                    <tbody>
+                        <tr><td class="rk">1</td><td class="nm tl">A. Hardy</td><td>HB</td><td class="tm">MIZ</td><td class="hi">2,003</td></tr>
+                        <tr><td class="rk">2</td><td class="nm tl">B. Jackson</td><td>HB</td><td class="tm">OSU</td><td class="hi">1,927</td></tr>
+                        <tr><td class="rk">3</td><td class="nm tl">M. Fletcher Jr.</td><td>HB</td><td class="tm">MIA</td><td class="hi">1,810</td></tr>
+                        <tr><td class="rk">4</td><td class="nm tl">D. Scott</td><td>HB</td><td class="tm">NDSU</td><td class="hi">1,639</td></tr>
+                        <tr><td class="rk">5</td><td class="nm tl">N. Frazier</td><td>HB</td><td class="tm">UGA</td><td class="hi">1,577</td></tr>
+                        <tr><td class="rk">6</td><td class="nm tl">M. Brown</td><td>HB</td><td class="tm">CSU</td><td class="hi">1,468</td></tr>
+                        <tr><td class="rk">7</td><td class="nm tl">D. Bishop</td><td>HB</td><td class="tm">TENN</td><td class="hi">1,410</td></tr>
+                        <tr><td class="rk">8</td><td class="nm tl">I. Brown</td><td>HB</td><td class="tm">LOU</td><td class="hi">1,343</td></tr>
+                        <tr><td class="rk">9</td><td class="nm tl">O. Allen</td><td>FB</td><td class="tm">AF</td><td class="hi">1,311</td></tr>
+                        <tr><td class="rk">10</td><td class="nm tl">T. Richard</td><td>HB</td><td class="tm">IND</td><td class="hi">1,282</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Rushing TDs -->
+        <div class="table-card">
+            <h2>Rushing Touchdowns</h2>
+            <div class="table-scroll">
+                <table class="espn-table">
+                    <thead><tr><th>RK</th><th class="tl">Player</th><th>Pos</th><th>Team</th><th>TD</th></tr></thead>
+                    <tbody>
+                        <tr><td class="rk">1</td><td class="nm tl">D. Scott</td><td>HB</td><td class="tm">NDSU</td><td class="hi">20</td></tr>
+                        <tr><td class="rk">2</td><td class="nm tl">M. Fletcher Jr.</td><td>HB</td><td class="tm">MIA</td><td class="hi">17</td></tr>
+                        <tr><td class="rk">3</td><td class="nm tl">K. Udoh</td><td>HB</td><td class="tm">OSU</td><td class="hi">16</td></tr>
+                        <tr><td class="rk">4</td><td class="nm tl">I. Brown</td><td>HB</td><td class="tm">LOU</td><td class="hi">15</td></tr>
+                        <tr><td class="rk">5</td><td class="nm tl">T. Richard</td><td>HB</td><td class="tm">IND</td><td class="hi">14</td></tr>
+                        <tr><td class="rk">6</td><td class="nm tl">M. Brown</td><td>HB</td><td class="tm">CSU</td><td class="hi">13</td></tr>
+                        <tr><td class="rk">7</td><td class="nm tl">D. Bishop</td><td>HB</td><td class="tm">TENN</td><td class="hi">13</td></tr>
+                        <tr><td class="rk">8</td><td class="nm tl">R. Owens II</td><td>HB</td><td class="tm">PSU</td><td class="hi">12</td></tr>
+                        <tr><td class="rk">9</td><td class="nm tl">J. Baugh</td><td>HB</td><td class="tm">NAVY</td><td class="hi">12</td></tr>
+                        <tr><td class="rk">10</td><td class="nm tl">J. Thomas</td><td>HB</td><td class="tm">ARMY</td><td class="hi">12</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="empty-state" style="padding:12px 16px;text-align:left">Note: leaderboard was sorted by rushing yards, so this reflects TD leaders among players visible on those screens — not a guaranteed true top 10.</div>
+        </div>
+
+        <!-- Receiving Yards -->
+        <div class="table-card">
+            <h2>Receiving Yards</h2>
+            <div class="table-scroll">
+                <table class="espn-table">
+                    <thead><tr><th>RK</th><th class="tl">Player</th><th>Pos</th><th>Team</th><th>Yards</th></tr></thead>
+                    <tbody>
+                        <tr><td class="rk">1</td><td class="nm tl">J. Napier</td><td>WR</td><td class="tm">SDSU</td><td class="hi">1,238</td></tr>
+                        <tr><td class="rk">2</td><td class="nm tl">A. Evans III</td><td>WR</td><td class="tm">MSST</td><td class="hi">1,235</td></tr>
+                        <tr><td class="rk">3</td><td class="nm tl">J. Richardson</td><td>WR</td><td class="tm">DUKE</td><td class="hi">1,225</td></tr>
+                        <tr><td class="rk">4</td><td class="nm tl">T. Brown</td><td>WR</td><td class="tm">CLEM</td><td class="hi">1,215</td></tr>
+                        <tr><td class="rk">5</td><td class="nm tl">T. Anderson</td><td>WR</td><td class="tm">USC</td><td class="hi">1,204</td></tr>
+                        <tr><td class="rk">6</td><td class="nm tl">J. Smith</td><td>WR</td><td class="tm">OSU</td><td class="hi">1,166</td></tr>
+                        <tr><td class="rk">7</td><td class="nm tl">J. Boggs</td><td>WR</td><td class="tm">FSU</td><td class="hi">1,155</td></tr>
+                        <tr><td class="rk">8</td><td class="nm tl">P. Livingstone</td><td>WR</td><td class="tm">OU</td><td class="hi">1,152</td></tr>
+                        <tr><td class="rk">9</td><td class="nm tl">N. Marsh</td><td>WR</td><td class="tm">IND</td><td class="hi">1,147</td></tr>
+                        <tr><td class="rk">10</td><td class="nm tl">C. Milliner</td><td>WR</td><td class="tm">UNT</td><td class="hi">1,147</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Receiving TDs -->
+        <div class="table-card">
+            <h2>Receiving Touchdowns</h2>
+            <div class="table-scroll">
+                <table class="espn-table">
+                    <thead><tr><th>RK</th><th class="tl">Player</th><th>Pos</th><th>Team</th><th>TD</th></tr></thead>
+                    <tbody>
+                        <tr><td class="rk">1</td><td class="nm tl">T. Brown</td><td>WR</td><td class="tm">CLEM</td><td class="hi">13</td></tr>
+                        <tr><td class="rk">2</td><td class="nm tl">P. Livingstone</td><td>WR</td><td class="tm">OU</td><td class="hi">12</td></tr>
+                        <tr><td class="rk">3</td><td class="nm tl">C. Vaughn</td><td>WR</td><td class="tm">BAYLOR</td><td class="hi">12</td></tr>
+                        <tr><td class="rk">4</td><td class="nm tl">J. Smith</td><td>WR</td><td class="tm">OSU</td><td class="hi">10</td></tr>
+                        <tr><td class="rk">5</td><td class="nm tl">J. Boggs</td><td>WR</td><td class="tm">FSU</td><td class="hi">10</td></tr>
+                        <tr><td class="rk">6</td><td class="nm tl">N. Marsh</td><td>WR</td><td class="tm">IND</td><td class="hi">9</td></tr>
+                        <tr><td class="rk">7</td><td class="nm tl">C. Hendricks</td><td>WR</td><td class="tm">AUB</td><td class="hi">9</td></tr>
+                        <tr><td class="rk">8</td><td class="nm tl">B. Staley</td><td>WR</td><td class="tm">UCF</td><td class="hi">8</td></tr>
+                        <tr><td class="rk">9</td><td class="nm tl">T. Favors</td><td>WR</td><td class="tm">KSU</td><td class="hi">8</td></tr>
+                        <tr><td class="rk">10</td><td class="nm tl">T. Anderson</td><td>WR</td><td class="tm">USC</td><td class="hi">7</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Sacks -->
+        <div class="table-card">
+            <h2>Sacks</h2>
+            <div class="table-scroll">
+                <table class="espn-table">
+                    <thead><tr><th>RK</th><th class="tl">Player</th><th>Pos</th><th>Team</th><th>Sacks</th></tr></thead>
+                    <tbody>
+                        <tr><td class="rk">1</td><td class="nm tl">T. Wein</td><td>LEDG</td><td class="tm">OU</td><td class="hi">21.5</td></tr>
+                        <tr><td class="rk">2</td><td class="nm tl">T. Lathan</td><td>MIKE</td><td class="tm">KU</td><td class="hi">5.5</td></tr>
+                        <tr><td class="rk">3</td><td class="nm tl">Y. Pierre</td><td>REDG</td><td class="tm">BAMA</td><td class="hi">5.0</td></tr>
+                        <tr><td class="rk">4</td><td class="nm tl">J. Forrest</td><td>SAM</td><td class="tm">ODU</td><td class="hi">4.5</td></tr>
+                        <tr><td class="rk">5</td><td class="nm tl">I. Hubert</td><td>SAM</td><td class="tm">AF</td><td class="hi">4.5</td></tr>
+                        <tr><td class="rk">6</td><td class="nm tl">M. Abou-Jaoude</td><td>REDG</td><td class="tm">UNC</td><td class="hi">4.0</td></tr>
+                        <tr><td class="rk">7</td><td class="nm tl">G. Lampron</td><td>MIKE</td><td class="tm">COLO</td><td class="hi">4.0</td></tr>
+                        <tr><td class="rk">8</td><td class="nm tl">K. Efford</td><td>MIKE</td><td class="tm">GT</td><td class="hi">4.0</td></tr>
+                        <tr><td class="rk">9</td><td class="nm tl">O. Heinecke</td><td>WILL</td><td class="tm">OU</td><td class="hi">3.5</td></tr>
+                        <tr><td class="rk">10</td><td class="nm tl">T. White</td><td>LEDG</td><td class="tm">TTU</td><td class="hi">3.5</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- INTs -->
+        <div class="table-card">
+            <h2>Interceptions</h2>
+            <div class="table-scroll">
+                <table class="espn-table">
+                    <thead><tr><th>RK</th><th class="tl">Player</th><th>Pos</th><th>Team</th><th>INT</th></tr></thead>
+                    <tbody>
+                        <tr><td class="rk">1</td><td class="nm tl">A. Kite</td><td>CB</td><td class="tm">MISS</td><td class="hi">8</td></tr>
+                        <tr><td class="rk">2</td><td class="nm tl">F. Hamilton</td><td>SS</td><td class="tm">ARST</td><td class="hi">7</td></tr>
+                        <tr><td class="rk">3</td><td class="nm tl">D. Pickett</td><td>CB</td><td class="tm">LSU</td><td class="hi">6</td></tr>
+                        <tr><td class="rk">4</td><td class="nm tl">R. Gibson III</td><td>CB</td><td class="tm">TAMU</td><td class="hi">6</td></tr>
+                        <tr><td class="rk">5</td><td class="nm tl">J. Crawford</td><td>CB</td><td class="tm">MISS</td><td class="hi">6</td></tr>
+                        <tr><td class="rk">6</td><td class="nm tl">K. Phillips</td><td>CB</td><td class="tm">TEX</td><td class="hi">6</td></tr>
+                        <tr><td class="rk">7</td><td class="nm tl">D. Henderson</td><td>CB</td><td class="tm">ARST</td><td class="hi">6</td></tr>
+                        <tr><td class="rk">8</td><td class="nm tl">J. Sims</td><td>CB</td><td class="tm">WMU</td><td class="hi">5</td></tr>
+                        <tr><td class="rk">9</td><td class="nm tl">K. Willis</td><td>SS</td><td class="tm">JMU</td><td class="hi">5</td></tr>
+                        <tr><td class="rk">10</td><td class="nm tl">M. Stevenson</td><td>CB</td><td class="tm">TULN</td><td class="hi">5</td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -132,7 +427,7 @@
         <div class="footer-bottom">&copy; 2026 CFB Updates. Dynasty League Coverage.</div>
     <div class="footer-disclaimer">CFB Updates is a satirical fan site covering a private video-game dynasty league. All stories are fiction. Not affiliated with ESPN, the NCAA, any university, or any real person depicted. Please do not sue us, buddehs.</div>
     </footer>
-    <script src="./data.js?v=46"></script>
-    <script src="./app.js?v=46"></script>
+    <script src="./data.js?v=47"></script>
+    <script src="./app.js?v=47"></script>
 </body>
 </html>

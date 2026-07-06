@@ -337,7 +337,13 @@ div.totals-row{border-top:2px solid var(--ink)}
 .section-title,.stats-tab-title,.stat-category-title,.category-title,.awards-title{font-family:var(--cond);font-weight:800;font-size:1.15rem;color:var(--ink);text-align:center;text-transform:uppercase;letter-spacing:.4px;margin-bottom:20px;padding-bottom:11px;border-bottom:2px solid var(--ink)}
 
 /* bracket */
+.bracket-tree{display:flex;gap:22px;align-items:stretch;overflow-x:auto;padding:6px 2px 14px}
+.bracket-tree .bracket-round{justify-content:space-around;min-width:198px}
 .bracket-round{display:flex;flex-direction:column;gap:12px}
+.bracket-seed{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;background:var(--chrome);color:#fff;font-family:var(--cond);font-weight:800;font-size:.66rem;border-radius:3px;margin-right:8px;padding:0 4px}
+.bracket-team.winner .bracket-seed{background:var(--red)}
+.bracket-team .bt-name{flex:1}
+.bracket-team .bt-score{font-family:var(--cond);font-weight:800;margin-left:10px}
 .round-label,.label,.legend{font-family:var(--cond);font-weight:800;text-transform:uppercase;color:var(--gray);font-size:.74rem;letter-spacing:.5px;text-align:center}
 .bracket-game,.bracket-championship{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden;box-shadow:var(--sh);min-width:190px}
 .bracket-championship{border:2px solid var(--red)}
