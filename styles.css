@@ -235,6 +235,8 @@ main .featured-section>h3{margin:0 0 12px;padding-bottom:8px;border-bottom:2px s
 /* video */
 .video-figure{margin:0 0 18px;position:relative}
 .article-video{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r);background:#000;display:block}
+.video-figure.portrait{max-width:420px;margin-left:auto;margin-right:auto}
+.video-figure.portrait .article-video{aspect-ratio:9/16;object-fit:contain}
 .video-figure figcaption{font-size:.78rem;color:var(--gray);padding:7px 2px 0;line-height:1.4;border-bottom:1px solid var(--line-2);padding-bottom:9px}
 .video-badge{position:absolute;top:10px;left:10px;z-index:2;background:var(--red);color:#fff;font-family:var(--cond);font-weight:800;font-size:.66rem;text-transform:uppercase;letter-spacing:.7px;padding:4px 9px;border-radius:3px;pointer-events:none}
 .video-badge::before{content:"\25B6\00A0"}
